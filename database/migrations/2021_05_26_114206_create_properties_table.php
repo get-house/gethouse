@@ -15,6 +15,19 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('agent_id')->nullable();
+            $table->foreignId('landlord_id')->nullable();
+            $table->foreignId('tenant_id')->nullable();
+            $table->string('name');
+            $table->integer('price');
+            $table->string('feature');
+            $table->text('description');
+            $table->string('images')->nullable();
+            $table->string('type');
+            $table->string('location');
+            $table->string('period_of_availability');
+            $table->string('urgency');
+            $table->boolean('isVerified')->default(0);
             $table->timestamps();
         });
     }
