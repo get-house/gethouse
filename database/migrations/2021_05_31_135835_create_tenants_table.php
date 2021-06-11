@@ -18,7 +18,6 @@ class CreateTenantsTable extends Migration
             $table->string('name');
             $table->foreignId('user_id');
             $table->foreignId('property_id')->nullable();
-            $table->foreignId('agent_id')->nullable();
             $table->text('address');
             $table->integer('phone_number');
             $table->string('email');

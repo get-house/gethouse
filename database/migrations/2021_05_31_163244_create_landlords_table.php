@@ -15,9 +15,7 @@ class CreateLandlordsTable extends Migration
     {
         Schema::create('landlords', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('property_id')->nullable();
             $table->foreignId('user_id');
-            $table->foreignId('tenant_id')->nullable();
             $table->string('name');
             $table->text('address');
             $table->integer('phone_number');
