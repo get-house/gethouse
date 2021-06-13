@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Property;
 use App\Models\Tenant;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TenantFactory extends Factory
@@ -22,7 +24,10 @@ class TenantFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id'=>User::factory(),
+            'property_id'=>Property::factory(),
+            'address'=>$this->faker->address(),
+            'phone_number'=>$this->faker->phoneNumber(),
         ];
     }
 }

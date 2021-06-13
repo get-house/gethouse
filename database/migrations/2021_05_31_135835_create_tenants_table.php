@@ -15,12 +15,10 @@ class CreateTenantsTable extends Migration
     {
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->foreignId('user_id');
             $table->foreignId('property_id')->nullable();
             $table->text('address');
-            $table->integer('phone_number');
-            $table->string('email');
+            $table->string('phone_number');
             $table->boolean('isActive')->default(false);
             $table->string('rating')->nullable();
             $table->timestamps();
