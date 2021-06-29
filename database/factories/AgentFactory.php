@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Agent;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AgentFactory extends Factory
@@ -22,7 +23,9 @@ class AgentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id'=>User::factory(),
+            'address'=>$this->faker->address(),
+            'phone_number'=>$this->faker->phoneNumber(),
         ];
     }
 }
