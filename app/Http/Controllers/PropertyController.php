@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Route;
 
 class PropertyController extends Controller
 {
@@ -14,7 +17,15 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        //
+        $properties = Property::orderBy('name')->get();
+
+        return Inertia::render('Welcome', [
+            'properties'=>$properties,
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+            'laravelVersion' => Application::VERSION,
+            'phpVersion' => PHP_VERSION,
+        ]);
     }
 
     /**
