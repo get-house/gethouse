@@ -45,7 +45,7 @@
     <!-- lets go there -->
     <div>
         <!-- hero section -->
-        <div class="relative bg-white overflow-hidden">
+        <div class="relative bg-white">
             <div class="max-w-7xl mx-auto">
                 <div
                     class="

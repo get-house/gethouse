@@ -136,6 +136,7 @@
                                                 :href="route(item.href)"
                                                 :method="item.method"
                                                 :as="button"
+                                                :type="button"
                                                 :class="[
                                                     active ? 'bg-gray-100' : '',
                                                     'block px-4 py-2 text-sm text-gray-700',
@@ -350,6 +351,7 @@ const profile = [
         href: "logout",
         method: "post",
         as: "button",
+        type: "button",
     },
 ];
 

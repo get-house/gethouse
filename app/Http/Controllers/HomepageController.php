@@ -17,7 +17,7 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        $properties = Property::orderBy('name')->take(10)->get();
+        $properties = Property::orderBy('name')->with(['landlord', 'agent', 'tenant'])->take(10)->get();
 
         return Inertia::render('Welcome', [
             'properties' => $properties,
