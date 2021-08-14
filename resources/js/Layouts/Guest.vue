@@ -397,7 +397,6 @@ import BreezeDropdownLink from "@/Components/DropdownLink";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 
 const navigation = ["Home", "Properties", "Houses", "Policies", "Reports"];
-// const profile = ["Your Profile", "Settings", "Sign out"];
 
 export default {
     components: {
@@ -420,7 +419,6 @@ export default {
 
         return {
             navigation,
-            profile,
             open,
         };
     },
