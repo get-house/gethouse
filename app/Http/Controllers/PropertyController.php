@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Property;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
+
 
 class PropertyController extends Controller
 {
