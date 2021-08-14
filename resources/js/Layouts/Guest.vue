@@ -73,7 +73,7 @@
                             </button>
 
                             <!-- Profile dropdown -->
-                            <Menu
+                            <!-- <Menu
                                 as="div"
                                 class="ml-3 relative"
                                 v-if="$page.props.auth.user"
@@ -132,7 +132,7 @@
                                             :key="item"
                                             v-slot="{ active }"
                                         >
-                                            <inertia-link
+                                            <Link
                                                 :href="route(item.href)"
                                                 :method="item.method"
                                                 :as="button"
@@ -141,19 +141,77 @@
                                                     active ? 'bg-gray-100' : '',
                                                     'block px-4 py-2 text-sm text-gray-700',
                                                 ]"
-                                                >{{ item.name }}</inertia-link
+                                                >{{ item.name }}</Link
                                             >
                                         </MenuItem>
                                     </MenuItems>
                                 </transition>
-                            </Menu>
+                            </Menu> -->
+
+                            <!-- experimental -->
+                            <div
+                                v-if="$page.props.auth.user"
+                                class="hidden sm:flex sm:items-center sm:ml-6"
+                            >
+                                <div class="ml-3 relative">
+                                    <breeze-dropdown align="right" width="48">
+                                        <template #trigger>
+                                            <span
+                                                class="inline-flex rounded-md"
+                                            >
+                                                <button
+                                                    type="button"
+                                                    class="
+                                                        max-w-xs
+                                                        bg-gray-800
+                                                        rounded-full
+                                                        flex
+                                                        items-center
+                                                        text-sm
+                                                        focus:outline-none
+                                                        focus:ring-2
+                                                        focus:ring-offset-2
+                                                        focus:ring-offset-gray-800
+                                                        focus:ring-white
+                                                    "
+                                                >
+                                                    <img
+                                                        class="
+                                                            h-8
+                                                            w-8
+                                                            rounded-full
+                                                        "
+                                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                                        alt=""
+                                                    />
+                                                </button>
+                                            </span>
+                                        </template>
+
+                                        <template #content>
+                                            <breeze-dropdown-link
+                                                :href="route('logout')"
+                                                method="post"
+                                                as="button"
+                                            >
+                                                Log Out
+                                            </breeze-dropdown-link>
+                                            <breeze-dropdown-link
+                                                :href="route('home')"
+                                                >Settings</breeze-dropdown-link
+                                            >
+                                        </template>
+                                    </breeze-dropdown>
+                                </div>
+                            </div>
+                            <!-- end of experimental -->
                             <template v-else>
-                                <inertia-link
+                                <Link
                                     :href="route('login')"
                                     class="bg-gray-800 text-lg text-white"
                                 >
                                     Sign In
-                                </inertia-link>
+                                </Link>
                             </template>
                         </div>
                     </div>
@@ -284,7 +342,7 @@
                         class="mt-3 px-2 space-y-1"
                         v-if="$page.props.auth.user"
                     >
-                        <inertia-link
+                        <Link
                             v-for="item in profile"
                             :key="item"
                             :href="item.href"
@@ -298,16 +356,16 @@
                                 text-gray-400
                                 hover:text-white hover:bg-gray-700
                             "
-                            >{{ item.name }}</inertia-link
+                            >{{ item.name }}</Link
                         >
                     </div>
                     <template v-else>
-                        <inertia-link
+                        <Link
                             :href="route('login')"
                             class="bg-gray-800 text-lg text-white"
                         >
                             Sign In
-                        </inertia-link>
+                        </Link>
                     </template>
                 </div>
             </DisclosurePanel>
@@ -323,6 +381,7 @@
 </template>
 
 <script>
+import { Link } from "@inertiajs/inertia-vue3";
 import { ref } from "vue";
 import {
     Disclosure,
@@ -333,30 +392,16 @@ import {
     MenuItem,
     MenuItems,
 } from "@headlessui/vue";
+import BreezeDropdown from "@/Components/Dropdown";
+import BreezeDropdownLink from "@/Components/DropdownLink";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 
 const navigation = ["Home", "Properties", "Houses", "Policies", "Reports"];
 // const profile = ["Your Profile", "Settings", "Sign out"];
-const profile = [
-    {
-        name: "Your Profile",
-        href: "dashboard",
-    },
-    {
-        name: "Settings",
-        href: "dashboard",
-    },
-    {
-        name: "Sign out",
-        href: "logout",
-        method: "post",
-        as: "button",
-        type: "button",
-    },
-];
 
 export default {
     components: {
+        Link,
         Disclosure,
         DisclosureButton,
         DisclosurePanel,
@@ -367,6 +412,8 @@ export default {
         BellIcon,
         MenuIcon,
         XIcon,
+        BreezeDropdown,
+        BreezeDropdownLink,
     },
     setup() {
         const open = ref(false);
