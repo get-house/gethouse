@@ -343,7 +343,7 @@
                 justify-center
                 items-center
                 inset-0
-                z-50
+                z-0
                 outline-none
                 focus:outline-none
             "
@@ -570,5 +570,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props:{
+        platinumProperties: {
+            type:Object
+        },
+        goldProperties: {
+            type:Object
+        },
+    }
+};
 </script>

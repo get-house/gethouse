@@ -1,5 +1,9 @@
 const mix = require('laravel-mix');
 
+mix.browserSync({
+    proxy: 'gethouse.test',
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

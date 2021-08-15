@@ -18,14 +18,12 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [HomepageController::class, 'index'])->name('home');
-
-
-
-
+Route::resource('/property', PropertyController::class);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+})
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 require __DIR__ . '/auth.php';
