@@ -5,18 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Property;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
+use Inertia\Response;
 
 class PropertyController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function index()
+    public function index(): Response
     {
+        $properties = Property::all();
+        return Inertia::render('Property/Index', [
+            'properties' => $properties
+        ]);
     }
 
     /**

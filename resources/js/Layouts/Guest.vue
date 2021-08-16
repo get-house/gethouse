@@ -14,28 +14,11 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <template
-                                    v-for="(item, itemIdx) in navigation"
-                                    :key="item"
-                                >
-                                    <template v-if="itemIdx === 0">
+
+
                                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                        <a
-                                            href="#"
-                                            class="
-                                                bg-gray-900
-                                                text-white
-                                                px-3
-                                                py-2
-                                                rounded-md
-                                                text-sm
-                                                font-medium
-                                            "
-                                            >{{ item }}</a
-                                        >
-                                    </template>
-                                    <a
-                                        v-else
+
+                                    <Link
                                         href="#"
                                         class="
                                             text-gray-300
@@ -46,9 +29,34 @@
                                             text-sm
                                             font-medium
                                         "
-                                        >{{ item }}</a
+                                        >Dashboard</Link
                                     >
-                                </template>
+                                <Link
+                                    :href="route('property.index')"
+                                    class="
+                                            text-gray-300
+                                            hover:bg-gray-700 hover:text-white
+                                            px-3
+                                            py-2
+                                            rounded-md
+                                            text-sm
+                                            font-medium
+                                        "
+                                >Properties</Link
+                                >
+                                <Link
+                                    href="#"
+                                    class="
+                                            text-gray-300
+                                            hover:bg-gray-700 hover:text-white
+                                            px-3
+                                            py-2
+                                            rounded-md
+                                            text-sm
+                                            font-medium
+                                        "
+                                >Policies</Link
+                                >
                             </div>
                         </div>
                     </div>
@@ -73,86 +81,71 @@
                             </button>
 
                             <!-- Profile dropdown -->
-                            <Menu
-                                as="div"
-                                class="ml-3 relative"
+
+                            <!-- experimental -->
+                            <div
                                 v-if="$page.props.auth.user"
+                                class="hidden sm:flex sm:items-center sm:ml-6"
                             >
-                                <div>
-                                    <MenuButton
-                                        class="
-                                            max-w-xs
-                                            bg-gray-800
-                                            rounded-full
-                                            flex
-                                            items-center
-                                            text-sm
-                                            focus:outline-none
-                                            focus:ring-2
-                                            focus:ring-offset-2
-                                            focus:ring-offset-gray-800
-                                            focus:ring-white
-                                        "
-                                    >
-                                        <span class="sr-only"
-                                            >Open user menu</span
-                                        >
-                                        <img
-                                            class="h-8 w-8 rounded-full"
-                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                            alt=""
-                                        />
-                                    </MenuButton>
-                                </div>
-                                <transition
-                                    enter-active-class="transition ease-out duration-100"
-                                    enter-from-class="transform opacity-0 scale-95"
-                                    enter-to-class="transform opacity-100 scale-100"
-                                    leave-active-class="transition ease-in duration-75"
-                                    leave-from-class="transform opacity-100 scale-100"
-                                    leave-to-class="transform opacity-0 scale-95"
-                                >
-                                    <MenuItems
-                                        class="
-                                            origin-top-right
-                                            absolute
-                                            right-0
-                                            mt-2
-                                            w-48
-                                            rounded-md
-                                            shadow-lg
-                                            py-1
-                                            bg-white
-                                            ring-1 ring-black ring-opacity-5
-                                            focus:outline-none
-                                        "
-                                    >
-                                        <MenuItem
-                                            v-for="item in profile"
-                                            :key="item"
-                                            v-slot="{ active }"
-                                        >
-                                            <inertia-link
-                                                :href="route(item.href)"
-                                                :method="item.method"
-                                                :as="button"
-                                                :class="[
-                                                    active ? 'bg-gray-100' : '',
-                                                    'block px-4 py-2 text-sm text-gray-700',
-                                                ]"
-                                                >{{ item.name }}</inertia-link
+                                <div class="ml-3 relative z-40">
+                                    <breeze-dropdown align="right" width="48">
+                                        <template #trigger>
+                                            <span
+                                                class="inline-flex rounded-md"
                                             >
-                                        </MenuItem>
-                                    </MenuItems>
-                                </transition>
-                            </Menu>
+                                                <button
+                                                    type="button"
+                                                    class="
+                                                        max-w-xs
+                                                        bg-gray-800
+                                                        rounded-full
+                                                        flex
+                                                        items-center
+                                                        text-sm
+                                                        focus:outline-none
+                                                        focus:ring-2
+                                                        focus:ring-offset-2
+                                                        focus:ring-offset-gray-800
+                                                        focus:ring-white
+                                                    "
+                                                >
+                                                    <img
+                                                        class="
+                                                            h-8
+                                                            w-8
+                                                            rounded-full
+                                                        "
+                                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                                        alt=""
+                                                    />
+                                                </button>
+                                            </span>
+                                        </template>
+
+                                        <template #content>
+                                            <breeze-dropdown-link
+                                                :href="route('logout')"
+                                                method="post"
+                                                as="button"
+                                            >
+                                                Log Out
+                                            </breeze-dropdown-link>
+                                            <breeze-dropdown-link
+                                                :href="route('home')"
+                                                >Settings</breeze-dropdown-link
+                                            >
+                                        </template>
+                                    </breeze-dropdown>
+                                </div>
+                            </div>
+                            <!-- end of experimental -->
                             <template v-else>
-                                <inertia-link
+                                <Link
                                     :href="route('login')"
                                     class="bg-gray-800 text-lg text-white"
                                 >
                                     Sign In
-                                </inertia-link>
+                                </Link>
                             </template>
                         </div>
                     </div>
@@ -283,7 +276,7 @@
                         class="mt-3 px-2 space-y-1"
                         v-if="$page.props.auth.user"
                     >
-                        <inertia-link
+                        <Link
                             v-for="item in profile"
                             :key="item"
                             :href="item.href"
@@ -297,16 +290,16 @@
                                 text-gray-400
                                 hover:text-white hover:bg-gray-700
                             "
-                            >{{ item.name }}</inertia-link
+                            >{{ item.name }}</Link
                         >
                     </div>
                     <template v-else>
-                        <inertia-link
+                        <Link
                             :href="route('login')"
                             class="bg-gray-800 text-lg text-white"
                         >
                             Sign In
-                        </inertia-link>
+                        </Link>
                     </template>
                 </div>
             </DisclosurePanel>
@@ -322,6 +315,7 @@
 </template>
 
 <script>
+import { Link } from "@inertiajs/inertia-vue3";
 import { ref } from "vue";
 import {
     Disclosure,
@@ -332,29 +326,15 @@ import {
     MenuItem,
     MenuItems,
 } from "@headlessui/vue";
+import BreezeDropdown from "@/Components/Dropdown";
+import BreezeDropdownLink from "@/Components/DropdownLink";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 
 const navigation = ["Home", "Properties", "Houses", "Policies", "Reports"];
-// const profile = ["Your Profile", "Settings", "Sign out"];
-const profile = [
-    {
-        name: "Your Profile",
-        href: "dashboard",
-    },
-    {
-        name: "Settings",
-        href: "dashboard",
-    },
-    {
-        name: "Sign out",
-        href: "logout",
-        method: "post",
-        as: "button",
-    },
-];
 
 export default {
     components: {
+        Link,
         Disclosure,
         DisclosureButton,
         DisclosurePanel,
@@ -365,13 +345,14 @@ export default {
         BellIcon,
         MenuIcon,
         XIcon,
+        BreezeDropdown,
+        BreezeDropdownLink,
     },
     setup() {
         const open = ref(false);
 
         return {
             navigation,
-            profile,
             open,
         };
     },
