@@ -1,8 +1,10 @@
 const mix = require('laravel-mix');
 
-mix.browserSync({
-    proxy: 'gethouse.test',
-});
+// mix.browserSync({
+//     proxy: 'http://gethouse.test:3000',
+//     host: 'gethouse.test',
+//     open: 'external',
+// });
 
 /*
  |--------------------------------------------------------------------------
