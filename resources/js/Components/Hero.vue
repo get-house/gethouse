@@ -189,7 +189,11 @@
                                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                                         ></path>
                                     </svg>
-                                    <p class="">Kaduna,NG</p>
+                                    <p class="">
+                                        {{
+                                            gold.location.substring(0, 9).trim()
+                                        }}
+                                    </p>
                                 </div>
                                 <div class="flex-1 inline-flex items-center">
                                     <svg

@@ -32367,6 +32367,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Hero.vue?vue&type=script&lang=js":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Hero.vue?vue&type=script&lang=js ***!
+  \********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    platinumProperties: Object,
+    goldProperties: Object
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Input.vue?vue&type=script&lang=js":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Input.vue?vue&type=script&lang=js ***!
@@ -32980,49 +33000,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_Guest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/Guest */ "./resources/js/Layouts/Guest.vue");
-/* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/index.js");
+/* harmony import */ var _Components_Hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Components/Hero */ "./resources/js/Components/Hero.vue");
+/* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/index.js");
+
 
 
 var features = [{
   name: 'Extensive property reach',
   description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.GlobeAltIcon
+  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.GlobeAltIcon
 }, {
   name: 'No hidden fees',
   description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.ScaleIcon
+  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.ScaleIcon
 }, {
   name: 'Real time availability',
   description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.LightningBoltIcon
+  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.LightningBoltIcon
 }, {
   name: 'Mobile notifications',
   description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.AnnotationIcon
+  icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.AnnotationIcon
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   layout: _Layouts_Guest__WEBPACK_IMPORTED_MODULE_0__.default,
   components: {
-    AnnotationIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.AnnotationIcon,
-    GlobeAltIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.GlobeAltIcon,
-    LightningBoltIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.LightningBoltIcon,
-    ScaleIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.ScaleIcon
+    AnnotationIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.AnnotationIcon,
+    GlobeAltIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.GlobeAltIcon,
+    LightningBoltIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.LightningBoltIcon,
+    ScaleIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_2__.ScaleIcon,
+    Hero: _Components_Hero__WEBPACK_IMPORTED_MODULE_1__.default
   },
   props: {
     auth: Object,
-    platinumProperties: {
-      type: Object
-    },
-    goldProperties: {
-      type: Object
-    },
+    platinumProperties: Object,
+    goldProperties: Object,
     canLogin: Boolean,
     canRegister: Boolean,
     errors: Object,
     laravelVersion: String,
     phpVersion: String
   },
-  setup: function setup() {
+  setup: function setup(props) {
     return {
       features: features
     };
@@ -33203,6 +33222,166 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* FORWARDED */
 
   });
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Hero.vue?vue&type=template&id=6d20fc76":
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Hero.vue?vue&type=template&id=6d20fc76 ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "\n            min-h-screen\n            grid\n            justify-items-center\n            lg:grid-cols-5\n            sm:grid-cols-1\n        "
+};
+var _hoisted_2 = {
+  "class": "place-self-center col-span-3"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1 class=\"text-6xl font-bold leading-tight\"> Find <span class=\"text-indigo-700\">Perfect</span> Place <br> To Live Life. </h1><div class=\"flex-auto flex space-x-4 mt-12 mb-4\"><button class=\"\n                        px-6\n                        flex\n                        items-center\n                        justify-center\n                        bg-white\n                        rounded-full\n                        text-lg\n                        shadow-\n                        hover:bg-indigo-700 hover:text-white\n                    \"> Buy </button><button class=\"\n                        px-6\n                        flex\n                        items-center\n                        justify-center\n                        bg-white\n                        rounded-full\n                        text-lg\n                        shadow-sm\n                        hover:shadow-md hover:bg-indigo-700 hover:text-white\n                    \"> Sell </button><button class=\"\n                        px-6\n                        flex\n                        items-center\n                        justify-center\n                        bg-white\n                        rounded-full\n                        text-lg\n                        shadow-sm\n                        hover:shadow-md hover:bg-indigo-700 hover:text-white\n                    \"> Rent </button><button class=\"\n                        px-6\n                        flex\n                        items-center\n                        justify-center\n                        bg-white\n                        rounded-full\n                        text-lg\n                        shadow-sm\n                        hover:shadow-md hover:bg-indigo-700 hover:text-white\n                    \"> Manage </button></div>", 2);
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"bg-white rounded-full my-4 h-14 flex gap-10 shadow\"><div class=\"flex flex-col px-4\"><label class=\"text-xs\">city/street</label><select class=\"\n                            rounded-lg\n                            focus:outline-none focus:ring\n                            text-sm\n                            font-semibold\n                        \"><option value=\"\">Street1</option></select></div><div class=\"flex flex-col\"><label class=\"text-xs\">Property type</label><select class=\"\n                            rounded-lg\n                            focus:outline-none focus:ring\n                            text-sm\n                            font-semibold\n                        \"><option value=\"\">Duplex</option></select></div><div class=\"flex flex-col\"><label class=\"text-xs\">Price range</label><select class=\"\n                            rounded-lg\n                            focus:outline-none focus:ring\n                            text-sm\n                            font-semibold\n                        \"><option value=\"\">2000</option></select></div><input type=\"search\" name=\"search\" id=\"search\" placeholder=\"search property\" class=\"\n                        rounded-r-full\n                        text-right\n                        bg-indigo-500\n                        text-white\n                        placeholder-white\n                        pr-2\n                        focus:outline-none focus:ring\n                    \"></div>", 1);
+
+var _hoisted_6 = {
+  "class": "\n                    flex\n                    justify-center\n                    items-center\n                    space-x-4\n                    max-h-72\n                    animated\n                    fadeIn\n                    faster\n                    outline-none\n                    focus:outline-none\n                "
+};
+var _hoisted_7 = {
+  "class": "flex flex-col justify-center items-center"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  alt: "Just a flower",
+  "class": "object-cover h-3/6 w-48 rounded-t-lg"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_9 = {
+  "class": "flex-auto ml-3"
+};
+var _hoisted_10 = {
+  "class": "flex flex-wrap"
+};
+var _hoisted_11 = {
+  "class": "flex-auto text-lg font-medium"
+};
+var _hoisted_12 = {
+  "class": "flex py-4 text-sm text-gray-500"
+};
+var _hoisted_13 = {
+  "class": "flex-1 inline-flex items-center"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  "class": "h-5 w-5 mr-3 text-gray-400",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_15 = {
+  "class": ""
+};
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "flex-1 inline-flex items-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  "class": "h-5 w-5 mr-2 text-gray-400",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": ""
+}, "#250000")], -1
+/* HOISTED */
+);
+
+var _hoisted_17 = {
+  "class": "\n                col-span-2\n                animated\n                fadeIn\n                faster\n                flex\n                justify-center\n                items-center\n                inset-0\n                z-0\n                outline-none\n                focus:outline-none\n            "
+};
+var _hoisted_18 = {
+  "class": "flex flex-col items-center justify-center"
+};
+var _hoisted_19 = {
+  "class": "max-w-md w-full bg-gray-200 shadow-lg rounded-xl p-6"
+};
+
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative h-62 w-full mb-3\"><div class=\"absolute flex flex-col top-0 right-0 p-3\"><button class=\"\n                                        transition\n                                        ease-in\n                                        duration-300\n                                        bg-gray-800\n                                        hover:text-purple-500\n                                        shadow\n                                        hover:shadow-md\n                                        text-gray-500\n                                        rounded-full\n                                        w-8\n                                        h-8\n                                        text-center\n                                        p-1\n                                    \"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg></button></div><img src=\"https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80\" alt=\"Just a flower\" class=\"w-full object-fill rounded-2xl\"></div>", 1);
+
+var _hoisted_21 = {
+  "class": "flex-auto justify-evenly"
+};
+var _hoisted_22 = {
+  "class": "flex flex-wrap"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"\n                                        w-full\n                                        flex-none\n                                        text-sm\n                                        flex\n                                        items-center\n                                        text-gray-600\n                                    \"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 text-red-500 mr-1\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path d=\"M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z\"></path></svg><span class=\"\n                                            text-gray-400\n                                            whitespace-nowrap\n                                            mr-3\n                                        \">4.60</span><span class=\"mr-2 text-gray-400\">Kaduna</span></div>", 1);
+
+var _hoisted_24 = {
+  "class": "\n                                        flex\n                                        items-center\n                                        w-full\n                                        justify-between\n                                        min-w-0\n                                    "
+};
+var _hoisted_25 = {
+  "class": "\n                                            text-lg\n                                            mr-auto\n                                            cursor-pointer\n                                            text-gray-600\n                                            truncate\n                                        "
+};
+
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "\n                                            flex\n                                            items-center\n                                            bg-green-400\n                                            text-white text-xs\n                                            px-2\n                                            py-1\n                                            ml-3\n                                            rounded-lg\n                                        "
+}, " AVAILABLE ", -1
+/* HOISTED */
+);
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex items-center space-x-10 mb-3\"><div class=\"\n                                        text-xl text-white\n                                        font-semibold\n                                        mt-1\n                                    \"> $240.00 </div><div class=\"\n                                        hover:text-yellow-500\n                                        cursor-pointer\n                                        p-1\n                                        py-0\n                                    \"> Bungalow </div></div><div class=\"\n                                    flex\n                                    space-x-2\n                                    text-sm\n                                    font-medium\n                                    justify-start\n                                \"><button class=\"\n                                        transition\n                                        ease-in\n                                        duration-300\n                                        inline-flex\n                                        items-center\n                                        text-sm\n                                        font-medium\n                                        mb-2\n                                        md:mb-0\n                                        bg-indigo-500\n                                        px-5\n                                        py-2\n                                        hover:shadow-lg\n                                        tracking-wider\n                                        text-white\n                                        rounded-full\n                                        hover:bg-indigo-600\n                                    \"><span>Check</span></button><button class=\"\n                                        transition\n                                        ease-in\n                                        duration-300\n                                        bg-gray-700\n                                        hover:bg-gray-800\n                                        border\n                                        hover:border-gray-500\n                                        border-gray-700\n                                        hover:text-white hover:shadow-lg\n                                        text-gray-400\n                                        rounded-full\n                                        w-9\n                                        h-9\n                                        text-center\n                                        p-2\n                                    \"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"></path><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z\"></path></svg></button></div>", 2);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" filter and search design "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" small caurosel cards starts here "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" bigining of first card "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.goldProperties, function (gold) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: gold.id,
+      "class": "bg-white shadow-lg rounded-xl"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(gold["class"]), 1
+    /* TEXT */
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(gold.location), 1
+    /* TEXT */
+    )]), _hoisted_16])])])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" end of one card ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" small caurosel cards ends here ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" grid component "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.platinumProperties, function (platinum) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: platinum.id,
+      "class": "flex flex-col"
+    }, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(platinum.feature), 1
+    /* TEXT */
+    ), _hoisted_26])]), _hoisted_27])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])]);
 }
 
 /***/ }),
@@ -34713,153 +34892,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "\n                min-h-screen\n                grid\n                justify-items-center\n                lg:grid-cols-5\n                sm:grid-cols-1\n            "
-};
-var _hoisted_2 = {
-  "class": "place-self-center col-span-3"
-};
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1 class=\"text-6xl font-bold leading-tight\"> Find <span class=\"text-indigo-700\">Perfect</span> Place <br> To Live Life. </h1><div class=\"flex-auto flex space-x-4 mt-12 mb-4\"><button class=\"\n                            px-6\n                            flex\n                            items-center\n                            justify-center\n                            bg-white\n                            rounded-full\n                            text-lg\n                            shadow-\n                            hover:bg-indigo-700 hover:text-white\n                        \"> Buy </button><button class=\"\n                            px-6\n                            flex\n                            items-center\n                            justify-center\n                            bg-white\n                            rounded-full\n                            text-lg\n                            shadow-sm\n                            hover:shadow-md hover:bg-indigo-700 hover:text-white\n                        \"> Sell </button><button class=\"\n                            px-6\n                            flex\n                            items-center\n                            justify-center\n                            bg-white\n                            rounded-full\n                            text-lg\n                            shadow-sm\n                            hover:shadow-md hover:bg-indigo-700 hover:text-white\n                        \"> Rent </button><button class=\"\n                            px-6\n                            flex\n                            items-center\n                            justify-center\n                            bg-white\n                            rounded-full\n                            text-lg\n                            shadow-sm\n                            hover:shadow-md hover:bg-indigo-700 hover:text-white\n                        \"> Manage </button></div>", 2);
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"bg-white rounded-full my-4 h-14 flex gap-10 shadow\"><div class=\"flex flex-col px-4\"><label class=\"text-xs\">city/street</label><select class=\"\n                                rounded-lg\n                                focus:outline-none focus:ring\n                                text-sm\n                                font-semibold\n                            \"><option value=\"\">Street1</option></select></div><div class=\"flex flex-col\"><label class=\"text-xs\">Property type</label><select class=\"\n                                rounded-lg\n                                focus:outline-none focus:ring\n                                text-sm\n                                font-semibold\n                            \"><option value=\"\">Duplex</option></select></div><div class=\"flex flex-col\"><label class=\"text-xs\">Price range</label><select class=\"\n                                rounded-lg\n                                focus:outline-none focus:ring\n                                text-sm\n                                font-semibold\n                            \"><option value=\"\">2000</option></select></div><input type=\"search\" name=\"search\" id=\"search\" placeholder=\"search property\" class=\"\n                            rounded-r-full\n                            text-right\n                            bg-indigo-500\n                            text-white\n                            placeholder-white\n                            pr-2\n                            focus:outline-none focus:ring\n                        \"></div>", 1);
-
-var _hoisted_6 = {
-  "class": "\n                        flex\n                        justify-center\n                        items-center\n                        space-x-4\n                        max-h-72\n                        animated\n                        fadeIn\n                        faster\n                        outline-none\n                        focus:outline-none\n                    "
-};
-var _hoisted_7 = {
-  "class": "flex flex-col justify-center items-center"
-};
-var _hoisted_8 = ["src"];
-var _hoisted_9 = {
-  "class": "flex-wrap"
-};
-var _hoisted_10 = {
-  "class": ""
-};
-var _hoisted_11 = {
-  "class": "flex-auto text-lg font-medium"
-};
-var _hoisted_12 = {
-  "class": "flex py-4 text-sm text-gray-500"
-};
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex-1 inline-flex items-center\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5 mr-3 text-gray-400\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"></path><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"></path></svg><p class=\"\">Kaduna</p></div>", 1);
-
-var _hoisted_14 = {
-  "class": "flex-1 inline-flex items-center"
-};
-
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  xmlns: "http://www.w3.org/2000/svg",
-  "class": "h-5 w-5 mr-2 text-gray-400",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  stroke: "currentColor"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  "stroke-width": "2",
-  d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-})], -1
-/* HOISTED */
-);
-
-var _hoisted_16 = {
-  "class": ""
-};
-var _hoisted_17 = {
-  "class": "\n                    col-span-2\n                    animated\n                    fadeIn\n                    faster\n                    flex\n                    justify-center\n                    items-center\n                    inset-0\n                    z-0\n                    outline-none\n                    focus:outline-none\n                "
-};
-var _hoisted_18 = {
-  "class": "flex flex-col items-center justify-center"
-};
-var _hoisted_19 = {
-  "class": "\n                            max-w-md\n                            w-full\n                            bg-gray-200\n                            shadow-lg\n                            rounded-xl\n                            p-2\n                        "
-};
-var _hoisted_20 = {
-  "class": "relative w-full mb-3"
-};
-
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "\n                                        absolute\n                                        flex flex-col\n                                        top-0\n                                        right-0\n                                        p-3\n                                    "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "\n                                            transition\n                                            ease-in\n                                            duration-300\n                                            bg-gray-800\n                                            hover:text-purple-500\n                                            shadow\n                                            hover:shadow-md\n                                            text-gray-500\n                                            rounded-full\n                                            w-8\n                                            h-8\n                                            text-center\n                                            p-1\n                                        "
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  xmlns: "http://www.w3.org/2000/svg",
-  "class": "h-6 w-6",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  stroke: "currentColor"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  "stroke-width": "2",
-  d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-})])])], -1
-/* HOISTED */
-);
-
-var _hoisted_22 = ["src"];
-var _hoisted_23 = {
-  "class": "flex-auto justify-evenly"
-};
-var _hoisted_24 = {
-  "class": "flex flex-wrap"
-};
-var _hoisted_25 = {
-  "class": "\n                                            w-full\n                                            flex-none\n                                            text-sm\n                                            flex\n                                            items-center\n                                            text-gray-600\n                                        "
-};
-
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  xmlns: "http://www.w3.org/2000/svg",
-  "class": "h-4 w-4 text-red-500 mr-1",
-  viewBox: "0 0 20 20",
-  fill: "currentColor"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-})], -1
-/* HOISTED */
-);
-
-var _hoisted_27 = {
-  "class": "\n                                                text-gray-400\n                                                whitespace-nowrap\n                                                mr-3\n                                            "
-};
-var _hoisted_28 = {
-  "class": "mr-2 text-gray-400"
-};
-var _hoisted_29 = {
-  "class": "\n                                            flex\n                                            items-center\n                                            w-full\n                                            justify-between\n                                            min-w-0\n                                        "
-};
-var _hoisted_30 = {
-  "class": "\n                                                text-lg\n                                                mr-auto\n                                                cursor-pointer\n                                                text-gray-600\n                                                truncate\n                                            "
-};
-
-var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "\n                                                flex\n                                                items-center\n                                                bg-green-400\n                                                text-white text-xs\n                                                px-2\n                                                py-1\n                                                ml-3\n                                                rounded-lg\n                                            "
-}, " AVAILABLE ", -1
-/* HOISTED */
-);
-
-var _hoisted_32 = {
-  "class": "flex items-center space-x-10 mb-3"
-};
-var _hoisted_33 = {
-  "class": "\n                                            text-xl text-gray-500\n                                            font-semibold\n                                            mt-1\n                                        "
-};
-var _hoisted_34 = {
-  "class": "\n                                            hover:text-yellow-500\n                                            cursor-pointer\n                                            p-1\n                                            py-0\n                                        "
-};
-
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"\n                                        flex\n                                        space-x-2\n                                        text-sm\n                                        font-medium\n                                        justify-start\n                                    \"><button class=\"\n                                            transition\n                                            ease-in\n                                            duration-300\n                                            inline-flex\n                                            items-center\n                                            text-sm\n                                            font-medium\n                                            mb-2\n                                            md:mb-0\n                                            bg-indigo-500\n                                            px-5\n                                            py-2\n                                            hover:shadow-lg\n                                            tracking-wider\n                                            text-white\n                                            rounded-full\n                                            hover:bg-indigo-600\n                                        \"><span>Enquire </span></button><button class=\"\n                                            transition\n                                            ease-in\n                                            duration-300\n                                            bg-gray-700\n                                            hover:bg-gray-800\n                                            border\n                                            hover:border-gray-500\n                                            border-gray-700\n                                            hover:text-white hover:shadow-lg\n                                            text-gray-400\n                                            rounded-full\n                                            w-9\n                                            h-9\n                                            text-center\n                                            p-2\n                                        \"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"></path><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z\"></path></svg></button></div>", 1);
-
-var _hoisted_36 = {
   "class": "py-12 bg-white"
 };
-var _hoisted_37 = {
+var _hoisted_2 = {
   "class": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
 };
 
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "lg:text-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "\n                            text-base text-indigo-600\n                            font-bold\n                            tracking-wide\n                            uppercase\n                        "
@@ -34871,80 +34910,47 @@ var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_39 = {
+var _hoisted_4 = {
   "class": "mt-10"
 };
-var _hoisted_40 = {
+var _hoisted_5 = {
   "class": "\n                            space-y-10\n                            md:space-y-0\n                            md:grid\n                            md:grid-cols-2\n                            md:gap-x-8\n                            md:gap-y-10\n                        "
 };
-var _hoisted_41 = {
+var _hoisted_6 = {
   "class": "\n                                        absolute\n                                        flex\n                                        items-center\n                                        justify-center\n                                        h-12\n                                        w-12\n                                        rounded-md\n                                        bg-indigo-500\n                                        text-white\n                                    "
 };
-var _hoisted_42 = {
+var _hoisted_7 = {
   "class": "\n                                        ml-16\n                                        text-lg\n                                        leading-6\n                                        font-medium\n                                        text-gray-900\n                                    "
 };
-var _hoisted_43 = {
+var _hoisted_8 = {
   "class": "mt-2 ml-16 text-base text-gray-500"
 };
 
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"\n                grid grid-cols-1\n                sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8\n                md:py-16\n            \"><div class=\"\n                    relative\n                    z-10\n                    col-start-1\n                    row-start-1\n                    px-4\n                    pt-40\n                    pb-3\n                    bg-gradient-to-t\n                    from-black\n                    sm:bg-none\n                \"><p class=\"\n                        text-sm\n                        font-medium\n                        text-white\n                        sm:mb-1 sm:text-gray-500\n                    \"> Entire house </p><h2 class=\"\n                        text-xl\n                        font-semibold\n                        text-white\n                        sm:text-2xl sm:leading-7 sm:text-black\n                        md:text-3xl\n                    \"> Beach House in Collingwood </h2></div><div class=\"col-start-1 row-start-2 px-4 sm:pb-16\"><div class=\"\n                        flex\n                        items-center\n                        text-sm\n                        font-medium\n                        my-5\n                        sm:mt-2 sm:mb-4\n                    \"><svg width=\"20\" height=\"20\" fill=\"currentColor\" class=\"text-violet-600\"><path d=\"M9.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118l-2.8-2.034c-.784-.57-.381-1.81.587-1.81H7.03a1 1 0 00.95-.69L9.05 3.69z\"></path></svg><div class=\"ml-1\"><span class=\"text-black\">4.94</span><span class=\"sm:hidden md:inline\">(128)</span></div><div class=\"text-base font-normal mx-2\">·</div><div>Collingwood, Ontario</div></div><hr class=\"w-16 border-gray-300 hidden sm:block\"></div><div class=\"col-start-1 row-start-3 space-y-3 px-4\"><p class=\"flex items-center text-black text-sm font-medium\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"w-6 h-6 rounded-full mr-2 bg-gray-100\"> Owned by Kevin Francis </p><button type=\"button\" class=\"\n                        bg-violet-100\n                        text-violet-700 text-base\n                        font-semibold\n                        px-6\n                        py-2\n                        rounded-lg\n                    \"> Check availability </button></div><div class=\"\n                    col-start-1\n                    row-start-1\n                    flex\n                    sm:col-start-2 sm:row-span-3\n                \"><div class=\"w-full grid grid-cols-3 grid-rows-2 gap-2\"><div class=\"relative col-span-3 row-span-2 md:col-span-2\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"\n                                absolute\n                                inset-0\n                                w-full\n                                h-full\n                                object-cover\n                                bg-gray-100\n                                sm:rounded-lg\n                            \"></div><div class=\"relative hidden md:block\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"\n                                absolute\n                                inset-0\n                                w-full\n                                h-full\n                                object-cover\n                                rounded-lg\n                                bg-gray-100\n                            \"></div><div class=\"relative hidden md:block\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"\n                                absolute\n                                inset-0\n                                w-full\n                                h-full\n                                object-cover\n                                rounded-lg\n                                bg-gray-100\n                            \"></div></div></div></div>", 1);
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"\n                grid grid-cols-1\n                sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8\n                md:py-16\n            \"><div class=\"\n                    relative\n                    z-10\n                    col-start-1\n                    row-start-1\n                    px-4\n                    pt-40\n                    pb-3\n                    bg-gradient-to-t\n                    from-black\n                    sm:bg-none\n                \"><p class=\"\n                        text-sm\n                        font-medium\n                        text-white\n                        sm:mb-1 sm:text-gray-500\n                    \"> Entire house </p><h2 class=\"\n                        text-xl\n                        font-semibold\n                        text-white\n                        sm:text-2xl sm:leading-7 sm:text-black\n                        md:text-3xl\n                    \"> Beach House in Collingwood </h2></div><div class=\"col-start-1 row-start-2 px-4 sm:pb-16\"><div class=\"\n                        flex\n                        items-center\n                        text-sm\n                        font-medium\n                        my-5\n                        sm:mt-2 sm:mb-4\n                    \"><svg width=\"20\" height=\"20\" fill=\"currentColor\" class=\"text-violet-600\"><path d=\"M9.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118l-2.8-2.034c-.784-.57-.381-1.81.587-1.81H7.03a1 1 0 00.95-.69L9.05 3.69z\"></path></svg><div class=\"ml-1\"><span class=\"text-black\">4.94</span><span class=\"sm:hidden md:inline\">(128)</span></div><div class=\"text-base font-normal mx-2\">·</div><div>Collingwood, Ontario</div></div><hr class=\"w-16 border-gray-300 hidden sm:block\"></div><div class=\"col-start-1 row-start-3 space-y-3 px-4\"><p class=\"flex items-center text-black text-sm font-medium\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"w-6 h-6 rounded-full mr-2 bg-gray-100\"> Owned by Kevin Francis </p><button type=\"button\" class=\"\n                        bg-violet-100\n                        text-violet-700 text-base\n                        font-semibold\n                        px-6\n                        py-2\n                        rounded-lg\n                    \"> Check availability </button></div><div class=\"\n                    col-start-1\n                    row-start-1\n                    flex\n                    sm:col-start-2 sm:row-span-3\n                \"><div class=\"w-full grid grid-cols-3 grid-rows-2 gap-2\"><div class=\"relative col-span-3 row-span-2 md:col-span-2\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"\n                                absolute\n                                inset-0\n                                w-full\n                                h-full\n                                object-cover\n                                bg-gray-100\n                                sm:rounded-lg\n                            \"></div><div class=\"relative hidden md:block\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"\n                                absolute\n                                inset-0\n                                w-full\n                                h-full\n                                object-cover\n                                rounded-lg\n                                bg-gray-100\n                            \"></div><div class=\"relative hidden md:block\"><img src=\"/images/hero_house.jpg\" alt=\"\" class=\"\n                                absolute\n                                inset-0\n                                w-full\n                                h-full\n                                object-cover\n                                rounded-lg\n                                bg-gray-100\n                            \"></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" lets go there "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" hero section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" filter and search design "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" small caurosel cards starts here "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" bigining of first card "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.goldProperties, function (goldProperty) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      key: goldProperty.id,
-      "class": "w-48 bg-white shadow rounded-xl"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      src: goldProperty.images,
-      alt: "Just a flower",
-      "class": "object-cover h-36 w-48 rounded-t-lg"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_8), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(goldProperty.name), 1
-    /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_16, " $" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(goldProperty.price), 1
-    /* TEXT */
-    )])])])])]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" end of one card ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" small caurosel cards ends here ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" grid component "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.platinumProperties, function (platinumProperty) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      key: platinumProperty.id,
-      "class": "flex flex-col"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      src: platinumProperty.images,
-      alt: "Just a flower",
-      "class": "\n                                        max-h-72\n                                        w-full\n                                        object-fill\n                                        rounded-2xl\n                                    "
-    }, null, 8
-    /* PROPS */
-    , _hoisted_22)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [_hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(platinumProperty.landlord.rating), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(platinumProperty.location), 1
-    /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(platinumProperty.name), 1
-    /* TEXT */
-    ), _hoisted_31])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, " $" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(platinumProperty.price), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(platinumProperty.type), 1
-    /* TEXT */
-    )]), _hoisted_35])]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" features section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dl", _hoisted_40, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.features, function (feature) {
+  var _component_hero = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("hero");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" lets go there "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" hero section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_hero, {
+    platinumProperties: $props.platinumProperties,
+    goldProperties: $props.goldProperties
+  }, null, 8
+  /* PROPS */
+  , ["platinumProperties", "goldProperties"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" features section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dl", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.features, function (feature) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: feature.name,
       "class": "relative"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)(feature.icon), {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)(feature.icon), {
       "class": "h-6 w-6",
       "aria-hidden": "true"
-    }))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_42, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(feature.name), 1
+    }))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(feature.name), 1
     /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(feature.description), 1
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(feature.description), 1
     /* TEXT */
     )]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" featured properties section "), _hoisted_44])], 2112
+  ))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" featured properties section "), _hoisted_9])], 2112
   /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
@@ -58919,6 +58925,32 @@ _DropdownLink_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default._
 
 /***/ }),
 
+/***/ "./resources/js/Components/Hero.vue":
+/*!******************************************!*\
+  !*** ./resources/js/Components/Hero.vue ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Hero_vue_vue_type_template_id_6d20fc76__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Hero.vue?vue&type=template&id=6d20fc76 */ "./resources/js/Components/Hero.vue?vue&type=template&id=6d20fc76");
+/* harmony import */ var _Hero_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Hero.vue?vue&type=script&lang=js */ "./resources/js/Components/Hero.vue?vue&type=script&lang=js");
+
+
+
+_Hero_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _Hero_vue_vue_type_template_id_6d20fc76__WEBPACK_IMPORTED_MODULE_0__.render
+/* hot reload */
+if (false) {}
+
+_Hero_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__file = "resources/js/Components/Hero.vue"
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_Hero_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default);
+
+/***/ }),
+
 /***/ "./resources/js/Components/Input.vue":
 /*!*******************************************!*\
   !*** ./resources/js/Components/Input.vue ***!
@@ -59399,6 +59431,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Components/Hero.vue?vue&type=script&lang=js":
+/*!******************************************************************!*\
+  !*** ./resources/js/Components/Hero.vue?vue&type=script&lang=js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_15_use_0_Hero_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_15_use_0_Hero_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./Hero.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Hero.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/Components/Input.vue?vue&type=script&lang=js":
 /*!*******************************************************************!*\
   !*** ./resources/js/Components/Input.vue?vue&type=script&lang=js ***!
@@ -59731,6 +59779,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_15_use_0_DropdownLink_vue_vue_type_template_id_6e0ef414__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_15_use_0_DropdownLink_vue_vue_type_template_id_6e0ef414__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./DropdownLink.vue?vue&type=template&id=6e0ef414 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/DropdownLink.vue?vue&type=template&id=6e0ef414");
+
+
+/***/ }),
+
+/***/ "./resources/js/Components/Hero.vue?vue&type=template&id=6d20fc76":
+/*!************************************************************************!*\
+  !*** ./resources/js/Components/Hero.vue?vue&type=template&id=6d20fc76 ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_15_use_0_Hero_vue_vue_type_template_id_6d20fc76__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_15_use_0_Hero_vue_vue_type_template_id_6d20fc76__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./Hero.vue?vue&type=template&id=6d20fc76 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[15].use[0]!./resources/js/Components/Hero.vue?vue&type=template&id=6d20fc76");
 
 
 /***/ }),

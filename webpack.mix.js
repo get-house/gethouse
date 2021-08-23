@@ -1,10 +1,11 @@
 const mix = require('laravel-mix');
 
-// mix.browserSync({
-//     proxy: 'http://gethouse.test:3000',
-//     host: 'gethouse.test',
-//     open: 'external',
-// });
+mix.options({
+    hmrOptions: {
+        host: 'gethouse.test',
+        port: 8080,
+    },
+});
 
 /*
  |--------------------------------------------------------------------------
