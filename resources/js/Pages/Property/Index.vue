@@ -1,29 +1,33 @@
 <template>
     <div>
         <div
-            class="mx-4
-                    grid
-                    grid-cols-1
-                    xs:grid-cols-2
-                    md:grid-cols-3
-                    justify-center
-                    items-center
-                    gap-8
-                    max-h-72
-                    animated
-                    fadeIn
-                    faster
-                    outline-none
-                    focus:outline-none
-                "
+            class="
+                mx-4
+                my-4
+                grid grid-cols-1
+                xs:grid-cols-2
+                md:grid-cols-3
+                justify-center
+                items-center
+                gap-4
+                animated
+                fadeIn
+                faster
+                outline-none
+                focus:outline-none
+            "
         >
             <!-- bigining of first card -->
-            <div v-for="property in properties" :key="property.id" class="bg-white  shadow rounded-xl">
-                <div  class="flex flex-col justify-center items-center">
+            <div
+                v-for="property in properties"
+                :key="property.id"
+                class="w-[350px] bg-white/40 backdrop-blur-md shadow rounded-xl"
+            >
+                <div class="flex flex-col justify-center items-center">
                     <img
                         :src="property.images"
                         alt="Just a flower"
-                        class="object-cover w-full rounded-t-lg"
+                        class="object-cover w-full h-[300px] rounded-t-lg"
                     />
                     <div class="flex-wrap">
                         <div class="">
@@ -77,23 +81,22 @@
                 </div>
             </div>
             <!-- end of one card -->
-
         </div>
         <!-- small caurosel cards ends here -->
     </div>
 </template>
 
 <script>
+import GuestLayout from '@/Layouts/Guest';
 export default {
-    name: "Index",
-    props:{
-        properties:{
-            type:Object
-        }
-    }
-}
+    layout: GuestLayout,
+    name: 'Index',
+    props: {
+        properties: {
+            type: Object,
+        },
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -586,6 +586,16 @@ video {
 	--tw-sepia: var(--tw-empty,/*!*/ /*!*/);
 	--tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
 	--tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+	--tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+	--tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 [type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
@@ -968,14 +978,14 @@ select {
 .h-10 {
 	height: 2.5rem;
 }
-.h-36 {
-	height: 9rem;
-}
 .h-12 {
 	height: 3rem;
 }
 .h-full {
 	height: 100%;
+}
+.h-\[300px\] {
+	height: 300px;
 }
 .max-h-72 {
 	max-height: 18rem;
@@ -1015,6 +1025,9 @@ select {
 }
 .w-16 {
 	width: 4rem;
+}
+.w-\[350px\] {
+	width: 350px;
 }
 .min-w-0 {
 	min-width: 0px;
@@ -1128,8 +1141,8 @@ select {
 .gap-2 {
 	gap: 0.5rem;
 }
-.gap-8 {
-	gap: 2rem;
+.gap-4 {
+	gap: 1rem;
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
@@ -1301,6 +1314,9 @@ select {
 .bg-violet-100 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+}
+.bg-white\/40 {
+	background-color: rgba(255, 255, 255, 0.4);
 }
 .bg-gradient-to-t {
 	background-image: linear-gradient(to top, var(--tw-gradient-stops));
@@ -1628,6 +1644,11 @@ select {
 }
 .filter {
 	filter: var(--tw-filter);
+}
+.backdrop-blur-md {
+	--tw-backdrop-blur: blur(12px);
+	-webkit-backdrop-filter: var(--tw-backdrop-filter);
+	        backdrop-filter: var(--tw-backdrop-filter);
 }
 .transition {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
