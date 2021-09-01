@@ -16,7 +16,7 @@ class PropertyController extends Controller
      */
     public function index(): Response
     {
-        $properties = Property::all();
+        $properties = Property::with('landlord.user')->paginate();
         return Inertia::render('Property/Index', [
             'properties' => $properties
         ]);
