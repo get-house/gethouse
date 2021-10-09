@@ -11,17 +11,21 @@ class Property extends Model
 {
     use HasFactory;
 
-    public function landlord():BelongsTo
+    protected $cast = [
+        'isVerified' => 'boolean'
+    ];
+
+    public function landlord(): BelongsTo
     {
         return $this->belongsTo(Landlord::class);
     }
 
-    public function agent():BelongsTo
+    public function agent(): BelongsTo
     {
         return $this->belongsTo(Agent::class);
     }
 
-    public function tenant():HasOne
+    public function tenant(): HasOne
     {
         return $this->hasOne(Tenant::class);
     }
