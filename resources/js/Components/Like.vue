@@ -1,6 +1,11 @@
 <template>
     <div class="absolute flex flex-col top-0 right-0 p-3">
         <button
+            v-tooltip.bottom-end="{
+                content:
+                    'Like this property to place <br/> it on your watch list',
+                html: true,
+            }"
             class="
                 transition
                 ease-in
@@ -35,6 +40,6 @@
 
 <script>
 export default {
-    name: 'LikeComponent'
+    name: 'LikeComponent',
 };
 </script>
