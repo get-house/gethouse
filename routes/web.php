@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PropertyController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
