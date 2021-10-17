@@ -13,7 +13,7 @@
                 hover:text-blue-500
                 shadow
                 hover:shadow-md
-                text-red-800
+                text-white
                 rounded-full
                 w-6
                 h-6
