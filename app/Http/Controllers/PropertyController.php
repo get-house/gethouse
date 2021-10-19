@@ -52,7 +52,7 @@ class PropertyController extends Controller
     public function show(Property $property)
     {
        
-        return Inertia::render('Property/Show',['property'=> $property->load('landlord','agent')]);
+        return Inertia::render('Property/Show',['property'=> $property->load('landlord.user','agent.user')]);
     }
 
     /**
