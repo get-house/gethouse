@@ -83,7 +83,7 @@ export default {
         phpVersion: String,
     },
 
-    setup(props) {
+    setup() {
         return {
             features,
         };

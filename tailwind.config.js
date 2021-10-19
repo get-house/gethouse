@@ -32,6 +32,9 @@ module.exports = {
                     900: '#4C1D95',
                 },
             },
+            gridTemplateRows: {
+          '[auto,auto,1fr]': 'auto auto 1fr',
+        },
         },
     },
 
@@ -41,5 +44,8 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio')
+    ],
 };
