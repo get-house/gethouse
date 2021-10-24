@@ -1,6 +1,6 @@
 <template>
-    <div class="my-2 mx-auto container">
-        <h1 class="text-4xl font-bold text-indigo-500">Explore Nearby</h1>
+    <div class="my-4 mx-auto container">
+        <h1 class="mt-10 text-4xl font-bold text-indigo-500">Explore Nearby</h1>
         <div class="grid grid-cols-4 gap-4 mt-6">
             <div class="flex space-x-4 items-center">
                 <img

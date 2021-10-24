@@ -1,7 +1,7 @@
 <template>
     <div
         class="
-            max-h-screen
+            
             grid
             justify-items-center
             lg:grid-cols-5
@@ -188,6 +188,7 @@
                 items-center
                 inset-0
                 z-0
+
                 outline-none
                 focus:outline-none
             "
@@ -200,6 +201,7 @@
                         bg-white/10
                         backdrop-blur-md
                         shadow
+                        
                         rounded-xl
                         p-2
                     "

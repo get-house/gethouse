@@ -3,7 +3,7 @@
         <div
             class="
                 grid grid-cols-1
-                xs:grid-cols-2
+                sm:grid-cols-2
                 md:grid-cols-3
                 justify-items-center
                 items-center
@@ -37,6 +37,11 @@
                                 class="absolute top-0 left-0 p-3"
                             >
                                 <button
+                                v-tooltip.bottom-end="{
+                content:
+                    'This property is verified',
+                html: true,
+            }"
                                     class="
                                         transition
                                         ease-in
