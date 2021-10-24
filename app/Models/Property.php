@@ -11,7 +11,7 @@ class Property extends Model
 {
     use HasFactory;
 
-    protected $cast = [
+    protected $casts = [
         'isVerified' => 'boolean'
     ];
 
