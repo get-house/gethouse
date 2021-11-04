@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -890,13 +890,16 @@ select {
 .col-span-2 {
 	grid-column: span 2 / span 2;
 }
+.col-span-1 {
+	grid-column: span 1 / span 1;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
 }
-.my-2 {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+.my-4 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .mx-2 {
 	margin-left: 0.5rem;
@@ -906,9 +909,9 @@ select {
 	margin-left: 2.5rem;
 	margin-right: 2.5rem;
 }
-.my-4 {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+.my-8 {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -1081,11 +1084,11 @@ select {
 .h-\[300px\] {
 	height: 300px;
 }
-.max-h-screen {
-	max-height: 100vh;
-}
 .max-h-72 {
 	max-height: 18rem;
+}
+.max-h-screen {
+	max-height: 100vh;
 }
 .max-h-60 {
 	max-height: 15rem;
@@ -1339,6 +1342,15 @@ select {
 .overflow-hidden {
 	overflow: hidden;
 }
+.overflow-x-auto {
+	overflow-x: auto;
+}
+.overflow-x-scroll {
+	overflow-x: scroll;
+}
+.overscroll-x-contain {
+	overscroll-behavior-x: contain;
+}
 .truncate {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -1509,6 +1521,10 @@ select {
 .bg-blue-400 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+}
+.bg-gray-400 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 }
 .object-cover {
 	-o-object-fit: cover;
@@ -1713,12 +1729,6 @@ select {
 .leading-none {
 	line-height: 1;
 }
-<<<<<<< HEAD
-=======
-.tracking-wider {
-	letter-spacing: 0.05em;
-}
->>>>>>> main
 .tracking-widest {
 	letter-spacing: 0.1em;
 }
@@ -1779,17 +1789,13 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
-.text-blue-400 {
+.text-indigo-500 {
 	--tw-text-opacity: 1;
-	color: rgba(96, 165, 250, var(--tw-text-opacity));
+	color: rgba(99, 102, 241, var(--tw-text-opacity));
 }
 .text-red-600 {
 	--tw-text-opacity: 1;
 	color: rgba(220, 38, 38, var(--tw-text-opacity));
-}
-.text-red-800 {
-	--tw-text-opacity: 1;
-	color: rgba(153, 27, 27, var(--tw-text-opacity));
 }
 .text-gray-800 {
 	--tw-text-opacity: 1;
@@ -2152,12 +2158,6 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
-@media (min-width: 475px) {
-
-	.xs\:grid-cols-2 {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
 @media (min-width: 640px) {
 
 	.sm\:-my-px {
@@ -2199,6 +2199,10 @@ select {
 
 	.sm\:grid-cols-1 {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+
+	.sm\:grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.sm\:items-center {
