@@ -94,69 +94,69 @@
                         overscroll-x-contain
                     "
                 >
-                    <a href="#slider-1">
+                    <Link href="#slider-1" preserveScroll>
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-2">
+                    <Link href="#slider-2">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-3">
+                    <Link href="#slider-3">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-4">
+                    <Link href="#slider-4">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-5">
+                    <Link href="#slider-5">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-6">
+                    <Link href="#slider-6">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-7">
+                    <Link href="#slider-7">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
 
-                    <a href="#slider-8">
+                    <Link href="#slider-8">
                         <img
                             src="/images/hero_house.jpg"
                             alt=""
                             class="w-40 rounded"
                         />
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div class="col-span-1 bg-gray-400 px-2">
@@ -173,10 +173,11 @@
 
 <script>
 import GuestLayout from '@/Layouts/Guest.vue';
+import { Link } from '@inertiajs/inertia-vue3';
 
 export default {
     layout: GuestLayout,
-    components: {},
+    components: { Link },
     props: {
         property: Object,
     },
