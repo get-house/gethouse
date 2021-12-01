@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <title>Welcome</title>
+    </Head>
     <!-- lets go there -->
     <div>
         <!-- hero section -->
