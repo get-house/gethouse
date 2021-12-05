@@ -2,35 +2,25 @@
     <Head>
         <title>properties</title>
     </Head>
+    <div class="flex justify-between mx-10 mt-4">
+        <h1 class="text-2xl">Properties</h1>
+        <input
+            v-model="search"
+            type="text"
+            placeholder="Search"
+            class="border px-2 rounded-lg"
+        />
+    </div>
     <div
-        class="
-            grid grid-cols-1
-            sm:grid-cols-2
-            md:grid-cols-3
-            justify-items-center
-            items-center
-            gap-y-6
-            animated
-            fadeIn
-            faster
-            outline-none
-            focus:outline-none
-        "
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center items-center gap-y-6 animated fadeIn faster outline-none focus:outline-none"
     >
         <!-- bigining of first card -->
         <div
             v-for="property in properties.data"
             :key="property.id"
-            class="
-                w-[380px]
-                my-4
-                bg-white/40
-                backdrop-blur-md
-                shadow
-                rounded-xl
-            "
+            class="w-[380px] my-4 bg-white/40 backdrop-blur-md shadow rounded-xl"
         >
-            <Link :href="route('property.show', property.id)">
+            <Link :href="route('properties.show', property.id)">
                 <div class="flex flex-col justify-center text-center">
                     <div class="relative">
                         <Like />
@@ -43,19 +33,7 @@
                                     content: 'This property is verified',
                                     html: true,
                                 }"
-                                class="
-                                    transition
-                                    ease-in
-                                    duration-300
-                                    hover:text-green-600
-                                    shadow
-                                    hover:shadow-md
-                                    text-green-800
-                                    rounded-full
-                                    w-6
-                                    h-6
-                                    text-center
-                                "
+                                class="transition ease-in duration-300 hover:text-green-600 shadow hover:shadow-md text-green-800 rounded-full w-6 h-6 text-center"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -78,31 +56,10 @@
                             class="object-cover w-full h-[300px] rounded-t-lg"
                         />
                         <div
-                            class="
-                                absolute
-                                bottom-0
-                                pb-2
-                                opacity-0
-                                hover:opacity-100
-                                bg-white/60
-                                backdrop-blur-xl
-                                transition
-                                duration-700
-                                ease-in-out
-                            "
+                            class="absolute bottom-0 pb-2 opacity-0 hover:opacity-100 bg-white/60 backdrop-blur-xl transition duration-700 ease-in-out"
                         >
                             <p
-                                class="
-                                    text-gray-900
-                                    mt-2
-                                    pt-2
-                                    transition
-                                    transform
-                                    hover:-translate-y-2
-                                    duration-1000
-                                    ease-in-out
-                                    z-10
-                                "
+                                class="text-gray-900 mt-2 pt-2 transition transform hover:-translate-y-2 duration-1000 ease-in-out z-10"
                             >
                                 {{ property.description }}
                             </p>
@@ -121,20 +78,10 @@
                             </h4>
                         </div>
                         <div
-                            class="
-                                grid grid-cols-3
-                                justify-items-center
-                                items-center
-                            "
+                            class="grid grid-cols-3 justify-items-center items-center"
                         >
                             <div
-                                class="
-                                    flex flex-col
-                                    justify-center
-                                    items-center
-                                    space-y-1
-                                    mb-2
-                                "
+                                class="flex flex-col justify-center items-center space-y-1 mb-2"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -157,37 +104,20 @@
                                     ></path>
                                 </svg>
                                 <p
-                                    class="
-                                        bg-blue-500
-                                        text-white
-                                        rounded-lg
-                                        shadow
-                                        px-2
-                                    "
+                                    class="bg-blue-500 text-white rounded-lg shadow px-2"
                                 >
                                     {{ property.location.substring(0, 10) }}
                                 </p>
                             </div>
                             <div class="text-gray-500">
                                 Type:<span
-                                    class="
-                                        bg-blue-400
-                                        rounded-full
-                                        shadow
-                                        text-white
-                                        ml-1
-                                        p-1
-                                    "
+                                    class="bg-blue-400 rounded-full shadow text-white ml-1 p-1"
                                 >
                                     {{ property.type.substring(0, 6) }}</span
                                 >
                             </div>
                             <div
-                                class="
-                                    flex flex-col
-                                    justify-center
-                                    items-center
-                                "
+                                class="flex flex-col justify-center items-center"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -223,12 +153,29 @@
 
 <script setup>
 import Like from '@/Components/Like';
+import { Inertia } from '@inertiajs/inertia';
+import { ref } from '@vue/reactivity';
+import { watch } from '@vue/runtime-core';
 
-defineProps({
-    properties: {
-        type: Object,
-        default: () => ({}),
-    },
+let props = defineProps({
+    properties: Object,
+    filters: Object,
+});
+
+let search = ref(props.filters.search);
+
+watch(search, (value) => {
+    Inertia.get(
+        '/properties',
+        {
+            search: value,
+        },
+
+        {
+            preserveState: true,
+            replace: true,
+        }
+    );
 });
 </script>
 
