@@ -17,7 +17,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [HomepageController::class, 'index'])->name('home');
-Route::resource('/property', PropertyController::class);
+Route::resource('/properties', PropertyController::class);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
