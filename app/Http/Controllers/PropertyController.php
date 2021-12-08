@@ -14,11 +14,18 @@ class PropertyController extends Controller
      *
      * @return Response
      */
-    public function index(): Response
+    public function index(Request $request): Response
     {
-        $properties = Property::with('landlord.user')->paginate();
+
         return Inertia::render('Property/Index', [
-            'properties' => $properties
+            'properties' => Property::query()
+                ->when($request->input('search'), function ($query, $search) {
+                    $query->where('name', 'like', "%{$search}%");
+                })
+                ->with('landlord.user')
+                ->paginate()
+                ->withQueryString(),
+            'filters' => $request->only(['search']),
         ]);
     }
 
@@ -51,8 +58,8 @@ class PropertyController extends Controller
      */
     public function show(Property $property)
     {
-       
-        return Inertia::render('Property/Show',['property'=> $property->load('landlord.user','agent.user')]);
+
+        return Inertia::render('Property/Show', ['property' => $property->load('landlord.user', 'agent.user')]);
     }
 
     /**
