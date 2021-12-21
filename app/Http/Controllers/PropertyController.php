@@ -16,15 +16,21 @@ class PropertyController extends Controller
      */
     public function index(Request $request): Response
     {
+        $properties = Property::query()
+            ->when($request->input('search'), function ($query, $search) {
+                $query->where('name', 'like', "%{$search}%");
+            })
+            ->with('landlord.user')
+            ->paginate()
+            ->appends($request->query());
+
+        if ($request->wantsJson()) {
+            return $properties;
+        }
+
 
         return Inertia::render('Property/Index', [
-            'properties' => Property::query()
-                ->when($request->input('search'), function ($query, $search) {
-                    $query->where('name', 'like', "%{$search}%");
-                })
-                ->with('landlord.user')
-                ->paginate()
-                ->withQueryString(),
+            'properties' => $properties,
             'filters' => $request->only(['search']),
         ]);
     }
@@ -36,7 +42,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Property/Create');
     }
 
     /**
