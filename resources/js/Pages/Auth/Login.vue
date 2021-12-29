@@ -1,5 +1,6 @@
 <template>
     <div>
+        <toast></toast>
         <breeze-validation-errors class="mb-4" />
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
@@ -64,20 +65,22 @@
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3";
-import BreezeButton from "@/Components/Button";
-import BreezeGuestLayout from "@/Layouts/Guest";
-import BreezeInput from "@/Components/Input";
-import BreezeCheckbox from "@/Components/Checkbox";
-import BreezeLabel from "@/Components/Label";
-import BreezeValidationErrors from "@/Components/ValidationErrors";
-import GuestLayout from "@/Layouts/Guest";
+import { Link } from '@inertiajs/inertia-vue3';
+import Toast from '@/Components/Toast';
+import BreezeButton from '@/Components/Button';
+import BreezeGuestLayout from '@/Layouts/Guest';
+import BreezeInput from '@/Components/Input';
+import BreezeCheckbox from '@/Components/Checkbox';
+import BreezeLabel from '@/Components/Label';
+import BreezeValidationErrors from '@/Components/ValidationErrors';
+import GuestLayout from '@/Layouts/Guest';
 
 export default {
     layout: GuestLayout,
 
     components: {
         Link,
+        Toast,
         BreezeButton,
         BreezeInput,
         BreezeCheckbox,
@@ -95,8 +98,8 @@ export default {
     data() {
         return {
             form: this.$inertia.form({
-                email: "",
-                password: "",
+                email: '',
+                password: '',
                 remember: false,
             }),
         };
@@ -104,8 +107,8 @@ export default {
 
     methods: {
         submit() {
-            this.form.post(this.route("login"), {
-                onFinish: () => this.form.reset("password"),
+            this.form.post(this.route('login'), {
+                onFinish: () => this.form.reset('password'),
             });
         },
     },

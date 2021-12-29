@@ -6,19 +6,7 @@
                     'Like this property to place <br/> it on your watch list',
                 html: true,
             }"
-            class="
-                transition
-                ease-in
-                duration-300
-                hover:text-blue-500
-                shadow
-                hover:shadow-md
-                text-white
-                rounded-full
-                w-6
-                h-6
-                text-center
-            "
+            class="transition ease-in duration-300 hover:text-purple-600 shadow hover:shadow-md text-purple-400 rounded-full w-6 h-6 text-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -4,6 +4,7 @@
     </Head>
     <div class="flex justify-between mx-10 mt-4">
         <h1 class="text-2xl">Properties</h1>
+        <toast> </toast>
         <input
             v-model="search"
             type="text"
@@ -14,11 +15,10 @@
     </div>
     <div
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center items-center gap-y-6 animated fadeIn faster outline-none focus:outline-none"
-        ref="scrollComponent"
     >
         <!-- bigining of first card -->
         <div
-            v-for="property in updatedProperties.data"
+            v-for="property in properties.data"
             :key="property.id"
             class="w-[380px] my-4 bg-white/40 backdrop-blur-md shadow rounded-xl"
         >
@@ -52,7 +52,14 @@
                             </button>
                         </div>
 
+                        <div v-if="property.media.length">
+                            <img
+                                :src="property.media[0].full_url"
+                                class="object-cover w-full h-[300px] rounded-t-lg"
+                            />
+                        </div>
                         <img
+                            v-else
                             src="/images/hero_house.jpg"
                             alt="Just a flower"
                             class="object-cover w-full h-[300px] rounded-t-lg"
@@ -147,6 +154,11 @@
                     </div>
                 </div>
             </Link>
+            <!-- <div v-if="property.media.length">
+                <div v-for="(item, index) in property.media">
+                    <img :src="item.full_url" alt="" />
+                </div>
+            </div> -->
         </div>
         <!-- end of one card -->
     </div>
@@ -155,10 +167,10 @@
 
 <script setup>
 import Like from '@/Components/Like';
+import Toast from '@/Components/Toast';
 import { Inertia } from '@inertiajs/inertia';
 import { ref } from '@vue/reactivity';
-import { watch, onMounted, onUnmounted } from '@vue/runtime-core';
-import axios from 'axios';
+import { onMounted, watch } from '@vue/runtime-core';
 
 let props = defineProps({
     properties: Object,
@@ -166,20 +178,6 @@ let props = defineProps({
 });
 
 let search = ref(props.filters.search);
-let updatedProperties = ref(props.properties);
-let scrollComponent = ref(null);
-
-const loadMoreProperties = () => {
-    let newProperties = axios
-        .get(`/properties?page=${updatedProperties.value.current_page + 1}`)
-        .then((response) => {
-            console.log(response);
-            updatedProperties.value.data = updatedProperties.value.data.concat(
-                response.data.data
-            );
-            updatedProperties.value.next_page_url = response.data.next_page_url;
-        });
-};
 
 watch(search, (value) => {
     Inertia.get(
@@ -194,23 +192,6 @@ watch(search, (value) => {
         }
     );
 });
-
-onMounted(() => {
-    console.log('mounted the dom');
-    window.addEventListener('scroll', handlescroll);
-});
-
-// onUnmounted(() => {
-//     console.log('Dom Unmounted');
-//     windows.removeEventListener('scroll', handlescroll);
-// });
-
-const handlescroll = (e) => {
-    let element = scrollComponent.value;
-    if (element.getBoundingClientRect().bottom <= window.innerHeight) {
-        loadMoreProperties();
-    }
-};
 </script>
 
 <style scoped></style>
