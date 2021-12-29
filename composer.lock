@@ -5041,7 +5041,27 @@
         },
         {
             "name": "symfony/translation",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "version": "v6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "5e3848083ef1abc4814be154095946b8193f41d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/5e3848083ef1abc4814be154095946b8193f41d6",
+                "reference": "5e3848083ef1abc4814be154095946b8193f41d6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+=======
+            "version": "v5.4.0",
+=======
             "version": "v6.0.1",
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -5054,23 +5074,46 @@
                 "shasum": ""
             },
             "require": {
+<<<<<<< HEAD
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
+>>>>>>> 34085372ddb538877b4285c26f9e8cffa337d9bc
+=======
                 "php": ">=8.0.2",
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/translation-contracts": "^2.3|^3.0"
             },
             "conflict": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
                 "symfony/config": "<5.4",
                 "symfony/console": "<5.4",
                 "symfony/dependency-injection": "<5.4",
                 "symfony/http-kernel": "<5.4",
                 "symfony/twig-bundle": "<5.4",
                 "symfony/yaml": "<5.4"
+<<<<<<< HEAD
+=======
+                "symfony/config": "<4.4",
+                "symfony/console": "<5.3",
+                "symfony/dependency-injection": "<5.0",
+                "symfony/http-kernel": "<5.0",
+                "symfony/twig-bundle": "<5.0",
+                "symfony/yaml": "<4.4"
+>>>>>>> 34085372ddb538877b4285c26f9e8cffa337d9bc
+=======
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
             },
             "provide": {
                 "symfony/translation-implementation": "2.3|3.0"
             },
             "require-dev": {
                 "psr/log": "^1|^2|^3",
+<<<<<<< HEAD
+<<<<<<< HEAD
                 "symfony/config": "^5.4|^6.0",
                 "symfony/console": "^5.4|^6.0",
                 "symfony/dependency-injection": "^5.4|^6.0",
@@ -5081,6 +5124,25 @@
                 "symfony/polyfill-intl-icu": "^1.21",
                 "symfony/service-contracts": "^1.1.2|^2|^3",
                 "symfony/yaml": "^5.4|^6.0"
+=======
+                "symfony/config": "^4.4|^5.0|^6.0",
+=======
+                "symfony/config": "^5.4|^6.0",
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
+                "symfony/console": "^5.4|^6.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/finder": "^5.4|^6.0",
+                "symfony/http-client-contracts": "^1.1|^2.0|^3.0",
+                "symfony/http-kernel": "^5.4|^6.0",
+                "symfony/intl": "^5.4|^6.0",
+                "symfony/polyfill-intl-icu": "^1.21",
+                "symfony/service-contracts": "^1.1.2|^2|^3",
+<<<<<<< HEAD
+                "symfony/yaml": "^4.4|^5.0|^6.0"
+>>>>>>> 34085372ddb538877b4285c26f9e8cffa337d9bc
+=======
+                "symfony/yaml": "^5.4|^6.0"
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
             },
             "suggest": {
                 "psr/log-implementation": "To use logging capability in translator",
@@ -5116,7 +5178,15 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+                "source": "https://github.com/symfony/translation/tree/v6.0.0"
+=======
+                "source": "https://github.com/symfony/translation/tree/v5.4.0"
+>>>>>>> 34085372ddb538877b4285c26f9e8cffa337d9bc
+=======
                 "source": "https://github.com/symfony/translation/tree/v6.0.1"
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
             },
             "funding": [
                 {
@@ -5132,7 +5202,15 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "time": "2021-11-29T15:32:57+00:00"
+=======
+            "time": "2021-11-29T15:30:56+00:00"
+>>>>>>> 34085372ddb538877b4285c26f9e8cffa337d9bc
+=======
             "time": "2021-12-08T15:13:44+00:00"
+>>>>>>> ddf8a4d2c614a8b2ef032cd2f228fa7e9585445d
         },
         {
             "name": "symfony/translation-contracts",
