@@ -4,11 +4,13 @@
     </Head>
     <div class="flex justify-between mx-10 mt-4">
         <h1 class="text-2xl">Properties</h1>
+        <toast> </toast>
         <input
             v-model="search"
             type="text"
             placeholder="Search"
             class="border px-2 rounded-lg"
+            id="search"
         />
     </div>
     <div
@@ -50,7 +52,14 @@
                             </button>
                         </div>
 
+                        <div v-if="property.media.length">
+                            <img
+                                :src="property.media[0].full_url"
+                                class="object-cover w-full h-[300px] rounded-t-lg"
+                            />
+                        </div>
                         <img
+                            v-else
                             src="/images/hero_house.jpg"
                             alt="Just a flower"
                             class="object-cover w-full h-[300px] rounded-t-lg"
@@ -145,6 +154,11 @@
                     </div>
                 </div>
             </Link>
+            <!-- <div v-if="property.media.length">
+                <div v-for="(item, index) in property.media">
+                    <img :src="item.full_url" alt="" />
+                </div>
+            </div> -->
         </div>
         <!-- end of one card -->
     </div>
@@ -153,9 +167,10 @@
 
 <script setup>
 import Like from '@/Components/Like';
+import Toast from '@/Components/Toast';
 import { Inertia } from '@inertiajs/inertia';
 import { ref } from '@vue/reactivity';
-import { watch } from '@vue/runtime-core';
+import { onMounted, watch } from '@vue/runtime-core';
 
 let props = defineProps({
     properties: Object,

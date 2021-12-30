@@ -1,29 +1,10 @@
 <template>
     <div class="grid grid-cols-4 max-h-screen">
         <div
-            class="
-                ml-10
-                h-[650px]
-                w-[320px]
-                bg-black
-                rounded-[60px]
-                border-[14px] border-black
-                relative
-                overflow-hidden
-                ring ring-purple-400
-                shadow-xl
-            "
+            class="ml-10 h-[650px] w-[320px] bg-black rounded-[60px] border-[14px] border-black relative overflow-hidden ring ring-purple-400 shadow-xl"
         >
             <img
-                class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    bg-pink-400
-                    opacity-50
-                "
+                class="absolute inset-0 h-full w-full object-cover bg-pink-400 opacity-50"
                 src="https://wallpapers.hector.me/wavey/Rainbow%20iPhone%20P3.jpg"
             />
             <div class="absolute top-0 inset-x-0">
@@ -92,43 +73,14 @@
                 <div class="relative mt-4 mx-2">
                     <!-- Stacked panels (sitting below) -->
                     <div
-                        class="
-                            absolute
-                            -bottom-4
-                            scale-[0.85]
-                            origin-bottom
-                            inset-x-0
-                            h-full
-                            w-full
-                            bg-white/10
-                            backdrop-blur-md
-                            rounded-2xl
-                        "
+                        class="absolute -bottom-4 scale-[0.85] origin-bottom inset-x-0 h-full w-full bg-white/10 backdrop-blur-md rounded-2xl"
                     ></div>
                     <div
-                        class="
-                            absolute
-                            -bottom-2
-                            scale-95
-                            origin-bottom
-                            inset-x-0
-                            h-full
-                            w-full
-                            bg-white/30
-                            backdrop-blur-md
-                            rounded-3xl
-                            shadow-sm
-                        "
+                        class="absolute -bottom-2 scale-95 origin-bottom inset-x-0 h-full w-full bg-white/30 backdrop-blur-md rounded-3xl shadow-sm"
                     ></div>
                     <!-- Main, current panel -->
                     <div
-                        class="
-                            p-4
-                            bg-white/40
-                            backdrop-blur-md
-                            rounded-3xl
-                            shadow
-                        "
+                        class="p-4 bg-white/40 backdrop-blur-md rounded-3xl shadow"
                     >
                         <div class="flex justify-between items-start">
                             <div>
@@ -138,16 +90,7 @@
                                 </h2>
                             </div>
                             <span
-                                class="
-                                    bg-gray-500
-                                    h-8
-                                    w-8
-                                    rounded-full
-                                    text-white
-                                    flex
-                                    items-center
-                                    justify-center
-                                "
+                                class="bg-gray-500 h-8 w-8 rounded-full text-white flex items-center justify-center"
                                 >11</span
                             >
                         </div>
@@ -194,12 +137,7 @@
                                 </p>
                             </div>
                             <ul
-                                class="
-                                    flex
-                                    -space-x-4
-                                    flex-row-reverse
-                                    space-x-reverse
-                                "
+                                class="flex -space-x-4 flex-row-reverse space-x-reverse"
                             >
                                 <li>
                                     <img
@@ -218,7 +156,7 @@
                                 <li>
                                     <img
                                         class="h-8 w-8 rounded-xl object-cover"
-                                        src="https://www.engmanagement.dev/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fsarah-drasner%402x.fa3f0a5d32f918fbe0918080d2767ad7.jpg&w=384&q=95"
+                                        src="https://images.unsplash.com/photo-1616776005756-4dca36124bf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                                         alt=""
                                     />
                                 </li>
@@ -231,13 +169,7 @@
             <div class="absolute bottom-0 inset-x-0 h-20">
                 <div class="px-10 pt-6 flex justify-between">
                     <button
-                        class="
-                            bg-gray-800/40
-                            backdrop-blur-md
-                            text-white
-                            rounded-full
-                            p-2
-                        "
+                        class="bg-gray-800/40 backdrop-blur-md text-white rounded-full p-2"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -251,13 +183,7 @@
                         </svg>
                     </button>
                     <button
-                        class="
-                            bg-gray-800/40
-                            backdrop-blur-md
-                            text-white
-                            rounded-full
-                            p-2
-                        "
+                        class="bg-gray-800/40 backdrop-blur-md text-white rounded-full p-2"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
