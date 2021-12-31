@@ -1097,6 +1097,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/e03f8a7f4bcd99ec67e56428e4fc7424de4cefa8",
                 "reference": "e03f8a7f4bcd99ec67e56428e4fc7424de4cefa8",
+
                 "shasum": ""
             },
             "require": {
@@ -1144,7 +1145,9 @@
             ],
             "support": {
                 "issues": "https://github.com/itsgoingd/clockwork/issues",
+
                 "source": "https://github.com/itsgoingd/clockwork/tree/v5.1.3"
+
             },
             "funding": [
                 {
@@ -1152,7 +1155,9 @@
                     "type": "github"
                 }
             ],
+
             "time": "2021-12-24T12:24:20+00:00"
+
         },
         {
             "name": "laravel/framework",
@@ -6145,6 +6150,7 @@
         },
         {
             "name": "laravel/sail",
+
             "version": "v1.12.12",
             "source": {
                 "type": "git",
@@ -6155,6 +6161,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/c60773f04f093bd1d2f3b99ff9e5a1aa5b05b8b6",
                 "reference": "c60773f04f093bd1d2f3b99ff9e5a1aa5b05b8b6",
+
                 "shasum": ""
             },
             "require": {
@@ -6202,6 +6209,7 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2021-12-16T14:58:08+00:00"
+
         },
         {
             "name": "mockery/mockery",
