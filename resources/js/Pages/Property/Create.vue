@@ -54,6 +54,7 @@
                                             id="name"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
                                             placeholder="3 Bedroom flat"
+                                            required
                                         />
                                     </div>
                                     <div
@@ -83,6 +84,7 @@
                                             id="price"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                                             placeholder="200,000"
+                                            required
                                         />
                                     </div>
                                     <div
@@ -107,6 +109,7 @@
                                             id="type"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
                                             placeholder="flat, bungalow, land, motel, guest inn, ...."
+                                            required
                                         />
                                     </div>
                                     <div
@@ -131,6 +134,7 @@
                                             id="feature"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
                                             placeholder="fully furnished, semi furnished, unfurnished"
+                                            required
                                         />
                                     </div>
                                     <div
@@ -155,6 +159,7 @@
                                             id="location"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
                                             placeholder="fully furnished, semi furnished, unfurnished"
+                                            required
                                         />
                                     </div>
                                     <div
@@ -181,6 +186,7 @@
                                             id="period_of_availability"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
                                             placeholder="fully furnished, semi furnished, unfurnished"
+                                            required
                                         />
                                     </div>
                                     <div
@@ -207,6 +213,7 @@
                                             id="urgency"
                                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
                                             placeholder="fully furnished, semi furnished, unfurnished"
+                                            required
                                         />
                                     </div>
                                     <div
@@ -231,8 +238,9 @@
                                         id="description"
                                         name="description"
                                         rows="3"
-                                        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                                        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md resize-x"
                                         placeholder="this property is a fully furnished 3 bedroom flat with power and water"
+                                        required
                                     />
                                     <div
                                         v-if="form.errors"
@@ -304,6 +312,7 @@
                                 v-if="!form.processing"
                                 type="submit"
                                 class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                :disabled="!canSubmit"
                             >
                                 Save
                             </button>
@@ -348,7 +357,7 @@ import { useForm } from '@inertiajs/inertia-vue3';
 import FileInput from '@/components/FileInput';
 
 import axios from 'axios';
-import { ref } from '@vue/reactivity';
+import { computed, ref } from '@vue/reactivity';
 
 let form = useForm({
     name: null,
@@ -363,31 +372,6 @@ let form = useForm({
 });
 
 let photo = ref([]);
-
-let cantSubmit = () => {
-    return photo.value.every((item) => item.loading);
-};
-
-let submit = () => {
-    form.photoIds = photo.value.map((item) => item.id);
-    form.post('/properties', form, {
-        preserveState: true,
-        //set the form to processing on start event
-        onStart: () => {
-            form.processing = true;
-        },
-        //set the form to not processing on finish event
-        onFinish: () => {
-            form.processing = false;
-        },
-        //check if there is no error on success event and clear the form
-        onSuccess: () => {
-            console.log('success');
-            form.reset();
-            photo.value = [];
-        },
-    });
-};
 
 let uploadMedia = (files) => {
     Array.from(files).forEach((media) => {
@@ -429,5 +413,30 @@ const removeMedia = (index, item) => {
         });
     }
 };
+
+let submit = () => {
+    form.photoIds = photo.value.map((item) => item.id);
+    form.post('/properties', form, {
+        preserveState: true,
+        //set the form to processing on start event
+        onStart: () => {
+            form.processing = true;
+        },
+        //set the form to not processing on finish event
+        onFinish: () => {
+            form.processing = false;
+        },
+        //check if there is no error on success event and clear the form
+        onSuccess: () => {
+            console.log('success');
+            form.reset();
+            photo.value = [];
+        },
+    });
+};
+
+const canSubmit = computed(() => {
+    return photo.value.every((item) => !item.loading);
+});
 </script>
 <style scoped></style>

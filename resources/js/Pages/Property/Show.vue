@@ -1,31 +1,8 @@
-<!--
-  This example r
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
 <template>
     <Head title="property" />
-    <div class="pt-6 grid grid-cols-4 justify-items-center">
-        <div class="col-span-3">
-            <div class="example mx-10 flex overflow-x-auto">
+    <div class="pt-6 grid grid-cols-1 md:grid-cols-4 justify-items-center">
+        <div class="md:col-span-3 mx-10">
+            <div class="example flex overflow-hidden">
                 <img
                     id="slider-1"
                     src="/images/hero_house.jpg"
@@ -83,16 +60,7 @@
                 />
             </div>
             <div
-                class="
-                    example
-                    flex
-                    justify-center
-                    space-x-4
-                    my-8
-                    mx-10
-                    overflow-x-scroll
-                    overscroll-x-contain
-                "
+                class="example flex justify-center space-x-4 my-8 overflow-x-scroll overscroll-x-contain"
             >
                 <Link href="#slider-1" preserveScroll>
                     <img
@@ -158,8 +126,46 @@
                     />
                 </Link>
             </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 justify-items-start my-4"
+            >
+                <div class="flex space-x-4">
+                    <p class="text-slate-500">property verified</p>
+                    <span>
+                        <BadgeCheckIcon class="w-6 h-6 text-indigo-500" />
+                    </span>
+                    <span>
+                        <XCircleIcon class="w-6 h-6 text-rose-500" />
+                    </span>
+                </div>
+                <div class="justify-self-end flex space-x-3">
+                    <p>add to favourite</p>
+                    <button type="button">
+                        <HeartIcon
+                            class="w-6 h-6 text-indigo-300 hover:text-indigo-500"
+                        />
+                    </button>
+
+                    <p>share</p>
+                    <span>
+                        <ShareIcon
+                            class="w-6 h-6 text-indigo-300 hover:text-indigo-500"
+                        />
+                    </span>
+                </div>
+            </div>
+            <h2 class="text-gray-800 text-xl font-semibold my-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+                velit unde incidunt hic id. Ipsa, quod.
+            </h2>
+            <p class="flex space-x-2 my-4 text-slate-500">
+                karuma, abuja
+                <span>
+                    <LocationMarkerIcon class="w-6 h-6 text-indigo-400" />
+                </span>
+            </p>
         </div>
-        <div class="col-span-1 bg-gray-400 px-2">
+        <div class="md:col-span-1 bg-gray-400 px-2">
             <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                 aut quibusdam reiciendis debitis rem rerum impedit dignissimos
@@ -171,22 +177,19 @@
 </template>
 
 <script setup>
+import {
+    BadgeCheckIcon,
+    XCircleIcon,
+    HeartIcon,
+    ShareIcon,
+} from '@heroicons/vue/solid';
+
+import { LocationMarkerIcon } from '@heroicons/vue/solid';
+
 defineProps: ({
     property: Object,
 });
 </script>
 <style scoped>
 /* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.example {
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
 </style>
