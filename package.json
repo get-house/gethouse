@@ -37,6 +37,7 @@
         "@heroicons/vue": "^1.0.1",
         "@prettier/plugin-php": "^0.17.3",
         "prettier": "^2.3.2",
-        "v-tooltip": "^4.0.0-alpha.1"
+        "v-tooltip": "^4.0.0-alpha.1",
+        "vue3-date-time-picker": "^2.4.4"
     }
 }
