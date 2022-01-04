@@ -2,130 +2,7 @@
     <Head title="property" />
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-6">
         <div class="md:col-span-3 mx-6">
-            <div class="example flex overflow-hidden">
-                <img
-                    id="slider-1"
-                    src="/images/hero_house.jpg"
-                    alt="house"
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-2"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-3"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-4"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-5"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-6"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-7"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-
-                <img
-                    id="slider-8"
-                    src="/images/hero_house.jpg"
-                    alt=""
-                    class="object-cover flex-shrink-0 w-full rounded"
-                />
-            </div>
-            <div
-                class="scrollbar-none flex justify-center space-x-4 my-8 overflow-x-scroll overscroll-x-contain"
-            >
-                <Link href="#slider-1" preserveScroll>
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-2">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-3">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-4">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-5">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-6">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-7">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-
-                <Link href="#slider-8">
-                    <img
-                        src="/images/hero_house.jpg"
-                        alt=""
-                        class="w-40 rounded"
-                    />
-                </Link>
-            </div>
+            <ImageGallery />
             <div
                 class="grid grid-cols-1 md:grid-cols-2 justify-items-start my-4"
             >
@@ -767,6 +644,7 @@ import {
 import { ref } from 'vue';
 import Datepicker from 'vue3-date-time-picker';
 import 'vue3-date-time-picker/dist/main.css';
+import ImageGallery from '@/Components/ImageGallery';
 
 defineProps: ({
     property: Object,

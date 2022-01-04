@@ -63,8 +63,6 @@
 </template>
 
 <script setup>
-import { defineEmits } from 'vue';
-
 const emit = defineEmits(['input']);
 const change = (e) => {
     emit('input', e.target.files);
