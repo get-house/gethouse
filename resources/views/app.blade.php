@@ -21,6 +21,12 @@
 
 <body class="font-sans antialiased">
     @inertia
+
+    @env(['local','staging'])
+
+    <x-responsive-helper />
+    @endenv
+
 </body>
 
 </html>
