@@ -1,15 +1,6 @@
 <template>
     <div
-        class="
-            bg-white/10
-            backdrop-blur-md
-            rounded-full
-            my-4
-            h-14
-            flex
-            gap-10
-            shadow
-        "
+        class="hidden bg-white/10 backdrop-blur-md rounded-full my-4 h-14 sm:flex gap-10 shadow"
     >
         <div class="flex flex-col text-center">
             <!-- <label class="text-xs">city/street</label>
@@ -20,38 +11,13 @@
                 <ListboxLabel>location:</ListboxLabel>
                 <div class="relative">
                     <ListboxButton
-                        class="
-                            relative
-                            w-full
-                            py-1
-                            pl-3
-                            pr-10
-                            text-left text-gray-800
-                            rounded-lg
-                            cursor-default
-                            focus:outline-none
-                            focus-visible:ring-2
-                            focus-visible:ring-opacity-75
-                            focus-visible:ring-white
-                            focus-visible:ring-offset-orange-300
-                            focus-visible:ring-offset-2
-                            focus-visible:border-indigo-500
-                            sm:text-sm
-                        "
+                        class="relative w-full py-1 pl-3 pr-10 text-left text-gray-800 rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm"
                     >
                         <span class="block truncate">{{
                             selectedPerson.name
                         }}</span>
                         <span
-                            class="
-                                absolute
-                                inset-y-0
-                                right-0
-                                flex
-                                items-center
-                                pr-2
-                                pointer-events-none
-                            "
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                         >
                             <SelectorIcon
                                 class="w-5 h-5 text-gray-400"
@@ -66,21 +32,7 @@
                         leave-to-class="opacity-0"
                     >
                         <ListboxOptions
-                            class="
-                                absolute
-                                w-full
-                                py-1
-                                mt-1
-                                overflow-auto
-                                text-base
-                                bg-white
-                                rounded-md
-                                shadow-lg
-                                max-h-60
-                                ring-1 ring-black ring-opacity-5
-                                focus:outline-none
-                                sm:text-sm
-                            "
+                            class="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
                         >
                             <ListboxOption
                                 v-slot="{ active, selected }"
@@ -108,14 +60,7 @@
                                     >
                                     <span
                                         v-if="selected"
-                                        class="
-                                            absolute
-                                            inset-y-0
-                                            left-0
-                                            flex
-                                            items-center
-                                            text-indigo-600
-                                        "
+                                        class="absolute inset-y-0 left-0 flex items-center text-indigo-600"
                                     >
                                         <CheckIcon
                                             class="w-5 h-5"
@@ -134,38 +79,13 @@
                 <ListboxLabel>property type:</ListboxLabel>
                 <div class="relative">
                     <ListboxButton
-                        class="
-                            relative
-                            w-full
-                            py-1
-                            pl-3
-                            pr-10
-                            text-left text-gray-800
-                            rounded-lg
-                            cursor-default
-                            focus:outline-none
-                            focus-visible:ring-2
-                            focus-visible:ring-opacity-75
-                            focus-visible:ring-white
-                            focus-visible:ring-offset-orange-300
-                            focus-visible:ring-offset-2
-                            focus-visible:border-indigo-500
-                            sm:text-sm
-                        "
+                        class="relative w-full py-1 pl-3 pr-10 text-left text-gray-800 rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm"
                     >
                         <span class="block truncate">{{
                             selectedPerson.name
                         }}</span>
                         <span
-                            class="
-                                absolute
-                                inset-y-0
-                                right-0
-                                flex
-                                items-center
-                                pr-2
-                                pointer-events-none
-                            "
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                         >
                             <SelectorIcon
                                 class="w-5 h-5 text-gray-400"
@@ -180,21 +100,7 @@
                         leave-to-class="opacity-0"
                     >
                         <ListboxOptions
-                            class="
-                                absolute
-                                w-full
-                                py-1
-                                mt-1
-                                overflow-auto
-                                text-base
-                                bg-white
-                                rounded-md
-                                shadow-lg
-                                max-h-60
-                                ring-1 ring-black ring-opacity-5
-                                focus:outline-none
-                                sm:text-sm
-                            "
+                            class="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
                         >
                             <ListboxOption
                                 v-slot="{ active, selected }"
@@ -222,15 +128,7 @@
                                     >
                                     <span
                                         v-if="selected"
-                                        class="
-                                            absolute
-                                            inset-y-0
-                                            left-0
-                                            flex
-                                            items-center
-                                            pl-3
-                                            text-indigo-600
-                                        "
+                                        class="absolute inset-y-0 left-0 flex items-center pl-3 text-indigo-600"
                                     >
                                         <CheckIcon
                                             class="w-5 h-5"
@@ -249,38 +147,13 @@
                 <ListboxLabel>price range:</ListboxLabel>
                 <div class="relative">
                     <ListboxButton
-                        class="
-                            relative
-                            w-full
-                            py-1
-                            pl-3
-                            pr-10
-                            text-left text-gray-800
-                            rounded-lg
-                            cursor-default
-                            focus:outline-none
-                            focus-visible:ring-2
-                            focus-visible:ring-opacity-75
-                            focus-visible:ring-white
-                            focus-visible:ring-offset-orange-300
-                            focus-visible:ring-offset-2
-                            focus-visible:border-indigo-500
-                            sm:text-sm
-                        "
+                        class="relative w-full py-1 pl-3 pr-10 text-left text-gray-800 rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm"
                     >
                         <span class="block truncate">{{
                             selectedPerson.name
                         }}</span>
                         <span
-                            class="
-                                absolute
-                                inset-y-0
-                                right-0
-                                flex
-                                items-center
-                                pr-2
-                                pointer-events-none
-                            "
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                         >
                             <SelectorIcon
                                 class="w-5 h-5 text-gray-400"
@@ -295,21 +168,7 @@
                         leave-to-class="opacity-0"
                     >
                         <ListboxOptions
-                            class="
-                                absolute
-                                w-full
-                                py-1
-                                mt-1
-                                overflow-auto
-                                text-base
-                                bg-white
-                                rounded-md
-                                shadow-lg
-                                max-h-60
-                                ring-1 ring-black ring-opacity-5
-                                focus:outline-none
-                                sm:text-sm
-                            "
+                            class="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
                         >
                             <ListboxOption
                                 v-slot="{ active, selected }"
@@ -337,15 +196,7 @@
                                     >
                                     <span
                                         v-if="selected"
-                                        class="
-                                            absolute
-                                            inset-y-0
-                                            left-0
-                                            flex
-                                            items-center
-                                            pl-3
-                                            text-indigo-600
-                                        "
+                                        class="absolute inset-y-0 left-0 flex items-center pl-3 text-indigo-600"
                                     >
                                         <CheckIcon
                                             class="w-5 h-5"
@@ -364,15 +215,7 @@
             name="search"
             id="search"
             placeholder="search property"
-            class="
-                rounded-r-full
-                text-right
-                bg-indigo-500
-                text-white
-                placeholder-white
-                pr-2
-                focus:outline-none focus:ring
-            "
+            class="rounded-r-full text-right bg-indigo-500 text-white placeholder-white pr-2 focus:outline-none focus:ring"
         />
     </div>
 </template>

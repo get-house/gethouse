@@ -2,7 +2,7 @@
     <Head>
         <title>properties</title>
     </Head>
-    <div class="flex justify-between mx-10 mt-4">
+    <div class="flex justify-between mx-2 sm:mx-10 mt-4">
         <h1 class="text-2xl">Properties</h1>
         <toast> </toast>
         <input
@@ -14,13 +14,13 @@
         />
     </div>
     <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center items-center gap-y-6 animated fadeIn faster outline-none focus:outline-none"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-x-4 gap-y-6 animated fadeIn faster outline-none focus:outline-none"
     >
         <!-- bigining of first card -->
         <div
             v-for="property in properties.data"
             :key="property.id"
-            class="w-[380px] my-4 bg-white/40 backdrop-blur-md shadow rounded-xl"
+            class="w-[21rem] sm:w-[22rem] lg:w-[24rem] my-4 bg-white/40 backdrop-blur-md shadow rounded-xl"
         >
             <Link :href="route('properties.show', property.id)">
                 <div class="flex flex-col justify-center text-center">

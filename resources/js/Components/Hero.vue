@@ -1,14 +1,5 @@
 <template>
-    <div
-        class="
-            
-            grid
-            justify-items-center
-            lg:grid-cols-5
-            sm:grid-cols-1
-            mt-1
-        "
-    >
+    <div class="grid justify-items-center lg:grid-cols-5 sm:grid-cols-1 mt-1">
         <div class="place-self-center col-span-3">
             <h1 class="text-6xl font-bold leading-tight">
                 Find
@@ -16,68 +7,24 @@
                 Place <br />
                 To Live Life.
             </h1>
-            <div class="flex-auto flex space-x-4 mt-10 mb-4">
+            <div class="hidden sm:flex sm:flex-auto space-x-4 mt-10 mb-4">
                 <button
-                    class="
-                        px-6
-                        flex
-                        items-center
-                        justify-center
-                        bg-white/10
-                        backdrop-blur-md
-                        rounded-full
-                        text-lg
-                        shadow-md
-                        hover:shadow-md hover:bg-indigo-700 hover:text-white
-                    "
+                    class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
                 >
                     Buy
                 </button>
                 <button
-                    class="
-                        px-6
-                        flex
-                        items-center
-                        justify-center
-                        bg-white/10
-                        backdrop-blur-md
-                        rounded-full
-                        text-lg
-                        shadow-md
-                        hover:shadow-md hover:bg-indigo-700 hover:text-white
-                    "
+                    class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
                 >
                     Sell
                 </button>
                 <button
-                    class="
-                        px-6
-                        flex
-                        items-center
-                        justify-center
-                        bg-white/10
-                        backdrop-blur-md
-                        rounded-full
-                        text-lg
-                        shadow-md
-                        hover:shadow-md hover:bg-indigo-700 hover:text-white
-                    "
+                    class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
                 >
                     Rent
                 </button>
                 <button
-                    class="
-                        px-6
-                        flex
-                        items-center
-                        justify-center
-                        bg-white/10
-                        backdrop-blur-md
-                        rounded-full
-                        text-lg
-                        shadow-md
-                        hover:shadow-md hover:bg-indigo-700 hover:text-white
-                    "
+                    class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
                 >
                     Manage
                 </button>
@@ -86,18 +33,7 @@
             <SearchComponent />
             <!-- small caurosel cards starts here -->
             <div
-                class="
-                    flex
-                    justify-center
-                    items-center
-                    space-x-4
-                    max-h-72
-                    animated
-                    fadeIn
-                    faster
-                    outline-none
-                    focus:outline-none
-                "
+                class="flex justify-center overflow-hidden items-center space-x-4 max-h-72 animated fadeIn faster outline-none focus:outline-none"
             >
                 <!-- bigining of first card -->
                 <div
@@ -177,34 +113,11 @@
         </div>
         <!-- grid component -->
         <div
-            class="
-                col-span-2
-                transition
-                duration-500
-                fadeIn
-                ease-in-out
-                flex
-                justify-center
-                items-center
-                inset-0
-                z-0
-
-                outline-none
-                focus:outline-none
-            "
+            class="col-span-2 transition duration-500 fadeIn ease-in-out flex justify-center items-center inset-0 z-0 outline-none focus:outline-none"
         >
             <div class="flex flex-col items-center justify-center">
                 <div
-                    class="
-                        max-w-md
-                        w-full
-                        bg-white/10
-                        backdrop-blur-md
-                        shadow
-                        
-                        rounded-xl
-                        p-2
-                    "
+                    class="w-[22rem] sm:w-full bg-white/10 backdrop-blur-md shadow rounded-xl p-2"
                 >
                     <div
                         v-for="platinum in platinumProperties"
@@ -222,14 +135,7 @@
                         <div class="flex-auto justify-evenly">
                             <div class="flex flex-wrap">
                                 <div
-                                    class="
-                                        w-full
-                                        flex-none
-                                        text-sm
-                                        flex
-                                        items-center
-                                        text-gray-600
-                                    "
+                                    class="w-full flex-none text-sm flex items-center text-gray-600"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -242,47 +148,22 @@
                                         ></path>
                                     </svg>
                                     <span
-                                        class="
-                                            text-gray-400
-                                            whitespace-nowrap
-                                            mr-3
-                                        "
+                                        class="text-gray-400 whitespace-nowrap mr-3"
                                         >4.60</span
                                     ><span class="mr-2 text-gray-400"
                                         >Kaduna</span
                                     >
                                 </div>
                                 <div
-                                    class="
-                                        flex
-                                        items-center
-                                        w-full
-                                        justify-between
-                                        min-w-0
-                                    "
+                                    class="flex items-center w-full justify-between min-w-0"
                                 >
                                     <h2
-                                        class="
-                                            text-lg
-                                            mr-auto
-                                            cursor-pointer
-                                            text-gray-600
-                                            truncate
-                                        "
+                                        class="text-lg mr-auto cursor-pointer text-gray-600 truncate"
                                     >
                                         {{ platinum.feature }}
                                     </h2>
                                     <div
-                                        class="
-                                            flex
-                                            items-center
-                                            bg-green-400
-                                            text-white text-xs
-                                            px-2
-                                            py-1
-                                            ml-3
-                                            rounded-lg
-                                        "
+                                        class="flex items-center bg-green-400 text-white text-xs px-2 py-1 ml-3 rounded-lg"
                                     >
                                         AVAILABLE
                                     </div>
@@ -296,66 +177,21 @@
                                     >
                                 </div>
                                 <div
-                                    class="
-                                        hover:text-yellow-500
-                                        cursor-pointer
-                                        p-1
-                                        py-0
-                                    "
+                                    class="hover:text-yellow-500 cursor-pointer p-1 py-0"
                                 >
                                     Bungalow
                                 </div>
                             </div>
                             <div
-                                class="
-                                    flex
-                                    space-x-2
-                                    text-sm
-                                    font-medium
-                                    justify-start
-                                "
+                                class="flex space-x-2 text-sm font-medium justify-start"
                             >
                                 <button
-                                    class="
-                                        transition
-                                        ease-in
-                                        duration-300
-                                        inline-flex
-                                        items-center
-                                        text-sm
-                                        font-medium
-                                        mb-2
-                                        md:mb-0
-                                        bg-indigo-500
-                                        px-5
-                                        py-2
-                                        hover:shadow-lg
-                                        tracking-wider
-                                        text-white
-                                        rounded-full
-                                        hover:bg-indigo-600
-                                    "
+                                    class="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-indigo-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-indigo-600"
                                 >
                                     <span>Check</span>
                                 </button>
                                 <button
-                                    class="
-                                        transition
-                                        ease-in
-                                        duration-300
-                                        bg-gray-700
-                                        hover:bg-gray-800
-                                        border
-                                        hover:border-gray-500
-                                        border-gray-700
-                                        hover:text-white hover:shadow-lg
-                                        text-gray-400
-                                        rounded-full
-                                        w-9
-                                        h-9
-                                        text-center
-                                        p-2
-                                    "
+                                    class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-center p-2"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

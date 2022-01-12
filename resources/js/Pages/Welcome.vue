@@ -12,7 +12,7 @@
         <!-- nearby section -->
         <HomepageNearby />
         <!-- features section -->
-        <FeatureSection :features="features"></FeatureSection>
+        <FeatureSection></FeatureSection>
         <!-- featured Notification section -->
         <PhoneNotification />
     </div>
@@ -32,33 +32,6 @@ import {
     LightningBoltIcon,
     ScaleIcon,
 } from '@heroicons/vue/outline';
-
-const features = [
-    {
-        name: 'Extensive property reach',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: GlobeAltIcon,
-    },
-    {
-        name: 'No hidden fees',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: ScaleIcon,
-    },
-    {
-        name: 'Real time availability',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: LightningBoltIcon,
-    },
-    {
-        name: 'Mobile notifications',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: AnnotationIcon,
-    },
-];
 
 export default {
     layout: GuestLayout,
@@ -84,12 +57,6 @@ export default {
         errors: Object,
         laravelVersion: String,
         phpVersion: String,
-    },
-
-    setup() {
-        return {
-            features,
-        };
     },
 };
 </script>
