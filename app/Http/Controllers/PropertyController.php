@@ -26,7 +26,7 @@ class PropertyController extends Controller
                 $query->where('name', 'like', "%{$search}%");
             })
             ->with(['landlord.user', 'agent.user', 'tenant.user', 'media'])
-            ->paginate(51)
+            ->paginate()
             ->appends($request->query());
 
         if ($request->wantsJson()) {
