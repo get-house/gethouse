@@ -146,7 +146,7 @@
                                         ></path>
                                     </svg>
                                     <p class="text-gray-600">
-                                        $
+                                        &#8358;
                                         <span
                                             class="text-green-500 font-semibold"
                                             >{{ property.price }}</span
@@ -169,7 +169,7 @@
     <!-- small caurosel cards ends here -->
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Like from '@/Components/Like';
 import Toast from '@/Components/Toast';
 import { Inertia } from '@inertiajs/inertia';

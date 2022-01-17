@@ -106,7 +106,7 @@
                                             ></path>
                                         </svg>
                                         <p class="">
-                                            #<span
+                                            &#8358;<span
                                                 class="text-green-500 font-semibold"
                                                 >250000</span
                                             >
@@ -181,7 +181,7 @@
 
                                 <div class="flex items-center space-x-10 mb-3">
                                     <div class="text-xl text-gray-600 mt-1">
-                                        $<span
+                                        &#8358;<span
                                             class="text-green-500 font-semibold"
                                             >240.00</span
                                         >
