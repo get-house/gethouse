@@ -35,9 +35,12 @@
     "dependencies": {
         "@headlessui/vue": "^1.2.0",
         "@heroicons/vue": "^1.0.1",
+        "@inertiajs/server": "^0.1.0",
         "@prettier/plugin-php": "^0.17.3",
+        "@vue/server-renderer": "^3.2.27",
         "prettier": "^2.3.2",
         "v-tooltip": "^4.0.0-alpha.17",
-        "vue3-date-time-picker": "^2.4.4"
+        "vue3-date-time-picker": "^2.4.4",
+        "webpack-node-externals": "^3.0.0"
     }
 }
