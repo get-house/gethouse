@@ -10,7 +10,7 @@
             :goldProperties="goldProperties"
         ></HeroSection>
         <!-- nearby section -->
-        <HomepageNearby />
+        <!-- <HomepageNearby /> -->
         <!-- features section -->
         <FeatureSection></FeatureSection>
         <!-- featured Notification section -->
