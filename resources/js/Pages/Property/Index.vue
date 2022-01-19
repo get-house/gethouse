@@ -6,6 +6,9 @@
         <div class="flex justify-between mx-2 sm:mx-10 pt-2">
             <h1 class="text-2xl">Properties</h1>
             <toast> </toast>
+            <div class="max-w-[50rem] z-50">
+                <Search />
+            </div>
             <input
                 v-model="search"
                 type="text"
@@ -172,9 +175,11 @@
 <script setup>
 import Like from '@/Components/Like';
 import Toast from '@/Components/Toast';
+import Search from '@/Components/Search';
 import { Inertia } from '@inertiajs/inertia';
 import { ref } from '@vue/reactivity';
-import { onMounted, watch } from '@vue/runtime-core';
+import { watch } from '@vue/runtime-core';
+import Search1 from '@/Components/Search.vue';
 
 let props = defineProps({
     properties: Object,

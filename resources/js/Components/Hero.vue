@@ -10,30 +10,23 @@
                     Place <br />
                     To Live Life.
                 </h1>
-                <div class="hidden sm:flex sm:flex-auto space-x-4 mt-10 mb-4">
+                <div
+                    class="hidden sm:flex justify-center space-x-10 mt-10 mb-4"
+                >
                     <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
+                        class="px-4 py-1 bg-indigo-300 rounded text-2xl text-center shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
                     >
                         Buy
                     </button>
+
                     <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
-                    >
-                        Sell
-                    </button>
-                    <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
+                        class="px-4 py-1 bg-indigo-300 rounded text-2xl shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
                     >
                         Rent
                     </button>
-                    <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
-                    >
-                        Manage
-                    </button>
                 </div>
                 <!-- filter and search design -->
-                <SearchComponent />
+
                 <!-- small caurosel cards starts here -->
                 <div
                     class="flex justify-center overflow-hidden items-center space-x-4 max-h-72 animated fadeIn faster outline-none focus:outline-none"
@@ -234,20 +227,13 @@
     </body>
 </template>
 
-<script>
-import SearchComponent from '@/Components/Search';
+<script setup>
 import LikeComponent from '@/Components/Like';
-export default {
-    name: 'HeroSection',
-    components: {
-        SearchComponent,
-        LikeComponent,
-    },
-    props: {
-        platinumProperties: Object,
-        goldProperties: Object,
-    },
-};
+
+let props = defineProps({
+    platinumProperties: Object,
+    goldProperties: Object,
+});
 </script>
 <style scoped>
 body {

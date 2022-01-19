@@ -1,6 +1,6 @@
 <template>
     <div
-        class="hidden bg-white/10 backdrop-blur-md rounded-full my-4 h-14 sm:flex gap-10 shadow"
+        class="bg-white/10 backdrop-blur-md rounded-md flex flex-wrap gap-10 shadow"
     >
         <div class="flex flex-col text-center">
             <!-- <label class="text-xs">city/street</label>
@@ -210,13 +210,6 @@
                 </div>
             </Listbox>
         </div>
-        <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="search property"
-            class="rounded-r-full text-right bg-indigo-500 text-white placeholder-white pr-2 focus:outline-none focus:ring"
-        />
     </div>
 </template>
 
