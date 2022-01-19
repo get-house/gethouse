@@ -281,6 +281,9 @@
                                     <Datepicker
                                         v-model="date"
                                         monthNameFormat="long"
+                                        :minDate="new Date()"
+                                        :minTime="{ hours: 8, minutes: 30 }"
+                                        :maxTime="{ hours: 17 }"
                                         class="max-w-[14rem] my-4 border-indigo-300"
                                     />
                                 </div>
@@ -641,7 +644,7 @@ import {
     TabPanel,
     TransitionRoot,
 } from '@headlessui/vue';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import Datepicker from 'vue3-date-time-picker';
 import 'vue3-date-time-picker/dist/main.css';
 import ImageGallery from '@/Components/ImageGallery';

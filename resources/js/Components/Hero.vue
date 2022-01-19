@@ -14,13 +14,13 @@
                     class="hidden sm:flex justify-center space-x-10 mt-10 mb-4"
                 >
                     <button
-                        class="px-4 py-1 bg-indigo-300 rounded text-2xl text-center shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
+                        class="px-4 py-1 bg-indigo-700 text-white rounded text-2xl text-center shadow-md hover:shadow-md hover:bg-slate-300 hover:text-indigo-500"
                     >
                         Buy
                     </button>
 
                     <button
-                        class="px-4 py-1 bg-indigo-300 rounded text-2xl shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
+                        class="px-4 py-1 bg-indigo-700 text-white rounded text-2xl text-center shadow-md hover:shadow-md hover:bg-slate-300 hover:text-indigo-500"
                     >
                         Rent
                     </button>
