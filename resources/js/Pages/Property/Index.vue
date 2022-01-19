@@ -169,7 +169,7 @@
     <!-- small caurosel cards ends here -->
 </template>
 
-<script setup lang="ts">
+<script setup>
 import Like from '@/Components/Like';
 import Toast from '@/Components/Toast';
 import { Inertia } from '@inertiajs/inertia';

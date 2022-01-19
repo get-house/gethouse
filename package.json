@@ -4,7 +4,7 @@
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "watch-poll": "mix wtatch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production"
@@ -15,8 +15,6 @@
         "@inertiajs/progress": "^0.2.7",
         "@tailwindcss/aspect-ratio": "^0.4.0",
         "@tailwindcss/forms": "^0.4.0",
-        "@typescript-eslint/eslint-plugin": "^5.9.1",
-        "@typescript-eslint/parser": "^5.9.1",
         "@vue/compiler-sfc": "^3.0.5",
         "autoprefixer": "^10.4.0",
         "axios": "^0.24.0",
@@ -29,10 +27,8 @@
         "postcss": "^8.4.4",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^3.0.0",
-        "ts-loader": "^9.2.6",
         "vue": "^3.0.5",
-        "vue-loader": "^16.1.2",
-        "vue-tsc": "^0.30.5"
+        "vue-loader": "^16.1.2"
     },
     "dependencies": {
         "@headlessui/vue": "^1.2.0",
@@ -42,7 +38,6 @@
         "@vue/server-renderer": "^3.2.27",
         "prettier": "^2.3.2",
         "v-tooltip": "^4.0.0-alpha.17",
-        "vue3-date-time-picker": "^2.4.4",
-        "webpack-node-externals": "^3.0.0"
+        "vue3-date-time-picker": "^2.4.4"
     }
 }
