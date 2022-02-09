@@ -122,7 +122,7 @@
                         class="w-[22rem] sm:w-full bg-white/10 backdrop-blur-md shadow rounded-xl p-2"
                     >
                         <div
-                            v-for="platinum in platinumProperties"
+                            v-for="platinum in currentPlatinum"
                             :key="platinum.id"
                             class="flex flex-col"
                         >
@@ -194,6 +194,7 @@
                                         <span>Check</span>
                                     </button>
                                     <button
+                                        @click="changeCurrentPlatinum(id)"
                                         class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-center p-2"
                                     >
                                         <svg
@@ -229,11 +230,19 @@
 
 <script setup>
 import LikeComponent from '@/Components/Like';
+import { ref } from 'vue';
 
 let props = defineProps({
     platinumProperties: Object,
     goldProperties: Object,
 });
+
+let currentPlatinum = ref(Object.entries({ ...props.platinumProperties })[0]);
+
+//a method that changes the current platinum property using id
+const changeCurrentPlatinum = (id) => {
+    // currentPlatinum.value = Object.keys({ ...props.platinumProperties })[id];
+};
 </script>
 <style scoped>
 body {

@@ -285,7 +285,13 @@
                                         :minTime="{ hours: 8, minutes: 30 }"
                                         :maxTime="{ hours: 17 }"
                                         class="max-w-[14rem] my-4 border-indigo-300"
-                                    />
+                                    >
+                                        <template #clock-icon>
+                                            <ClockIcon
+                                                class="w-8 h-8 text-indigo-600"
+                                            />
+                                        </template>
+                                    </Datepicker>
                                 </div>
                                 <div
                                     class="flex items-center space-x-2 text-sm mt-8 mb-4"
@@ -630,6 +636,7 @@ import {
     QuestionMarkCircleIcon,
     CheckIcon,
     SelectorIcon,
+    ClockIcon,
 } from '@heroicons/vue/solid';
 import {
     Listbox,
