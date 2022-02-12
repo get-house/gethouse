@@ -179,7 +179,6 @@ import Search from '@/Components/Search';
 import { Inertia } from '@inertiajs/inertia';
 import { ref } from '@vue/reactivity';
 import { watch } from '@vue/runtime-core';
-import Search1 from '@/Components/Search.vue';
 
 let props = defineProps({
     properties: Object,
