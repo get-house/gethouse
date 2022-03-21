@@ -10,30 +10,23 @@
                     Place <br />
                     To Live Life.
                 </h1>
-                <div class="hidden sm:flex sm:flex-auto space-x-4 mt-10 mb-4">
+                <div
+                    class="hidden sm:flex justify-center space-x-10 mt-10 mb-4"
+                >
                     <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
+                        class="px-4 py-1 bg-indigo-700 text-white rounded text-2xl text-center shadow-md hover:shadow-md hover:bg-slate-300 hover:text-indigo-500"
                     >
                         Buy
                     </button>
+
                     <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
-                    >
-                        Sell
-                    </button>
-                    <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
+                        class="px-4 py-1 bg-indigo-700 text-white rounded text-2xl text-center shadow-md hover:shadow-md hover:bg-slate-300 hover:text-indigo-500"
                     >
                         Rent
                     </button>
-                    <button
-                        class="px-6 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full text-lg shadow-md hover:shadow-md hover:bg-indigo-700 hover:text-white"
-                    >
-                        Manage
-                    </button>
                 </div>
                 <!-- filter and search design -->
-                <SearchComponent />
+
                 <!-- small caurosel cards starts here -->
                 <div
                     class="flex justify-center overflow-hidden items-center space-x-4 max-h-72 animated fadeIn faster outline-none focus:outline-none"
@@ -106,7 +99,7 @@
                                             ></path>
                                         </svg>
                                         <p class="">
-                                            #<span
+                                            &#8358;<span
                                                 class="text-green-500 font-semibold"
                                                 >250000</span
                                             >
@@ -129,7 +122,7 @@
                         class="w-[22rem] sm:w-full bg-white/10 backdrop-blur-md shadow rounded-xl p-2"
                     >
                         <div
-                            v-for="platinum in platinumProperties"
+                            v-for="platinum in currentPlatinum"
                             :key="platinum.id"
                             class="flex flex-col"
                         >
@@ -181,7 +174,7 @@
 
                                 <div class="flex items-center space-x-10 mb-3">
                                     <div class="text-xl text-gray-600 mt-1">
-                                        $<span
+                                        &#8358;<span
                                             class="text-green-500 font-semibold"
                                             >240.00</span
                                         >
@@ -201,6 +194,7 @@
                                         <span>Check</span>
                                     </button>
                                     <button
+                                        @click="changeCurrentPlatinum(id)"
                                         class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-center p-2"
                                     >
                                         <svg
@@ -234,19 +228,20 @@
     </body>
 </template>
 
-<script>
-import SearchComponent from '@/Components/Search';
+<script setup>
 import LikeComponent from '@/Components/Like';
-export default {
-    name: 'HeroSection',
-    components: {
-        SearchComponent,
-        LikeComponent,
-    },
-    props: {
-        platinumProperties: Object,
-        goldProperties: Object,
-    },
+import { ref } from 'vue';
+
+let props = defineProps({
+    platinumProperties: Object,
+    goldProperties: Object,
+});
+
+let currentPlatinum = ref(Object.entries({ ...props.platinumProperties })[0]);
+
+//a method that changes the current platinum property using id
+const changeCurrentPlatinum = (id) => {
+    // currentPlatinum.value = Object.keys({ ...props.platinumProperties })[id];
 };
 </script>
 <style scoped>

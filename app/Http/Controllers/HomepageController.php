@@ -20,7 +20,7 @@ class HomepageController extends Controller
         $properties = Property::with(['landlord', 'agent', 'tenant'])->get();
 
         return Inertia::render('Welcome', [
-            'platinumProperties' => $properties->whereIn('class', ['platinum'])->take(1),
+            'platinumProperties' => $properties->whereIn('class', ['platinum']),
             'goldProperties' => $properties->whereIn('class', ['gold'])->take(3),
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
