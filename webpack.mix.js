@@ -1,11 +1,41 @@
 const mix = require('laravel-mix');
 
+const fs = require('fs');
+
 mix.options({
     hmrOptions: {
         host: 'gethouse.test',
         port: 8080,
     },
+}).webpackConfig({
+    devServer: {
+        https: {
+            key: fs.readFileSync(
+                '/Users/amisha/.config/valet/Certificates/gethouse.test.key'
+            ),
+            cert: fs.readFileSync(
+                '/Users/amisha/.config/valet/Certificates/gethouse.test.crt'
+            ),
+        },
+    },
 });
+
+// mix.options({
+//     hmrOptions: {
+//         host: 'gethouse.test',
+//         port: 8080,
+//     },
+// });
+
+// mix.browserSync({
+//     proxy: 'https://gethouse.test',
+//     host: 'gethouse.test',
+
+//     https: {
+//         key: 'Users/amisha/.config/valet/Certificates/gethouse.test.key',
+//         cert: 'Users/amisha/.config/valet/Certificates/gethouse.test.crt',
+//     },
+// });
 
 /*
  |--------------------------------------------------------------------------
