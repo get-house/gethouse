@@ -1,3 +1,20 @@
+<script setup>
+import LikeComponent from '@/Components/Like';
+import { ref } from 'vue';
+
+let props = defineProps({
+    platinumProperties: Object,
+    goldProperties: Object,
+});
+
+let currentPlatinum = ref(props.platinumProperties[0]);
+
+//a method that changes the current platinum property using id
+const changeCurrentPlatinum = (index) => {
+    currentPlatinum.value = props.platinumProperties[index];
+};
+</script>
+
 <template>
     <body>
         <div
@@ -121,11 +138,7 @@
                     <div
                         class="w-[22rem] sm:w-full bg-white/10 backdrop-blur-md shadow rounded-xl p-2"
                     >
-                        <div
-                            v-for="platinum in currentPlatinum"
-                            :key="platinum.id"
-                            class="flex flex-col"
-                        >
+                        <div class="flex flex-col">
                             <div class="relative h-62 w-full mb-3">
                                 <LikeComponent></LikeComponent>
                                 <img
@@ -162,7 +175,7 @@
                                         <h2
                                             class="text-lg mr-auto cursor-pointer text-gray-600 truncate"
                                         >
-                                            {{ platinum.feature }}
+                                            {{ currentPlatinum.feature }}
                                         </h2>
                                         <div
                                             class="flex items-center bg-green-400 text-white text-xs px-2 py-1 ml-3 rounded-lg"
@@ -176,13 +189,13 @@
                                     <div class="text-xl text-gray-600 mt-1">
                                         &#8358;<span
                                             class="text-green-500 font-semibold"
-                                            >240.00</span
+                                            >{{ currentPlatinum.price }}</span
                                         >
                                     </div>
                                     <div
                                         class="hover:text-yellow-500 cursor-pointer p-1 py-0"
                                     >
-                                        Bungalow
+                                        {{ currentPlatinum.name }}
                                     </div>
                                 </div>
                                 <div
@@ -194,8 +207,15 @@
                                         <span>Check</span>
                                     </button>
                                     <button
-                                        @click="changeCurrentPlatinum(id)"
-                                        class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-center p-2"
+                                        v-for="(
+                                            platinum, index
+                                        ) in platinumProperties"
+                                        @click="changeCurrentPlatinum(index)"
+                                        class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-right p-2"
+                                        :class="{
+                                            'border-4 border-indigo-500':
+                                                currentPlatinum === platinum,
+                                        }"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -228,22 +248,6 @@
     </body>
 </template>
 
-<script setup>
-import LikeComponent from '@/Components/Like';
-import { ref } from 'vue';
-
-let props = defineProps({
-    platinumProperties: Object,
-    goldProperties: Object,
-});
-
-let currentPlatinum = ref(Object.entries({ ...props.platinumProperties })[0]);
-
-//a method that changes the current platinum property using id
-const changeCurrentPlatinum = (id) => {
-    // currentPlatinum.value = Object.keys({ ...props.platinumProperties })[id];
-};
-</script>
 <style scoped>
 body {
     background-color: #eeeded;

@@ -1,3 +1,22 @@
+<script setup>
+import { ref } from 'vue';
+
+let pictures = ref([
+    '/images/hero_house.jpg',
+    '/images/home2.jpg',
+    '/images/home3.jpg',
+    '/images/home4.jpg',
+    '/images/home5.jpg',
+]);
+
+let currentPicture = ref(pictures.value[0]);
+
+//a method that changes the current picture using the index of the picture
+const changePicture = (index) => {
+    currentPicture.value = pictures.value[index];
+};
+</script>
+
 <template>
     <div class="example flex overflow-hidden">
         <img
@@ -26,22 +45,3 @@
         <img src="/images/hero_house.jpg" alt="" class="w-40 rounded" />
     </div> -->
 </template>
-
-<script setup>
-import { ref } from 'vue';
-
-let pictures = ref([
-    '/images/hero_house.jpg',
-    '/images/home2.jpg',
-    '/images/home3.jpg',
-    '/images/home4.jpg',
-    '/images/home5.jpg',
-]);
-
-let currentPicture = ref(pictures.value[0]);
-
-//a method that changes the current picture using the index of the picture
-const changePicture = (index) => {
-    currentPicture.value = pictures.value[index];
-};
-</script>
