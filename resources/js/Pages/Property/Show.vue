@@ -1,3 +1,63 @@
+<script setup>
+import {
+    BadgeCheckIcon,
+    XCircleIcon,
+    HeartIcon,
+    ShareIcon,
+    LocationMarkerIcon,
+    QuestionMarkCircleIcon,
+    CheckIcon,
+    SelectorIcon,
+    ClockIcon,
+} from '@heroicons/vue/solid';
+import {
+    Listbox,
+    ListboxLabel,
+    ListboxButton,
+    ListboxOptions,
+    ListboxOption,
+    TabGroup,
+    TabList,
+    Tab,
+    TabPanels,
+    TabPanel,
+    TransitionRoot,
+} from '@headlessui/vue';
+import { ref, computed } from 'vue';
+import Datepicker from 'vue3-date-time-picker';
+import 'vue3-date-time-picker/dist/main.css';
+import ImageGallery from '@/Components/ImageGallery';
+
+defineProps: ({
+    property: Object,
+});
+
+const inspection = [
+    { name: 'Physical inspection' },
+    { name: 'Virtual inspection' },
+];
+
+const durations = [{ name: '12 month' }, { name: '24 month' }];
+
+const paymentPlan = [
+    { name: 'Monthly' },
+    { name: 'Quarterly' },
+    { name: 'Yearly' },
+    { name: 'Bi-annually' },
+    { name: 'Upfront' },
+];
+
+const bookAs = [{ name: 'Individual' }, { name: 'Corporate' }];
+
+const selectedInspection = ref(inspection[0]);
+const selectedDurations = ref(durations[0]);
+const selectedPaymentPlan = ref(paymentPlan[0]);
+const selectedBookAs = ref(bookAs[0]);
+
+const isShowing = ref(true);
+const date = ref(new Date());
+</script>
+
 <template>
     <Head title="property" />
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-6">
@@ -626,65 +686,6 @@
     </div>
 </template>
 
-<script setup>
-import {
-    BadgeCheckIcon,
-    XCircleIcon,
-    HeartIcon,
-    ShareIcon,
-    LocationMarkerIcon,
-    QuestionMarkCircleIcon,
-    CheckIcon,
-    SelectorIcon,
-    ClockIcon,
-} from '@heroicons/vue/solid';
-import {
-    Listbox,
-    ListboxLabel,
-    ListboxButton,
-    ListboxOptions,
-    ListboxOption,
-    TabGroup,
-    TabList,
-    Tab,
-    TabPanels,
-    TabPanel,
-    TransitionRoot,
-} from '@headlessui/vue';
-import { ref, computed } from 'vue';
-import Datepicker from 'vue3-date-time-picker';
-import 'vue3-date-time-picker/dist/main.css';
-import ImageGallery from '@/Components/ImageGallery';
-
-defineProps: ({
-    property: Object,
-});
-
-const inspection = [
-    { name: 'Physical inspection' },
-    { name: 'Virtual inspection' },
-];
-
-const durations = [{ name: '12 month' }, { name: '24 month' }];
-
-const paymentPlan = [
-    { name: 'Monthly' },
-    { name: 'Quarterly' },
-    { name: 'Yearly' },
-    { name: 'Bi-annually' },
-    { name: 'Upfront' },
-];
-
-const bookAs = [{ name: 'Individual' }, { name: 'Corporate' }];
-
-const selectedInspection = ref(inspection[0]);
-const selectedDurations = ref(durations[0]);
-const selectedPaymentPlan = ref(paymentPlan[0]);
-const selectedBookAs = ref(bookAs[0]);
-
-const isShowing = ref(true);
-const date = ref(new Date());
-</script>
 <style scoped>
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-none::-webkit-scrollbar {

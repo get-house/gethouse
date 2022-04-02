@@ -1,11 +1,22 @@
 const mix = require('laravel-mix');
+require('laravel-mix-valet');
 
-mix.options({
-    hmrOptions: {
-        host: 'gethouse.test',
-        port: 8080,
-    },
-});
+// mix.options({
+//     hmrOptions: {
+//         host: 'gethouse.test',
+//         port: 8080,
+//     },
+// });
+
+// mix.browserSync({
+//     proxy: 'https://gethouse.test',
+//     host: 'gethouse.test',
+
+//     https: {
+//         key: 'Users/amisha/.config/valet/Certificates/gethouse.test.key',
+//         cert: 'Users/amisha/.config/valet/Certificates/gethouse.test.crt',
+//     },
+// });
 
 /*
  |--------------------------------------------------------------------------
@@ -25,6 +36,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
+    .valet()
     .webpackConfig(require('./webpack.config'));
 
 if (mix.inProduction()) {
