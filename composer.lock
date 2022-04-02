@@ -2903,25 +2903,24 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.2.3",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "fc9bb7fb5388691fd7373cd44dcb4d63bbcf24df"
+                "reference": "8ced2afadd9ce455e2d5919d27c57e344bae4a09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/fc9bb7fb5388691fd7373cd44dcb4d63bbcf24df",
-                "reference": "fc9bb7fb5388691fd7373cd44dcb4d63bbcf24df",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/8ced2afadd9ce455e2d5919d27c57e344bae4a09",
+                "reference": "8ced2afadd9ce455e2d5919d27c57e344bae4a09",
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8 || ^0.9",
+                "ext-ctype": "*",
                 "ext-json": "*",
-                "php": "^7.2 || ^8.0",
-                "ramsey/collection": "^1.0",
-                "symfony/polyfill-ctype": "^1.8",
-                "symfony/polyfill-php80": "^1.14"
+                "php": "^8.0",
+                "ramsey/collection": "^1.0"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
@@ -2985,7 +2984,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.2.3"
+                "source": "https://github.com/ramsey/uuid/tree/4.3.0"
             },
             "funding": [
                 {
@@ -2997,7 +2996,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-25T23:10:38+00:00"
+            "time": "2022-03-26T22:00:50+00:00"
         },
         {
             "name": "symfony/console",
@@ -5090,19 +5089,20 @@
         },
         {
             "name": "tightenco/ziggy",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tighten/ziggy.git",
-                "reference": "ad1b6590978efe3ec36ca404e91f8acaa6c742bd"
+                "reference": "d3c74474f624ab80b7fb4e3e264e62bb4043eee2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tighten/ziggy/zipball/ad1b6590978efe3ec36ca404e91f8acaa6c742bd",
-                "reference": "ad1b6590978efe3ec36ca404e91f8acaa6c742bd",
+                "url": "https://api.github.com/repos/tighten/ziggy/zipball/d3c74474f624ab80b7fb4e3e264e62bb4043eee2",
+                "reference": "d3c74474f624ab80b7fb4e3e264e62bb4043eee2",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "laravel/framework": ">=5.4@dev"
             },
             "require-dev": {
@@ -5150,9 +5150,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tighten/ziggy/issues",
-                "source": "https://github.com/tighten/ziggy/tree/v1.4.4"
+                "source": "https://github.com/tighten/ziggy/tree/v1.4.5"
             },
-            "time": "2022-03-11T18:06:53+00:00"
+            "time": "2022-03-25T22:36:59+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7919,16 +7919,16 @@
         },
         {
             "name": "spatie/ignition",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "982f69f3c2e525cef62fa23ada047d745e4bcda9"
+                "reference": "be24d33a9de271638314924b5da85e168e4148e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/982f69f3c2e525cef62fa23ada047d745e4bcda9",
-                "reference": "982f69f3c2e525cef62fa23ada047d745e4bcda9",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/be24d33a9de271638314924b5da85e168e4148e4",
+                "reference": "be24d33a9de271638314924b5da85e168e4148e4",
                 "shasum": ""
             },
             "require": {
@@ -7985,7 +7985,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-19T14:07:30+00:00"
+            "time": "2022-03-23T11:02:14+00:00"
         },
         {
             "name": "spatie/laravel-ignition",
