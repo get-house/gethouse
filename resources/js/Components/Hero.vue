@@ -166,7 +166,7 @@ const changeCurrentPlatinum = (index) => {
                                             class="text-gray-400 whitespace-nowrap mr-3"
                                             >4.60</span
                                         ><span class="mr-2 text-gray-400"
-                                            >Kaduna</span
+                                            >Kaduna 💯</span
                                         >
                                     </div>
                                     <div
@@ -189,7 +189,8 @@ const changeCurrentPlatinum = (index) => {
                                     <div class="text-xl text-gray-600 mt-1">
                                         &#8358;<span
                                             class="text-green-500 font-semibold"
-                                            >{{ currentPlatinum.price }}</span
+                                        >
+                                            {{ currentPlatinum.price }}💰</span
                                         >
                                     </div>
                                     <div
