@@ -1,3 +1,34 @@
+<script setup>
+import Like from '@/Components/Like';
+import Toast from '@/Components/Toast';
+import Search from '@/Components/Search';
+import { Inertia } from '@inertiajs/inertia';
+import { ref } from '@vue/reactivity';
+import { watch } from '@vue/runtime-core';
+
+let props = defineProps({
+    properties: Object,
+    filters: Object,
+});
+
+let search = ref(props.filters.search);
+//create a method that loads more properties when the user scrolls to the bottom of the page using onMounted hook
+
+watch(search, (value) => {
+    Inertia.get(
+        '/properties',
+        {
+            search: value,
+        },
+
+        {
+            preserveState: true,
+            replace: true,
+        }
+    );
+});
+</script>
+
 <template>
     <Head>
         <title>properties</title>
@@ -171,36 +202,6 @@
     </body>
     <!-- small caurosel cards ends here -->
 </template>
-
-<script setup>
-import Like from '@/Components/Like';
-import Toast from '@/Components/Toast';
-import Search from '@/Components/Search';
-import { Inertia } from '@inertiajs/inertia';
-import { ref } from '@vue/reactivity';
-import { watch } from '@vue/runtime-core';
-
-let props = defineProps({
-    properties: Object,
-    filters: Object,
-});
-
-let search = ref(props.filters.search);
-
-watch(search, (value) => {
-    Inertia.get(
-        '/properties',
-        {
-            search: value,
-        },
-
-        {
-            preserveState: true,
-            replace: true,
-        }
-    );
-});
-</script>
 
 <style scoped>
 body {
