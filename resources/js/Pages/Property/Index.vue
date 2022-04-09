@@ -3,17 +3,57 @@ import Like from '@/Components/Like';
 import Toast from '@/Components/Toast';
 import Search from '@/Components/Search';
 import { Inertia } from '@inertiajs/inertia';
-import { ref } from '@vue/reactivity';
-import { watch } from '@vue/runtime-core';
+import { computed, ref } from '@vue/reactivity';
+import { watch, onMounted } from '@vue/runtime-core';
+import { usePage } from '@inertiajs/inertia-vue3';
 
 let props = defineProps({
     properties: Object,
     filters: Object,
 });
 
-let search = ref(props.filters.search);
-//create a method that loads more properties when the user scrolls to the bottom of the page using onMounted hook
+onMounted(() => {
+    //calculate when the user scrolls to the bottom of the page and load more properties by calling the loadMoreProperties method
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            loadMoreProperties();
+        }
+    });
+});
 
+let search = ref(props.filters.search);
+
+//create a allProperties ref
+let allProperties = ref(props.properties.data);
+const initialUrl = computed(() => {
+    return props.properties.path;
+});
+
+//We now need a method that will allow us to load the next page of properties based on the next_page_url property returned from Laravel's pagination object.
+let loadMoreProperties = () => {
+    if (props.properties.next_page_url === null) {
+        return;
+    }
+    Inertia.get(
+        props.properties.next_page_url,
+        {},
+        {
+            preserveState: true,
+            preserveScroll: true,
+            onSuccess: () => {
+                allProperties.value = [
+                    ...allProperties.value,
+                    ...props.properties.data,
+                ];
+                window.history.replaceState(
+                    {},
+                    usePage().title,
+                    initialUrl.value
+                );
+            },
+        }
+    );
+};
 watch(search, (value) => {
     Inertia.get(
         '/properties',
@@ -53,7 +93,7 @@ watch(search, (value) => {
         >
             <!-- bigining of first card -->
             <div
-                v-for="property in properties.data"
+                v-for="property in allProperties"
                 :key="property.id"
                 class="w-[21rem] sm:w-[22rem] lg:w-[24rem] my-4 bg-white/40 backdrop-blur-md shadow rounded-xl"
             >
