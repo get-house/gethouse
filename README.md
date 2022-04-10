@@ -1,1 +1,1 @@
-Gethouse is a property management system for the normal minds 😄 and will be ready in while for production 🚀
+Gethouse is a property management system for the normal minds 😄 and it's still in dev not ready for production 🚀
