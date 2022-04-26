@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 let pictures = ref([
     '/images/hero_house.jpg',
@@ -11,9 +11,18 @@ let pictures = ref([
 
 let currentPicture = ref(pictures.value[0]);
 
+onMounted(() => {
+    setInterval(() => {
+        let index = pictures.value.indexOf(currentPicture.value);
+        index = index + 1 >= pictures.value.length ? 0 : index + 1;
+        currentPicture.value = pictures.value[index];
+    }, 6000);
+});
+
 //a method that changes the current picture using the index of the picture
 const changePicture = (index) => {
     currentPicture.value = pictures.value[index];
+    //change the current picture to the next picture after 2sec
 };
 </script>
 
@@ -23,7 +32,7 @@ const changePicture = (index) => {
             id="current-image"
             :src="currentPicture"
             alt="house"
-            class="object-cover flex-shrink-0 w-full rounded"
+            class="object-cover flex-shrink-0 w-full rounded transition duration-500 ease-in-out transform translate-x-6 hover:-translate-y-1 hover:scale-110"
         />
     </div>
     <div class="flex justify-center space-x-4 my-4">
