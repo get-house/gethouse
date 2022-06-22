@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StorePropertyRequest;
 use App\Models\Media;
 use App\Models\Property;
 use Illuminate\Http\Request;
@@ -46,13 +45,11 @@ class PropertyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-
     {
         //check if user is logged in else redirect to login page
         if (Auth::check()) {
             //only allowed to create if user is landlord or agent or admin
             if (Auth::user()->landlord || Auth::user()->agent || Auth::user()->isAdmin) {
-
                 return Inertia::render('Property/Create');
             } else {
                 return Redirect::route('properties.index')->with('message', 'You are not authorized to create a property');
@@ -121,7 +118,6 @@ class PropertyController extends Controller
      */
     public function show(Property $property)
     {
-
         return Inertia::render('Property/Show', ['property' => $property->load('landlord.user', 'agent.user')]);
     }
 

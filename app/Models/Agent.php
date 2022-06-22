@@ -12,18 +12,18 @@ class Agent extends Model
 {
     use HasFactory;
 
-    public function user():BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function properties():HasMany
+    public function properties(): HasMany
     {
         return $this->hasMany(Property::class);
     }
 
-    public function tenants():HasManyThrough
+    public function tenants(): HasManyThrough
     {
-       return $this->hasManyThrough(Tenant::class,Property::class);
+        return $this->hasManyThrough(Tenant::class, Property::class);
     }
 }
