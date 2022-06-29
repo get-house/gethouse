@@ -1,4 +1,4 @@
-require('./bootstrap');
+import './bootstrap';
 
 // Import modules...
 import { createApp, h } from 'vue';
