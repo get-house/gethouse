@@ -1,13 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix wtatch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
+        "dev": "vite",
+        "build": "vite build"
     },
     "devDependencies": {
         "@inertiajs/inertia": "^0.11.0",
@@ -15,17 +10,18 @@
         "@inertiajs/progress": "^0.2.7",
         "@tailwindcss/aspect-ratio": "^0.4.0",
         "@tailwindcss/forms": "^0.4.0",
+        "@vitejs/plugin-vue": "^2.3.3",
         "@vue/compiler-sfc": "^3.0.5",
         "autoprefixer": "^10.4.0",
         "axios": "^0.24.0",
         "eslint": "^7.30.0",
         "eslint-plugin-vue": "^7.13.0",
-        "laravel-mix": "^6.0.39",
-        "laravel-mix-valet": "^1.3.0",
+        "laravel-vite-plugin": "^0.2.2",
         "lodash": "^4.17.19",
         "postcss": "^8.4.4",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^3.0.0",
+        "vite": "^2.9.12",
         "vue": "^3.0.5",
         "vue-loader": "^16.1.2"
     },

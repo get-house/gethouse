@@ -1,8 +1,10 @@
-require('./bootstrap');
+import './bootstrap';
+import '../css/app.css';
 
 // Import modules...
 import { createApp, h } from 'vue';
 import { createInertiaApp, Link, Head } from '@inertiajs/inertia-vue3';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { InertiaProgress } from '@inertiajs/progress';
 import VTooltipPlugin from 'v-tooltip';
 import 'v-tooltip/dist/v-tooltip.css';
@@ -31,7 +33,11 @@ import GuestLayout from '@/Layouts/Guest';
 
 createInertiaApp({
     resolve: (name) => {
-        const page = require(`./Pages/${name}`).default;
+        // const page = require(`./Pages/${name}`).default;
+        const page = resolvePageComponent(
+            `./Pages/${name}.vue`,
+            import.meta.glob('./Pages/**/*.vue')
+        );
         page.layout = page.layout || GuestLayout;
 
         return page;
