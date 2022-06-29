@@ -6,7 +6,6 @@ module.exports = {
             '@': path.resolve('resources/js'),
         },
     },
-
     module: {
         rules: [
             {
@@ -21,6 +20,6 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
             },
-        ]
-    }
-}
+        ],
+    },
+};
