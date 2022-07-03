@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3";
-import BreezeButton from "@/Components/Button";
-import BreezeGuestLayout from "@/Layouts/Guest";
+import { Link } from '@inertiajs/inertia-vue3';
+import BreezeButton from '@/Components/Button.vue';
+import BreezeGuestLayout from '@/Layouts/Guest.vue';
 
 export default {
     layout: BreezeGuestLayout,
@@ -60,13 +60,13 @@ export default {
 
     methods: {
         submit() {
-            this.form.post(this.route("verification.send"));
+            this.form.post(this.route('verification.send'));
         },
     },
 
     computed: {
         verificationLinkSent() {
-            return this.status === "verifLink-sent";
+            return this.status === 'verifLink-sent';
         },
     },
 };

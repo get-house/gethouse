@@ -8,7 +8,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { InertiaProgress } from '@inertiajs/progress';
 import VTooltipPlugin from 'v-tooltip';
 import 'v-tooltip/dist/v-tooltip.css';
-import GuestLayout from '@/Layouts/Guest';
+import GuestLayout from '@/Layouts/Guest.vue';
 
 // const el = document.getElementById('app');
 

@@ -209,8 +209,8 @@ import {
     MenuItem,
     MenuItems,
 } from '@headlessui/vue';
-import BreezeDropdown from '@/Components/Dropdown';
-import BreezeDropdownLink from '@/Components/DropdownLink';
+import BreezeDropdown from '@/Components/Dropdown.vue';
+import BreezeDropdownLink from '@/Components/DropdownLink.vue';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline';
 
 const navigation = ['Home', 'Properties', 'Houses', 'Policies', 'Reports'];

@@ -74,12 +74,12 @@
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3";
-import BreezeButton from "@/Components/Button";
-import BreezeGuestLayout from "@/Layouts/Guest";
-import BreezeInput from "@/Components/Input";
-import BreezeLabel from "@/Components/Label";
-import BreezeValidationErrors from "@/Components/ValidationErrors";
+import { Link } from '@inertiajs/inertia-vue3';
+import BreezeButton from '@/Components/Button.vue';
+import BreezeGuestLayout from '@/Layouts/Guest.vue';
+import BreezeInput from '@/Components/Input.vue';
+import BreezeLabel from '@/Components/Label.vue';
+import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
 
 export default {
     layout: BreezeGuestLayout,
@@ -100,10 +100,10 @@ export default {
     data() {
         return {
             form: this.$inertia.form({
-                name: "",
-                email: "",
-                password: "",
-                password_confirmation: "",
+                name: '',
+                email: '',
+                password: '',
+                password_confirmation: '',
                 terms: false,
             }),
         };
@@ -111,9 +111,9 @@ export default {
 
     methods: {
         submit() {
-            this.form.post(this.route("register"), {
+            this.form.post(this.route('register'), {
                 onFinish: () =>
-                    this.form.reset("password", "password_confirmation"),
+                    this.form.reset('password', 'password_confirmation'),
             });
         },
     },

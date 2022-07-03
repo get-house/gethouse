@@ -1,5 +1,5 @@
 <script setup>
-import LikeComponent from '@/Components/Like';
+import LikeComponent from '@/Components/Like.vue';
 import { ref } from 'vue';
 
 let props = defineProps({

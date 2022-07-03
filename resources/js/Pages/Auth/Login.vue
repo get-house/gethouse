@@ -66,14 +66,14 @@
 
 <script>
 import { Link } from '@inertiajs/inertia-vue3';
-import Toast from '@/Components/Toast';
-import BreezeButton from '@/Components/Button';
-import BreezeGuestLayout from '@/Layouts/Guest';
-import BreezeInput from '@/Components/Input';
-import BreezeCheckbox from '@/Components/Checkbox';
-import BreezeLabel from '@/Components/Label';
-import BreezeValidationErrors from '@/Components/ValidationErrors';
-import GuestLayout from '@/Layouts/Guest';
+import Toast from '@/Components/Toast.vue';
+import BreezeButton from '@/Components/Button.vue';
+import BreezeGuestLayout from '@/Layouts/Guest.vue';
+import BreezeInput from '@/Components/Input.vue';
+import BreezeCheckbox from '@/Components/Checkbox.vue';
+import BreezeLabel from '@/Components/Label.vue';
+import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
+import GuestLayout from '@/Layouts/Guest.vue';
 
 export default {
     layout: GuestLayout,
