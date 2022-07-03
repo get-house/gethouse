@@ -31,6 +31,21 @@ export default defineConfig({
                 }
             },
         },
+
+        {
+            name: 'ziggy',
+            enforce: 'post',
+            handleHotUpdate({ server, file }) {
+                if (file.includes('/routes/') && file.endsWith('.php')) {
+                    exec(
+                        'php artisan ziggy:generate',
+                        (error, stdout) =>
+                            error === null &&
+                            console.log(`  > Ziggy routes generated!`)
+                    );
+                }
+            },
+        },
     ],
 
     server: detectServerConfig(host),
