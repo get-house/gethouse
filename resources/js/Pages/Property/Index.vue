@@ -1,7 +1,7 @@
 <script setup>
-import Like from '@/Components/Like';
-import Toast from '@/Components/Toast';
-import Search from '@/Components/Search';
+import Like from '@/Components/Like.vue';
+import Toast from '@/Components/Toast.vue';
+import Search from '@/Components/Search.vue';
 import { Inertia } from '@inertiajs/inertia';
 import { computed, ref } from '@vue/reactivity';
 import { watch, onMounted } from '@vue/runtime-core';

@@ -354,7 +354,7 @@
 
 <script setup>
 import { useForm } from '@inertiajs/inertia-vue3';
-import FileInput from '@/components/FileInput';
+import FileInput from '@/components/FileInput.vue';
 
 import axios from 'axios';
 import { computed, ref } from '@vue/reactivity';

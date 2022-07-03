@@ -21,11 +21,11 @@
 <style scoped></style>
 
 <script>
-import GuestLayout from '@/Layouts/Guest';
-import HeroSection from '@/Components/Hero';
-import FeatureSection from '@/Components/FeatureSection';
-import PhoneNotification from '@/Components/PhoneNotification';
-import HomepageNearby from '@/Components/HomepageNearby';
+import GuestLayout from '@/Layouts/Guest.vue';
+import HeroSection from '@/Components/Hero.vue';
+import FeatureSection from '@/Components/FeatureSection.vue';
+import PhoneNotification from '@/Components/PhoneNotification.vue';
+import HomepageNearby from '@/Components/HomepageNearby.vue';
 import {
     AnnotationIcon,
     GlobeAltIcon,

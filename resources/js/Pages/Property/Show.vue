@@ -25,7 +25,7 @@ import {
 import { ref } from 'vue';
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
-import ImageGallery from '@/Components/ImageGallery';
+import ImageGallery from '@/Components/ImageGallery.vue';
 
 defineProps: ({
     property: Object,
