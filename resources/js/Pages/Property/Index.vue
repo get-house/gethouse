@@ -4,7 +4,7 @@ import Toast from '@/Components/Toast.vue';
 import Search from '@/Components/Search.vue';
 import { Inertia } from '@inertiajs/inertia';
 import { computed, ref } from '@vue/reactivity';
-import { watch, onMounted } from '@vue/runtime-core';
+import { watch, onMounted, onUnmounted } from '@vue/runtime-core';
 import { usePage } from '@inertiajs/inertia-vue3';
 
 let props = defineProps({
@@ -15,6 +15,15 @@ let props = defineProps({
 onMounted(() => {
     //calculate when the user scrolls to the bottom of the page and load more properties by calling the loadMoreProperties method
     window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            loadMoreProperties();
+        }
+    });
+});
+
+//use onUnmounted to remove the scroll event listener
+onUnmounted(() => {
+    window.removeEventListener('scroll', () => {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             loadMoreProperties();
         }
