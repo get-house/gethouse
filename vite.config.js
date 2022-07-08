@@ -9,7 +9,7 @@ let host = 'gethouse.test';
 
 export default defineConfig({
     plugins: [
-        laravel(['resources/js/app.js']),
+        laravel({ input: ['resources/js/app.js'], refresh: true }),
 
         vue({
             template: {
@@ -19,33 +19,6 @@ export default defineConfig({
                 },
             },
         }),
-
-        {
-            name: 'blade',
-            handleHotUpdate({ file, server }) {
-                if (file.endsWith('.blade.php')) {
-                    server.ws.send({
-                        type: 'full-reload',
-                        path: '*',
-                    });
-                }
-            },
-        },
-
-        {
-            name: 'ziggy',
-            enforce: 'post',
-            handleHotUpdate({ server, file }) {
-                if (file.includes('/routes/') && file.endsWith('.php')) {
-                    exec(
-                        'php artisan ziggy:generate',
-                        (error, stdout) =>
-                            error === null &&
-                            console.log(`  > Ziggy routes generated!`)
-                    );
-                }
-            },
-        },
     ],
 
     server: detectServerConfig(host),

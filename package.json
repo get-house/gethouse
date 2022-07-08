@@ -16,7 +16,7 @@
         "axios": "^0.24.0",
         "eslint": "^7.30.0",
         "eslint-plugin-vue": "^7.13.0",
-        "laravel-vite-plugin": "^0.2.2",
+        "laravel-vite-plugin": "^0.3.0",
         "lodash": "^4.17.19",
         "postcss": "^8.4.4",
         "postcss-import": "^14.0.1",
