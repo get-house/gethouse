@@ -1,4 +1,5 @@
 <script setup>
+import GuestLayout from '@/Layouts/Guest.vue';
 import Like from '@/Components/Like.vue';
 import Toast from '@/Components/Toast.vue';
 import Search from '@/Components/Search.vue';
@@ -21,13 +22,9 @@ onMounted(() => {
     });
 });
 
-//use onUnmounted to remove the scroll event listener
+//use onUnmounted to remove the scroll event listener and stop loading more properties
 onUnmounted(() => {
-    window.removeEventListener('scroll', () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            loadMoreProperties();
-        }
-    });
+    window.removeEventListener('scroll', loadMoreProperties);
 });
 
 let search = ref(props.filters.search);
@@ -42,26 +39,27 @@ const initialUrl = computed(() => {
 let loadMoreProperties = () => {
     if (props.properties.next_page_url === null) {
         return;
+    } else {
+        Inertia.get(
+            props.properties.next_page_url,
+            {},
+            {
+                preserveState: true,
+                preserveScroll: true,
+                onSuccess: () => {
+                    allProperties.value = [
+                        ...allProperties.value,
+                        ...props.properties.data,
+                    ];
+                    window.history.replaceState(
+                        {},
+                        usePage().title,
+                        initialUrl.value
+                    );
+                },
+            }
+        );
     }
-    Inertia.get(
-        props.properties.next_page_url,
-        {},
-        {
-            preserveState: true,
-            preserveScroll: true,
-            onSuccess: () => {
-                allProperties.value = [
-                    ...allProperties.value,
-                    ...props.properties.data,
-                ];
-                window.history.replaceState(
-                    {},
-                    usePage().title,
-                    initialUrl.value
-                );
-            },
-        }
-    );
 };
 watch(search, (value) => {
     Inertia.get(
@@ -82,7 +80,8 @@ watch(search, (value) => {
     <Head>
         <title>properties</title>
     </Head>
-    <body>
+
+    <GuestLayout>
         <div class="flex justify-between mx-2 sm:mx-10 pt-2">
             <h1 class="text-2xl">Properties</h1>
             <toast> </toast>
@@ -248,7 +247,8 @@ watch(search, (value) => {
             </div>
             <!-- end of one card -->
         </div>
-    </body>
+    </GuestLayout>
+
     <!-- small caurosel cards ends here -->
 </template>
 
