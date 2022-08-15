@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Media;
 use App\Models\Property;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\Rule;
@@ -16,6 +19,7 @@ class PropertyController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return Response
      */
     public function index(Request $request): Response
@@ -42,7 +46,7 @@ class PropertyController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function create()
     {
@@ -62,8 +66,8 @@ class PropertyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Application|RedirectResponse|Redirector
      */
     public function store(Request $request)
     {
@@ -113,8 +117,8 @@ class PropertyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
+     * @param Property $property
+     * @return Response
      */
     public function show(Property $property)
     {
@@ -124,8 +128,8 @@ class PropertyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
+     * @param Property $property
+     * @return void
      */
     public function edit(Property $property)
     {
@@ -135,9 +139,9 @@ class PropertyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Property $property
+     * @return void
      */
     public function update(Request $request, Property $property)
     {
@@ -147,8 +151,8 @@ class PropertyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
+     * @param Property $property
+     * @return void
      */
     public function destroy(Property $property)
     {
