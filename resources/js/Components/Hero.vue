@@ -44,11 +44,11 @@ const changeCurrentPlatinum = (index) => {
                 </div>
                 <!-- filter and search design -->
 
-                <!-- small caurosel cards starts here -->
+                <!-- small carousel cards starts here -->
                 <div
                     class="flex justify-center overflow-hidden items-center space-x-4 max-h-72 animated fadeIn faster outline-none focus:outline-none"
                 >
-                    <!-- bigining of first card -->
+                    <!-- beginning of first card -->
                     <div
                         v-for="gold in goldProperties"
                         :key="gold.id"
@@ -128,7 +128,7 @@ const changeCurrentPlatinum = (index) => {
                     </div>
                     <!-- end of one card -->
                 </div>
-                <!-- small caurosel cards ends here -->
+                <!-- small carousel cards ends here -->
             </div>
             <!-- grid component -->
             <div

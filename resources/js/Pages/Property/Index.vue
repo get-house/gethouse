@@ -38,7 +38,7 @@ const initialUrl = computed(() => {
 //We now need a method that will allow us to load the next page of properties based on the next_page_url property returned from Laravel's pagination object.
 let loadMoreProperties = () => {
     if (props.properties.next_page_url === null) {
-        return;
+
     } else {
         Inertia.get(
             props.properties.next_page_url,
@@ -99,7 +99,7 @@ watch(search, (value) => {
         <div
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-x-4 gap-y-6 animated fadeIn faster outline-none focus:outline-none"
         >
-            <!-- bigining of first card -->
+            <!-- beginning of first card -->
             <div
                 v-for="property in allProperties"
                 :key="property.id"
@@ -165,7 +165,7 @@ watch(search, (value) => {
                                 <h4 class="text-gray-600">
                                     owned by:
                                     <a href="#" class="text-purple-500">{{
-                                        property.landlord.user.name.substr(0, 6)
+                                        property.landlord.user.name.slice(0, 6)
                                     }}</a>
                                 </h4>
                             </div>
