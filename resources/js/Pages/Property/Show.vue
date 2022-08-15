@@ -713,7 +713,7 @@ const date = ref(new Date());
     -ms-overflow-style: none;
 }
 /* Hide scrollbar for Firefox */
-.scrollbar-none::-moz-scrollbar {
+.scrollbar-none{
     display: none;
 }
 </style>
