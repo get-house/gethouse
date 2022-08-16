@@ -20,7 +20,7 @@ class CreatePropertiesTable extends Migration
             $table->string('name');
             $table->integer('price');
             $table->string('feature');
-            $table->enum('class', ['premium', 'platinum', 'silver', 'gold']);
+            $table->enum('class', ['premium', 'platinum', 'silver', 'regular'])->default('regular');
             $table->text('description');
             $table->string('images')->nullable();
             $table->string('type');
