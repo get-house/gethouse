@@ -131,7 +131,7 @@ const changeCurrentPlatinum = (index) => {
                 <!-- small carousel cards ends here -->
             </div>
             <!-- grid component -->
-            <div
+            <div v-for="platinum in platinumProperties" :key="platinum.id"
                 class="col-span-2 transition duration-500 fadeIn ease-in-out flex justify-center items-center inset-0 z-0 outline-none focus:outline-none"
             >
                 <div class="flex flex-col items-center justify-center">
@@ -175,7 +175,7 @@ const changeCurrentPlatinum = (index) => {
                                         <h2
                                             class="text-lg mr-auto cursor-pointer text-gray-600 truncate"
                                         >
-                                            {{ currentPlatinum.feature }}
+                                            {{ platinum.feature }}
                                         </h2>
                                         <div
                                             class="flex items-center bg-green-400 text-white text-xs px-2 py-1 ml-3 rounded-lg"
@@ -190,13 +190,13 @@ const changeCurrentPlatinum = (index) => {
                                         &#8358;<span
                                             class="text-green-500 font-semibold"
                                         >
-                                            {{ currentPlatinum.price }}💰</span
+                                            {{ platinum.price }}💰</span
                                         >
                                     </div>
                                     <div
                                         class="hover:text-yellow-500 cursor-pointer p-1 py-0"
                                     >
-                                        {{ currentPlatinum.name }}
+                                        {{ platinum.name }}
                                     </div>
                                 </div>
                                 <div
