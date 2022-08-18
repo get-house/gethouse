@@ -3,10 +3,10 @@ import GuestLayout from '@/Layouts/Guest.vue';
 import Like from '@/Components/Like.vue';
 import Toast from '@/Components/Toast.vue';
 import Search from '@/Components/Search.vue';
-import { Inertia } from '@inertiajs/inertia';
-import { computed, ref } from '@vue/reactivity';
-import { watch, onMounted, onUnmounted } from '@vue/runtime-core';
-import { usePage } from '@inertiajs/inertia-vue3';
+import {Inertia} from '@inertiajs/inertia';
+import {computed, ref} from '@vue/reactivity';
+import {onMounted, onUnmounted, watch} from '@vue/runtime-core';
+import {usePage} from '@inertiajs/inertia-vue3';
 
 let props = defineProps({
     properties: Object,
@@ -37,9 +37,7 @@ const initialUrl = computed(() => {
 
 //We now need a method that will allow us to load the next page of properties based on the next_page_url property returned from Laravel's pagination object.
 let loadMoreProperties = () => {
-    if (props.properties.next_page_url === null) {
-
-    } else {
+    if (props.properties.next_page_url !== null) {
         Inertia.get(
             props.properties.next_page_url,
             {},
@@ -51,9 +49,10 @@ let loadMoreProperties = () => {
                         ...allProperties.value,
                         ...props.properties.data,
                     ];
+                    const {title} = usePage();
                     window.history.replaceState(
                         {},
-                        usePage().title,
+                        title,
                         initialUrl.value
                     );
                 },
