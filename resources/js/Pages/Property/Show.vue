@@ -1,16 +1,16 @@
 <script setup>
 import GuestLayout from '@/Layouts/Guest.vue';
 import {
-    BadgeCheckIcon,
+    CheckBadgeIcon,
     XCircleIcon,
     HeartIcon,
     ShareIcon,
-    LocationMarkerIcon,
+    MapPinIcon,
     QuestionMarkCircleIcon,
     CheckIcon,
-    SelectorIcon,
+    ChevronUpDownIcon,
     ClockIcon,
-} from '@heroicons/vue/solid';
+} from '@heroicons/vue/24/solid';
 import {
     Listbox,
     ListboxButton,
@@ -70,7 +70,7 @@ const date = ref(new Date());
                     <div class="flex space-x-4">
                         <p class="text-slate-700">property verified</p>
                         <span>
-                            <BadgeCheckIcon class="w-6 h-6 text-indigo-500" />
+                            <CheckBadgeIcon class="w-6 h-6 text-indigo-500" />
                         </span>
                         <span>
                             <XCircleIcon class="w-6 h-6 text-rose-500" />
@@ -99,7 +99,7 @@ const date = ref(new Date());
                 <p class="flex space-x-2 my-4 text-slate-800">
                     karuma, abuja
                     <span>
-                        <LocationMarkerIcon class="w-6 h-6 text-indigo-400" />
+                        <MapPinIcon class="w-6 h-6 text-indigo-400" />
                     </span>
                 </p>
                 <p class="text-indigo-600">
@@ -262,7 +262,7 @@ const date = ref(new Date());
                                                 <span
                                                     class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                                                 >
-                                                    <SelectorIcon
+                                                    <ChevronUpDownIcon
                                                         class="w-5 h-5 text-gray-400"
                                                         aria-hidden="true"
                                                     />
@@ -420,7 +420,7 @@ const date = ref(new Date());
                                                         <span
                                                             class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                                                         >
-                                                            <SelectorIcon
+                                                            <ChevronUpDownIcon
                                                                 class="w-5 h-5 text-gray-400"
                                                                 aria-hidden="true"
                                                             />
@@ -508,7 +508,7 @@ const date = ref(new Date());
                                                         <span
                                                             class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                                                         >
-                                                            <SelectorIcon
+                                                            <ChevronUpDownIcon
                                                                 class="w-5 h-5 text-gray-400"
                                                                 aria-hidden="true"
                                                             />
@@ -588,7 +588,7 @@ const date = ref(new Date());
                                                         <span
                                                             class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
                                                         >
-                                                            <SelectorIcon
+                                                            <ChevronUpDownIcon
                                                                 class="w-5 h-5 text-gray-400"
                                                                 aria-hidden="true"
                                                             />
@@ -713,7 +713,7 @@ const date = ref(new Date());
     -ms-overflow-style: none;
 }
 /* Hide scrollbar for Firefox */
-.scrollbar-none{
+.scrollbar-none {
     display: none;
 }
 </style>

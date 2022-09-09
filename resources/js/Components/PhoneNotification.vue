@@ -237,7 +237,7 @@
 </template>
 
 <script>
-import { ChartBarIcon } from '@heroicons/vue/solid';
+import { ChartBarIcon } from '@heroicons/vue/24/solid';
 export default {
     name: 'PhoneNotification',
     components: {

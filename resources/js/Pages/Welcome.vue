@@ -27,18 +27,18 @@ import FeatureSection from '@/Components/FeatureSection.vue';
 import PhoneNotification from '@/Components/PhoneNotification.vue';
 import HomepageNearby from '@/Components/HomepageNearby.vue';
 import {
-    AnnotationIcon,
+    ChatBubbleBottomCenterTextIcon,
     GlobeAltIcon,
-    LightningBoltIcon,
+    BoltIcon,
     ScaleIcon,
-} from '@heroicons/vue/outline';
+} from '@heroicons/vue/24/outline';
 
 export default {
     layout: GuestLayout,
     components: {
-        AnnotationIcon,
+        ChatBubbleBottomCenterTextIcon,
         GlobeAltIcon,
-        LightningBoltIcon,
+        BoltIcon,
         ScaleIcon,
         HeroSection,
         FeatureSection,
