@@ -32,7 +32,7 @@
             <div class="flex flex-col space-y-4 my-4">
                 <h2 class="font-bold text-3xl flex items-center space-x-2">
                     <span>
-                        <BadgeCheckIcon class="w-8 h-8 text-indigo-400 mr-2" />
+                        <CheckBadgeIcon class="w-8 h-8 text-indigo-400 mr-2" />
                     </span>
                     Vetted Properties
                 </h2>
@@ -71,7 +71,7 @@
             <div class="flex flex-col space-y-4 my-4">
                 <h2 class="font-bold text-3xl flex items-center space-x-2">
                     <span
-                        ><BadgeCheckIcon class="w-8 h-8 text-indigo-400 mr-2"
+                        ><CheckBadgeIcon class="w-8 h-8 text-indigo-400 mr-2"
                     /></span>
                     Vetted Tenants
                 </h2>
@@ -84,7 +84,7 @@
             <div class="flex flex-col space-y-4 my-4">
                 <h2 class="font-bold text-3xl flex items-center space-x-2">
                     <span>
-                        <CashIcon class="w-8 h-8 text-indigo-400 mr-2" />
+                        <BanknotesIcon class="w-8 h-8 text-indigo-400 mr-2" />
                     </span>
                     Steady Income
                 </h2>
@@ -97,7 +97,7 @@
             <div class="flex flex-col space-y-4 my-4">
                 <h2 class="font-bold text-3xl flex items-center space-x-2">
                     <span>
-                        <ClipboardCheckIcon
+                        <ClipboardDocumentCheckIcon
                             class="w-8 h-8 text-indigo-400 mr-2"
                         />
                     </span>
@@ -123,8 +123,8 @@
 import {
     ScaleIcon,
     CreditCardIcon,
-    BadgeCheckIcon,
-    CashIcon,
-    ClipboardCheckIcon,
-} from '@heroicons/vue/outline';
+    CheckBadgeIcon,
+    BanknotesIcon,
+    ClipboardDocumentCheckIcon,
+} from '@heroicons/vue/24/outline';
 </script>
