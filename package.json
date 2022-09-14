@@ -29,7 +29,7 @@
         "@headlessui/vue": "^1.6.7",
         "@heroicons/vue": "^2.0.0",
         "@inertiajs/server": "^0.1.0",
-        "@prettier/plugin-php": "^0.18.9",
+        "@prettier/plugin-php": "^0.19.1",
         "@vue/server-renderer": "^3.2.37",
         "@vuepic/vue-datepicker": "^3.3.1",
         "prettier": "^2.7.1",
