@@ -15,7 +15,7 @@ class Property extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'isVerified' => 'boolean'
+        'isVerified' => 'boolean',
     ];
 
     public function landlord(): BelongsTo
