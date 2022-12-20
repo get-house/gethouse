@@ -13,22 +13,6 @@ let props = defineProps({
     filters: Object,
 });
 
-onMounted(() => {
-    //calculate when the user scrolls to the bottom of the page and load more properties by calling the loadMoreProperties method
-    window.addEventListener('scroll', () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            loadMoreProperties();
-        }
-    });
-});
-
-//use onUnmounted to remove the scroll event listener and stop loading more properties
-onUnmounted(() => {
-    window.removeEventListener('scroll', loadMoreProperties);
-});
-
-let search = ref(props.filters.search);
-
 //create a allProperties ref
 let allProperties = ref(props.properties.data);
 const initialUrl = computed(() => {
@@ -60,6 +44,29 @@ let loadMoreProperties = () => {
         );
     }
 };
+
+
+onMounted(() => {
+    //calculate when the user scrolls to the bottom of the page and load more properties by calling the loadMoreProperties method
+    if (window.location.pathname === '/properties') {
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                loadMoreProperties();
+            }
+        });
+    }
+});
+
+//use onUnmounted to remove the scroll event listener and stop loading more properties
+onUnmounted(() => {
+    if (window.location.pathname === '/properties') {
+        window.removeEventListener('scroll', loadMoreProperties);
+    }
+});
+
+let search = ref(props.filters.search);
+
+
 watch(search, (value) => {
     Inertia.get(
         '/properties',
@@ -83,9 +90,9 @@ watch(search, (value) => {
     <GuestLayout>
         <div class="flex justify-between mx-2 sm:mx-10 pt-2">
             <h1 class="text-2xl">Properties</h1>
-            <toast> </toast>
+            <toast></toast>
             <div class="max-w-[50rem] z-50">
-                <Search />
+                <Search/>
             </div>
             <input
                 v-model="search"
@@ -107,7 +114,7 @@ watch(search, (value) => {
                 <Link :href="route('properties.show', property.id)">
                     <div class="flex flex-col justify-center text-center">
                         <div class="relative">
-                            <Like />
+                            <Like/>
                             <div
                                 v-show="property.isVerified"
                                 class="absolute top-0 left-0 p-3"
@@ -164,8 +171,8 @@ watch(search, (value) => {
                                 <h4 class="text-gray-600">
                                     owned by:
                                     <a href="#" class="text-purple-500">{{
-                                        property.landlord.user.name.slice(0, 6)
-                                    }}</a>
+                                            property.landlord.user.name.slice(0, 6)
+                                        }}</a>
                                 </h4>
                             </div>
                             <div
@@ -202,12 +209,12 @@ watch(search, (value) => {
                                 </div>
                                 <div class="text-gray-500">
                                     Type:<span
-                                        class="bg-blue-400 rounded-full shadow text-white ml-1 p-1"
-                                    >
+                                    class="bg-blue-400 rounded-full shadow text-white ml-1 p-1"
+                                >
                                         {{
-                                            property.type.substring(0, 6)
-                                        }}</span
-                                    >
+                                        property.type.substring(0, 6)
+                                    }}</span
+                                >
                                 </div>
                                 <div
                                     class="flex flex-col justify-center items-center"
@@ -230,7 +237,7 @@ watch(search, (value) => {
                                         &#8358;
                                         <span
                                             class="text-green-500 font-semibold"
-                                            >{{ property.price }}</span
+                                        >{{ property.price }}</span
                                         >
                                     </p>
                                 </div>

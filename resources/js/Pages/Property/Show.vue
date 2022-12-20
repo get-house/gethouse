@@ -23,31 +23,31 @@ import {
     TabPanel,
     TransitionRoot,
 } from '@headlessui/vue';
-import { ref } from 'vue';
+import {ref} from 'vue';
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
 import ImageGallery from '@/Components/ImageGallery.vue';
 
-defineProps: ({
+let props = defineProps({
     property: Object,
 });
 
 const inspection = [
-    { name: 'Physical inspection' },
-    { name: 'Virtual inspection' },
+    {name: 'Physical inspection'},
+    {name: 'Virtual inspection'},
 ];
 
-const durations = [{ name: '12 month' }, { name: '24 month' }];
+const durations = [{name: '12 month'}, {name: '24 month'}];
 
 const paymentPlan = [
-    { name: 'Monthly' },
-    { name: 'Quarterly' },
-    { name: 'Yearly' },
-    { name: 'Bi-annually' },
-    { name: 'Upfront' },
+    {name: 'Monthly'},
+    {name: 'Quarterly'},
+    {name: 'Yearly'},
+    {name: 'Bi-annually'},
+    {name: 'Upfront'},
 ];
 
-const bookAs = [{ name: 'Individual' }, { name: 'Corporate' }];
+const bookAs = [{name: 'Individual'}, {name: 'Corporate'}];
 
 const selectedInspection = ref(inspection[0]);
 const selectedDurations = ref(durations[0]);
@@ -59,23 +59,25 @@ const date = ref(new Date());
 </script>
 
 <template>
-    <Head title="property" />
+    <Head title="property"/>
     <GuestLayout>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-6">
             <div class="md:col-span-3 mx-6">
-                <ImageGallery />
+                <ImageGallery/>
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 justify-items-start my-4"
                 >
-                    <div class="flex space-x-4">
-                        <p class="text-slate-700">property verified</p>
-                        <span>
-                            <CheckBadgeIcon class="w-6 h-6 text-indigo-500" />
-                        </span>
-                        <span>
-                            <XCircleIcon class="w-6 h-6 text-rose-500" />
-                        </span>
+
+
+                    <div class="flex space-x-2" v-if="property.isVerified">
+                        <CheckBadgeIcon class="w-6 h-6 text-indigo-500"/>
+                        <span class="text-slate-700">property verified</span>
                     </div>
+                    <div class="flex space-x-2" v-else>
+                        <XCircleIcon class="w-6 h-6 text-rose-500"/>
+                        <span class="text-slate-700">property unverified</span>
+                    </div>
+
                     <div class="justify-self-end flex space-x-3">
                         <p>add to favourite</p>
                         <button type="button">
@@ -99,7 +101,7 @@ const date = ref(new Date());
                 <p class="flex space-x-2 my-4 text-slate-800">
                     karuma, abuja
                     <span>
-                        <MapPinIcon class="w-6 h-6 text-indigo-400" />
+                        <MapPinIcon class="w-6 h-6 text-indigo-400"/>
                     </span>
                 </p>
                 <p class="text-indigo-600">
@@ -224,14 +226,16 @@ const date = ref(new Date());
                                 </button>
                             </Tab>
                             <Tab v-slot="{ selected }" as="template"
-                                ><button
+                            >
+                                <button
                                     class="bg-white rounded rounded-l-none shadow-sm p-2"
                                     :class="{
                                         'bg-indigo-600 text-white': selected,
                                     }"
                                 >
                                     Rent now
-                                </button></Tab
+                                </button>
+                            </Tab
                             >
                         </TabList>
                         <TabPanels>
@@ -255,7 +259,7 @@ const date = ref(new Date());
                                             >
                                                 <span
                                                     class="block truncate cursor-pointer"
-                                                    >{{
+                                                >{{
                                                         selectedInspection.name
                                                     }}</span
                                                 >
@@ -302,7 +306,7 @@ const date = ref(new Date());
                                                                         : 'font-normal',
                                                                     'block truncate',
                                                                 ]"
-                                                                >{{
+                                                            >{{
                                                                     inspect.name
                                                                 }}</span
                                                             >
@@ -413,7 +417,7 @@ const date = ref(new Date());
                                                     >
                                                         <span
                                                             class="block truncate cursor-pointer"
-                                                            >{{
+                                                        >{{
                                                                 selectedDurations.name
                                                             }}</span
                                                         >
@@ -464,7 +468,7 @@ const date = ref(new Date());
                                                                                 : 'font-normal',
                                                                             'block truncate',
                                                                         ]"
-                                                                        >{{
+                                                                    >{{
                                                                             duration.name
                                                                         }}</span
                                                                     >
@@ -501,7 +505,7 @@ const date = ref(new Date());
                                                     >
                                                         <span
                                                             class="block truncate cursor-pointer"
-                                                            >{{
+                                                        >{{
                                                                 selectedPaymentPlan.name
                                                             }}</span
                                                         >
@@ -548,7 +552,7 @@ const date = ref(new Date());
                                                                                 : 'font-normal',
                                                                             'block truncate',
                                                                         ]"
-                                                                        >{{
+                                                                    >{{
                                                                             plan.name
                                                                         }}</span
                                                                     >
@@ -581,7 +585,7 @@ const date = ref(new Date());
                                                     >
                                                         <span
                                                             class="block truncate cursor-pointer"
-                                                            >{{
+                                                        >{{
                                                                 selectedBookAs.name
                                                             }}</span
                                                         >
@@ -628,7 +632,7 @@ const date = ref(new Date());
                                                                                 : 'font-normal',
                                                                             'block truncate',
                                                                         ]"
-                                                                        >{{
+                                                                    >{{
                                                                             book.name
                                                                         }}</span
                                                                     >
@@ -656,7 +660,7 @@ const date = ref(new Date());
                                             <label
                                                 class="text-sm my-2"
                                                 for="start"
-                                                >Move in date:</label
+                                            >Move in date:</label
                                             >
 
                                             <input
@@ -708,10 +712,12 @@ const date = ref(new Date());
 .scrollbar-none::-webkit-scrollbar {
     display: none;
 }
+
 /* Hide scrollbar for IE and Edge */
 .scrollbar-none {
     -ms-overflow-style: none;
 }
+
 /* Hide scrollbar for Firefox */
 .scrollbar-none {
     display: none;
