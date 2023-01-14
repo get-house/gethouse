@@ -169,7 +169,7 @@
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
+import { Link } from '@inertiajs/vue3';
 import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue';
 import BreezeDropdown from '@/Components/Dropdown.vue';
 import BreezeDropdownLink from '@/Components/DropdownLink.vue';

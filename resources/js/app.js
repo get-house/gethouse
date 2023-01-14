@@ -3,35 +3,17 @@ import '../css/app.css';
 
 // Import modules...
 import { createApp, h } from 'vue';
-import { createInertiaApp, Link, Head } from '@inertiajs/inertia-vue3';
+import { createInertiaApp, Link, Head } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import { InertiaProgress } from '@inertiajs/progress';
 import VTooltipPlugin from 'v-tooltip';
 import 'v-tooltip/dist/v-tooltip.css';
 import GuestLayout from '@/Layouts/Guest.vue';
 
-// const el = document.getElementById('app');
-
-// createApp({
-//     render: () =>
-//         h(InertiaApp, {
-//             initialPage: JSON.parse(el.dataset.page),
-//             resolveComponent: (name) => {
-//                 const page = require(`./Pages/${name}`).default;
-//                 page.layout = page.layout || GuestLayout;
-
-//                 return page;
-//             },
-//             title: (title) => `${title}-hello`,
-//         }),
-// })
-//     .mixin({ methods: { route } })
-//     .component('Link', Link)
-//     .use(InertiaPlugin)
-//     .use(VTooltipPlugin)
-//     .mount(el);
-
 createInertiaApp({
+    progress: {
+        color: '#10eb10',
+        showSpinner: true,
+    },
     resolve: (name) => {
         // const page = require(`./Pages/${name}`).default;
         const page = resolvePageComponent(
@@ -54,4 +36,4 @@ createInertiaApp({
     title: (title) => `Gethouse - ${title}`,
 });
 
-InertiaProgress.init({ color: '#10eb10', showSpinner: true });
+//{ color: '#10eb10', showSpinner: true }
