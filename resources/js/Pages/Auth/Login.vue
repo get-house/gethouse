@@ -1,7 +1,7 @@
 <template>
     <div>
         <toast></toast>
-        <breeze-validation-errors class="mb-4" />
+        <breeze-validation-errors class="mb-4"/>
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
@@ -9,7 +9,7 @@
 
         <form @submit.prevent="submit" class="mt-14 max-w-md mx-auto">
             <div>
-                <breeze-label for="email" value="Email" />
+                <breeze-label for="email" value="Email"/>
                 <breeze-input
                     id="email"
                     type="email"
@@ -22,7 +22,7 @@
             </div>
 
             <div class="mt-4">
-                <breeze-label for="password" value="Password" />
+                <breeze-label for="password" value="Password"/>
                 <breeze-input
                     id="password"
                     type="password"
@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
+import {Link} from '@inertiajs/vue3';
 import Toast from '@/Components/Toast.vue';
 import BreezeButton from '@/Components/Button.vue';
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
