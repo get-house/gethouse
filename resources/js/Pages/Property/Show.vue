@@ -59,7 +59,7 @@ const date = ref(new Date());
 </script>
 
 <template>
-    <Head title="property" />
+    <Head title="property" ></Head>
     <GuestLayout>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-6">
             <div class="md:col-span-3 mx-6">

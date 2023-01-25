@@ -353,11 +353,11 @@
 </template>
 
 <script setup>
-import { useForm } from '@inertiajs/inertia-vue3';
+import {useForm} from '@inertiajs/vue3';
 import FileInput from '@/components/FileInput.vue';
 
 import axios from 'axios';
-import { computed, ref } from '@vue/reactivity';
+import {computed, ref} from 'vue';
 
 let form = useForm({
     name: null,
@@ -390,7 +390,7 @@ let uploadMedia = (files) => {
 
             axios
                 .post('media', formData)
-                .then(({ data }) => {
+                .then(({data}) => {
                     item.id = data.id;
                 })
                 .finally(() => {
