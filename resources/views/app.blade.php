@@ -7,27 +7,27 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-
-
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <title>get-house</title>
 
     <!-- Styles -->
 
 
     <!-- Scripts -->
+    @vuedevtools
     @routes
     @vite('resources/js/app.js')
     @inertiaHead
 </head>
 
 <body class="font-sans antialiased">
-    @inertia
+@inertia
 
-    @env(['local','staging'])
+@env(['local','staging'])
 
-    <x-responsive-helper />
-    @endenv
+    <x-responsive-helper/>
+@endenv
 
 </body>
 
