@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\PropertyRequest;
+use Illuminate\Http\Request;
 
-class RequestController extends Controller
+class PropertyRequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,7 +33,7 @@ class RequestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PropertyRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -66,7 +67,7 @@ class RequestController extends Controller
      * @param  \App\Models\PropertyRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(PropertyRequest $request, PropertyRequest $request)
+    public function update(Request $request, PropertyRequest $propertyRequest)
     {
         //
     }
@@ -77,7 +78,7 @@ class RequestController extends Controller
      * @param  \App\Models\PropertyRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PropertyRequest $request)
+    public function destroy(PropertyRequest $propertyRequest)
     {
         //
     }
