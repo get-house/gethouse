@@ -16,10 +16,9 @@ class CreateLandlordsTable extends Migration
         Schema::create('landlords', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->text('address');
-            $table->string('phone_number');
             $table->boolean('isActive')->default(false);
             $table->string('rating')->nullable();
+            $table->string('review')->nullable();
             $table->timestamps();
         });
     }
