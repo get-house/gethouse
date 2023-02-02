@@ -23,9 +23,7 @@ class LandlordFactory extends Factory
     public function definition()
     {
         return [
-            'user_id'=>User::factory(),
-            'address'=>$this->faker->address(),
-            'phone_number'=>$this->faker->phoneNumber(),
+            'user_id' => User::factory(),
 
         ];
     }

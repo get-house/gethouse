@@ -15,14 +15,13 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('agent_id')->nullable();
             $table->foreignId('landlord_id')->nullable()->constrained();
             $table->foreignId('current_tenant_id')->nullable()->constrained('tenants')->onDelete('set null');
             $table->string('name');
             $table->integer('price');
             $table->string('size');
             $table->enum('furnishing', ['furnished', 'semi-furnished', 'unfurnished'])->default('unfurnished');
-            $table->enum('status', ['vacant', 'rented', 'maintenance'])->default('available');
+            $table->enum('status', ['vacant', 'rented', 'maintenance'])->default('vacant');
             $table->enum('class', ['premium', 'platinum', 'gold', 'regular'])->default('regular');
             $table->text('description');
             $table->string('rooms');
