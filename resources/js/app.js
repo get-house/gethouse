@@ -2,6 +2,7 @@ import './bootstrap';
 import '../css/app.css';
 
 // Import modules...
+
 import { createApp, h } from 'vue';
 import { createInertiaApp, Link, Head } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -24,6 +25,7 @@ createInertiaApp({
 
         return page;
     },
+
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
             .mixin({ methods: { route } })

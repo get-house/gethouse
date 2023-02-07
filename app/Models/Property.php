@@ -23,14 +23,9 @@ class Property extends Model
         return $this->belongsTo(Landlord::class);
     }
 
-    public function agent(): BelongsTo
+    public function currentTenant(): HasOne
     {
-        return $this->belongsTo(Agent::class);
-    }
-
-    public function tenant(): HasOne
-    {
-        return $this->hasOne(Tenant::class);
+        return $this->hasOne(Tenant::class, 'id', 'current_tenant_id');
     }
 
     public function media(): MorphMany
