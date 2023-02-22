@@ -3,10 +3,10 @@ import GuestLayout from '@/Layouts/Guest.vue';
 import Like from '@/Components/Like.vue';
 import Toast from '@/Components/Toast.vue';
 import Search from '@/Components/Search.vue';
-import { router } from '@inertiajs/vue3';
-import { computed, ref } from '@vue/reactivity';
-import { onMounted, onUnmounted, watch } from '@vue/runtime-core';
-import { usePage } from '@inertiajs/vue3';
+import {router} from '@inertiajs/vue3';
+import {computed, ref} from '@vue/reactivity';
+import {onMounted, onUnmounted, watch} from '@vue/runtime-core';
+import {usePage} from '@inertiajs/vue3';
 
 let props = defineProps({
     properties: Object,
@@ -33,7 +33,7 @@ let loadMoreProperties = () => {
                         ...allProperties.value,
                         ...props.properties.data,
                     ];
-                    const { title } = usePage();
+                    const {title} = usePage();
                     window.history.replaceState({}, title, initialUrl.value);
                 },
             }
@@ -89,7 +89,7 @@ watch(search, (value) => {
             <h1 class="text-2xl">Properties</h1>
             <toast></toast>
             <div class="max-w-[50rem] z-50">
-                <Search />
+                <Search/>
             </div>
             <input
                 v-model="search"
@@ -111,7 +111,7 @@ watch(search, (value) => {
                 <Link :href="route('properties.show', property.id)">
                     <div class="flex flex-col justify-center text-center">
                         <div class="relative">
-                            <Like />
+                            <Like/>
                             <div
                                 v-show="property.isVerified"
                                 class="absolute top-0 left-0 p-3"
@@ -168,8 +168,8 @@ watch(search, (value) => {
                                 <h4 class="text-gray-600">
                                     owned by:
                                     <a href="#" class="text-purple-500">{{
-                                        property.landlord.user.name.slice(0, 6)
-                                    }}</a>
+                                            property.landlord.user.name.slice(0, 6)
+                                        }}</a>
                                 </h4>
                             </div>
                             <div
@@ -201,17 +201,17 @@ watch(search, (value) => {
                                     <p
                                         class="bg-blue-500 text-white rounded-lg shadow px-2"
                                     >
-                                        {{ property.location.substring(0, 10) }}
+                                        {{ property.address.substring(0, 10) }}
                                     </p>
                                 </div>
                                 <div class="text-gray-500">
                                     Type:<span
-                                        class="bg-blue-400 rounded-full shadow text-white ml-1 p-1"
-                                    >
+                                    class="bg-blue-400 rounded-full shadow text-white ml-1 p-1"
+                                >
                                         {{
-                                            property.type.substring(0, 6)
-                                        }}</span
-                                    >
+                                        property.type.substring(0, 6)
+                                    }}</span
+                                >
                                 </div>
                                 <div
                                     class="flex flex-col justify-center items-center"
@@ -234,7 +234,7 @@ watch(search, (value) => {
                                         &#8358;
                                         <span
                                             class="text-green-500 font-semibold"
-                                            >{{ property.price }}</span
+                                        >{{ property.price }}</span
                                         >
                                     </p>
                                 </div>

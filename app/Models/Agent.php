@@ -17,10 +17,10 @@ class Agent extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function properties(): HasMany
-    {
-        return $this->hasMany(Property::class);
-    }
+//    public function properties(): HasMany
+//    {
+//        return $this->hasMany(Property::class);
+//    }
 
     public function tenants(): HasManyThrough
     {
