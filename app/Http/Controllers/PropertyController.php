@@ -18,9 +18,6 @@ class PropertyController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return Response
      */
     public function index(Request $request): Response
     {
@@ -28,14 +25,13 @@ class PropertyController extends Controller
             ->when($request->input('search'), function ($query, $search) {
                 $query->where('name', 'like', "%{$search}%");
             })
-            ->with(['landlord.user', 'agent.user', 'tenant.user', 'media'])
+            ->with(['landlord.user', 'currentTenant.user', 'media'])
             ->paginate()
             ->appends($request->query());
 
         if ($request->wantsJson()) {
             return $properties;
         }
-
 
         return Inertia::render('Property/Index', [
             'properties' => $properties,
@@ -53,7 +49,7 @@ class PropertyController extends Controller
         //check if user is logged in else redirect to login page
         if (Auth::check()) {
             //only allowed to create if user is landlord or agent or admin
-            if (Auth::user()->landlord || Auth::user()->agent || Auth::user()->isAdmin) {
+            if (Auth::user()->landlord || Auth::user()->isAdmin) {
                 return Inertia::render('Property/Create');
             } else {
                 return Redirect::route('properties.index')->with('message', 'You are not authorized to create a property');
@@ -66,7 +62,6 @@ class PropertyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
      * @return Application|RedirectResponse|Redirector
      */
     public function store(Request $request)
@@ -87,9 +82,7 @@ class PropertyController extends Controller
                 }),
             ],
 
-
         ]);
-
 
         $property = Property::create([
             //check if landlord or agent or admin
@@ -103,32 +96,29 @@ class PropertyController extends Controller
             'urgency' => $request->input('urgency'),
             'description' => $request->input('description'),
 
-
-
         ]);
 
         Media::find($request->photoIds)->each->update([
             'model_id' => $property->id,
             'model_type' => Property::class,
         ]);
+
         return redirect('/properties')->with('message', 'Property created successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Property $property
      * @return Response
      */
     public function show(Property $property)
     {
-        return Inertia::render('Property/Show', ['property' => $property->load('landlord.user', 'agent.user')]);
+        return Inertia::render('Property/Show', ['property' => $property->load('landlord.user', 'currentTenant.user', 'media')]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Property $property
      * @return void
      */
     public function edit(Property $property)
@@ -139,8 +129,6 @@ class PropertyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
-     * @param Property $property
      * @return void
      */
     public function update(Request $request, Property $property)
@@ -151,7 +139,6 @@ class PropertyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Property $property
      * @return void
      */
     public function destroy(Property $property)
