@@ -49,7 +49,9 @@ Gethouse is a SaaS property management system built with Laravel, Inertia.js (Vu
 
 ## Contributing
 
-If you would like to contribute to this project, please follow these steps:
+If you would like to contribute to this project, please read
+the [contributing guideline](https://github.com/get-house/gethouse/blob/main/CONTRIBUTING.md) before following these
+steps:
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature/new-feature`)
