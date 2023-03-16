@@ -54,7 +54,7 @@ const selectedDurations = ref(durations[0]);
 const selectedPaymentPlan = ref(paymentPlan[0]);
 const selectedBookAs = ref(bookAs[0]);
 
-const isShowing = ref(true);
+let isShowing = ref(true);
 const date = ref(new Date());
 </script>
 

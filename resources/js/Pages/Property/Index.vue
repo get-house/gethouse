@@ -4,8 +4,7 @@ import Like from '@/Components/Like.vue';
 import Toast from '@/Components/Toast.vue';
 import Search from '@/Components/Search.vue';
 import {router} from '@inertiajs/vue3';
-import {computed, ref} from '@vue/reactivity';
-import {onMounted, onUnmounted, watch} from '@vue/runtime-core';
+import {computed, ref, onMounted, onUnmounted, watch} from 'vue';
 import {usePage} from '@inertiajs/vue3';
 
 let props = defineProps({
@@ -15,12 +14,16 @@ let props = defineProps({
 
 //create a allProperties ref
 let allProperties = ref(props.properties.data);
+let isLoadingMore = ref(false);
 const initialUrl = computed(() => {
     return props.properties.path;
 });
 
 //We now need a method that will allow us to load the next page of properties based on the next_page_url property returned from Laravel's pagination object.
-let loadMoreProperties = () => {
+function loadMoreProperties() {
+    if (window.location.pathname !== '/properties') {
+        return;
+    }
     if (props.properties.next_page_url !== null) {
         router.get(
             props.properties.next_page_url,
@@ -39,28 +42,35 @@ let loadMoreProperties = () => {
             }
         );
     }
-};
+}
 
 onMounted(() => {
     //calculate when the user scrolls to the bottom of the page and load more properties by calling the loadMoreProperties method
     if (window.location.pathname === '/properties') {
-        window.addEventListener('scroll', () => {
-            if (
-                window.innerHeight + window.scrollY >=
-                document.body.offsetHeight
-            ) {
-                loadMoreProperties();
-            }
-        });
+        window.addEventListener('scroll', handleScroll);
     }
 });
 
 //use onUnmounted to remove the scroll event listener and stop loading more properties
 onUnmounted(() => {
     if (window.location.pathname === '/properties') {
-        window.removeEventListener('scroll', loadMoreProperties);
+        window.removeEventListener('scroll', handleScroll);
     }
 });
+const handleScroll = () => {
+    const {innerHeight} = window;
+    const {scrollHeight} = document.body;
+    const scrollTop =
+        (document.documentElement && document.documentElement.scrollTop) ||
+        document.body.scrollTop;
+
+    const scrolledToBottom = Math.ceil(scrollTop + innerHeight) >= scrollHeight;
+
+    if (scrolledToBottom) {
+        loadMoreProperties();
+        console.log('loading more properties');
+    }
+};
 
 let search = ref(props.filters.search);
 
@@ -80,9 +90,7 @@ watch(search, (value) => {
 </script>
 
 <template>
-    <Head>
-        <title>properties</title>
-    </Head>
+    <Head title="properties"></Head>
 
     <GuestLayout>
         <div class="flex justify-between mx-2 sm:mx-10 pt-2">
@@ -258,6 +266,6 @@ watch(search, (value) => {
 <style scoped>
 body {
     background-color: #dfdbe5;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+//background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 </style>
