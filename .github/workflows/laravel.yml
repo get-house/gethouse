@@ -1,10 +1,10 @@
-name: Laravel
+name: Gethouse
 
 on:
   push:
     branches: [ "main","experimental-inertia" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "experimental-inertia" ]
 
 jobs:
   laravel-tests:
