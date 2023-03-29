@@ -8,9 +8,9 @@ abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-        $this->withoutVite();
-    }
+//    protected function setUp(): void
+//    {
+//        parent::setUp();
+//        $this->withoutVite();
+//    }
 }
