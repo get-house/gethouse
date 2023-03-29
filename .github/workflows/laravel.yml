@@ -2,7 +2,7 @@ name: Laravel
 
 on:
   push:
-    branches: [ "experimental-inertia" ]
+    branches: [ "main","experimental-inertia" ]
   pull_request:
     branches: [ "main" ]
 
