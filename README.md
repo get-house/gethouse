@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/get-house/gethouse/workflows/Gethouse/badge.svg)](https://github.com/get-house/gethouse/actions)
+
 # Gethouse
 
 Gethouse is a SaaS property management system built with Laravel, Inertia.js (Vue), and Tailwind CSS.
