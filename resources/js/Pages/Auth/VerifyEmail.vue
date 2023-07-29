@@ -9,7 +9,7 @@
         class="mb-4 font-medium text-sm text-green-600"
         v-if="verificationLinkSent"
     >
-        A new verifLink has been sent to the email address you provided during
+        A new verify email Link has been sent to the email address you provided during
         registration.
     </div>
 
@@ -27,14 +27,15 @@
                 method="post"
                 as="button"
                 class="underline text-sm text-gray-600 hover:text-gray-900"
-                >Log Out</Link
+            >Log Out
+            </Link
             >
         </div>
     </form>
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
+import {Link} from '@inertiajs/vue3';
 import BreezeButton from '@/Components/Button.vue';
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
 

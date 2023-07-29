@@ -56,4 +56,15 @@ class User extends Authenticatable
     {
         return $this->hasOne(Tenant::class);
     }
+
+    // relationship with admin
+    public function admin(): HasOne
+    {
+        return $this->hasOne(Admin::class);
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
 }

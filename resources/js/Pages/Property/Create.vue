@@ -1,3 +1,91 @@
+<script setup>
+import {router, useForm} from '@inertiajs/vue3';
+import FileInput from '@/components/FileInput.vue';
+
+import axios from 'axios';
+import {computed, ref} from 'vue';
+
+let form = useForm({
+    name: null,
+    price: null,
+    type: null,
+    feature: null,
+    location: null,
+    period_of_availability: null,
+    urgency: null,
+    description: null,
+    photoIds: [],
+});
+
+let photo = ref([]);
+
+let uploadMedia = (files) => {
+    Array.from(files).forEach((media) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(media);
+
+        reader.onload = (e) => {
+            let item = {
+                url: e.target.result,
+                id: undefined,
+                loading: true,
+            };
+
+            let formData = new FormData();
+            formData.append('file', media);
+
+            axios
+                .post('media', formData)
+                .then(({data}) => {
+                    item.id = data.id;
+                })
+                .finally(() => {
+                    item.loading = false;
+                });
+
+            photo.value.push(item);
+        };
+    });
+};
+
+const removeMedia = (index, item) => {
+    photo.value.splice(index, 1);
+    //check if item.id exist and delete it
+    if (item.id) {
+        axios.delete(`media/${item.id}`).catch((error) => {
+            console.log(error);
+
+            photo.value.splice(index, 0, item);
+        });
+    }
+};
+
+let submit = () => {
+    form.photoIds = photo.value.map((item) => item.id);
+    form.post('/properties', form, {
+        preserveState: true,
+        //set the form to processing on start event
+        onStart: () => {
+            form.processing = true;
+        },
+        //set the form to not processing on finish event
+        onFinish: () => {
+            form.processing = false;
+        },
+        //check if there is no error on success event and clear the form
+        onSuccess: () => {
+            console.log('success');
+            form.reset();
+            photo.value = [];
+        },
+    });
+};
+
+const canSubmit = computed(() => {
+    return photo.value.every((item) => !item.loading);
+});
+</script>
+
 <template>
     <div class="mx-auto py-4 px-4">
         <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -312,7 +400,7 @@
                                 v-if="!form.processing"
                                 type="submit"
                                 class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                :disabled="!canSubmit"
+                                :disabled="canSubmit"
                             >
                                 Save
                             </button>
@@ -352,91 +440,5 @@
     </div>
 </template>
 
-<script setup>
-import {useForm} from '@inertiajs/vue3';
-import FileInput from '@/components/FileInput.vue';
 
-import axios from 'axios';
-import {computed, ref} from 'vue';
-
-let form = useForm({
-    name: null,
-    price: null,
-    type: null,
-    feature: null,
-    location: null,
-    period_of_availability: null,
-    urgency: null,
-    description: null,
-    photoIds: [],
-});
-
-let photo = ref([]);
-
-let uploadMedia = (files) => {
-    Array.from(files).forEach((media) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(media);
-
-        reader.onload = (e) => {
-            let item = {
-                url: e.target.result,
-                id: undefined,
-                loading: true,
-            };
-
-            let formData = new FormData();
-            formData.append('file', media);
-
-            axios
-                .post('media', formData)
-                .then(({data}) => {
-                    item.id = data.id;
-                })
-                .finally(() => {
-                    item.loading = false;
-                });
-
-            photo.value.push(item);
-        };
-    });
-};
-
-const removeMedia = (index, item) => {
-    photo.value.splice(index, 1);
-    //check if item.id exist and delete it
-    if (item.id) {
-        axios.delete(`media/${item.id}`).catch((error) => {
-            console.log(error);
-
-            photo.value.splice(index, 0, item);
-        });
-    }
-};
-
-let submit = () => {
-    form.photoIds = photo.value.map((item) => item.id);
-    form.post('/properties', form, {
-        preserveState: true,
-        //set the form to processing on start event
-        onStart: () => {
-            form.processing = true;
-        },
-        //set the form to not processing on finish event
-        onFinish: () => {
-            form.processing = false;
-        },
-        //check if there is no error on success event and clear the form
-        onSuccess: () => {
-            console.log('success');
-            form.reset();
-            photo.value = [];
-        },
-    });
-};
-
-const canSubmit = computed(() => {
-    return photo.value.every((item) => !item.loading);
-});
-</script>
 <style scoped></style>

@@ -19,6 +19,28 @@ const initialUrl = computed(() => {
     return props.properties.path;
 });
 
+let search = ref(props.filters.search);
+
+// create a watcher for search
+
+watch(search, value => {
+    router.get(
+        props.properties.path,
+        {
+            search: value,
+        },
+        {
+            preserveState: true,
+            preserveScroll: true,
+            onSuccess: () => {
+                allProperties.value = props.properties.data;
+                const {title} = usePage();
+                window.history.replaceState({}, title, initialUrl.value);
+            },
+        }
+    );
+});
+
 //We now need a method that will allow us to load the next page of properties based on the next_page_url property returned from Laravel's pagination object.
 function loadMoreProperties() {
     if (window.location.pathname !== '/properties') {
@@ -72,21 +94,7 @@ const handleScroll = () => {
     }
 };
 
-let search = ref(props.filters.search);
 
-watch(search, (value) => {
-    router.get(
-        '/properties',
-        {
-            search: value,
-        },
-
-        {
-            preserveState: true,
-            replace: true,
-        }
-    );
-});
 </script>
 
 <template>

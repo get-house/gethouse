@@ -12,14 +12,15 @@ import GuestLayout from '@/Layouts/Guest.vue';
 
 createInertiaApp({
     progress: {
-        color: '#10eb10',
+        delay: 250,
+        color: '#eb2a10',
         showSpinner: true,
     },
     resolve: (name) => {
         // const page = require(`./Pages/${name}`).default;
         const page = resolvePageComponent(
             `./Pages/${name}.vue`,
-            import.meta.glob('./Pages/**/*.vue')
+            import.meta.glob('./Pages/**/*.vue'),
         );
         page.layout = page.layout || GuestLayout;
 
@@ -35,7 +36,7 @@ createInertiaApp({
             .use(VTooltipPlugin)
             .mount(el);
     },
-    title: (title) => `Gethouse - ${title}`,
+    title: (title) => `GetHouse - ${title}`,
 });
 
 //{ color: '#10eb10', showSpinner: true }
