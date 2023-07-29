@@ -1,9 +1,9 @@
 <template>
-    <breeze-validation-errors class="mb-4" />
+    <breeze-validation-errors class="mb-4"/>
 
     <form @submit.prevent="submit">
         <div>
-            <breeze-label for="name" value="Name" />
+            <breeze-label for="name" value="Name"/>
             <breeze-input
                 id="name"
                 type="text"
@@ -16,7 +16,7 @@
         </div>
 
         <div class="mt-4">
-            <breeze-label for="email" value="Email" />
+            <breeze-label for="email" value="Email"/>
             <breeze-input
                 id="email"
                 type="email"
@@ -28,7 +28,7 @@
         </div>
 
         <div class="mt-4">
-            <breeze-label for="password" value="Password" />
+            <breeze-label for="password" value="Password"/>
             <breeze-input
                 id="password"
                 type="password"
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
+import {Link} from '@inertiajs/vue3';
 import BreezeButton from '@/Components/Button.vue';
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
 import BreezeInput from '@/Components/Input.vue';

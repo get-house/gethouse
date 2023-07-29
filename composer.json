@@ -16,6 +16,7 @@
         "laravel/sanctum": "^3.2.1",
         "laravel/telescope": "^4.13",
         "laravel/tinker": "^2.8",
+        "spatie/laravel-data": "^3.7",
         "tightenco/ziggy": "^1.5"
     },
     "require-dev": {

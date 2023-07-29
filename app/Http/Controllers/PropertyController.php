@@ -19,7 +19,7 @@ class PropertyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request): Response|RedirectResponse
+    public function index(Request $request)
     {
         $properties = Property::query()
             ->when($request->input('search'), function ($query, $search) {
@@ -48,7 +48,7 @@ class PropertyController extends Controller
         if (Auth::check()) {
             //only allowed to create if user is landlord or agent or admin
             return Auth::user()->landlord || Auth::user()
-                ->isAdmin ? Inertia::render('Property/Create') :
+                ->isAdmin() ? Inertia::render('Property/Create') :
                 Redirect::route('properties.index')
                     ->with('message', 'You are not authorized to create a property');
         } else {
@@ -84,11 +84,8 @@ class PropertyController extends Controller
         ]);
 
         $property = Property::create([
-            //check if landlord or agent or admin
-            'landlord_id' => Auth::user()
-                ->landlord ? Auth::user()
-                ->landlord->id : Auth::user()
-                ->agent->id,
+            //
+            'landlord_id' => auth()->user()->id,
             'name' => $request->input('name'),
             'price' => $request->input('price'),
             'type' => $request->input('type'),
